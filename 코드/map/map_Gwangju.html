@@ -1,0 +1,2197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_9b41e6f429962601b74c7f8a324a3df3 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_9b41e6f429962601b74c7f8a324a3df3" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_9b41e6f429962601b74c7f8a324a3df3 = L.map(
+                "map_9b41e6f429962601b74c7f8a324a3df3",
+                {
+                    center: [35.1595, 126.8526],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_9376247051175245ccb02ae0e1f9421d = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_9b41e6f429962601b74c7f8a324a3df3);
+        
+    
+            var tile_layer_943486924221e59841344c285d9825f0 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+            var mini_map_3916364745f4134d3a3ae3006c8f1cf7 = new L.Control.MiniMap(
+                tile_layer_943486924221e59841344c285d9825f0,
+                {"autoToggleDisplay": false, "centerFixed": false, "collapsedHeight": 25, "collapsedWidth": 25, "height": 150, "minimized": false, "position": "bottomright", "tiles": "OpenStreetMap", "toggleDisplay": true, "width": 150, "zoomAnimation": false, "zoomLevelOffset": -5}
+            );
+            map_9b41e6f429962601b74c7f8a324a3df3.addControl(mini_map_3916364745f4134d3a3ae3006c8f1cf7);
+        
+    
+            var marker_cluster_c434e2cb8329e2c54c2537733eba19d5 = L.markerClusterGroup(
+                {}
+            );
+            map_9b41e6f429962601b74c7f8a324a3df3.addLayer(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var marker_35ac525e90c3d457daa9cbda32abe0b2 = L.marker(
+                [35.1719501, 126.9209778],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_2e69fcc9e451144a8ed6d4432972da6b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_35ac525e90c3d457daa9cbda32abe0b2.setIcon(icon_2e69fcc9e451144a8ed6d4432972da6b);
+        
+    
+        var popup_fb5681baeb0214b9118e9e93aed3143f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8d52bb22cd031e9b86dd93f3faf03c9b = $(`<div id="html_8d52bb22cd031e9b86dd93f3faf03c9b" style="width: 100.0%; height: 100.0%;">장소명: 원이네웰빙호떡튀김<br>장소 유형: restaurant<br>촬영 내용: 2TV생생정보 1670회 상추튀김 맛집<br>주소:광주광역시 북구 서방로 73</div>`)[0];
+                popup_fb5681baeb0214b9118e9e93aed3143f.setContent(html_8d52bb22cd031e9b86dd93f3faf03c9b);
+            
+        
+
+        marker_35ac525e90c3d457daa9cbda32abe0b2.bindPopup(popup_fb5681baeb0214b9118e9e93aed3143f)
+        ;
+
+        
+    
+    
+            var marker_d34b63beef95b29fd703e6fdf88e5de9 = L.marker(
+                [35.1512097, 126.836712],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_97c4294363e1487ae01a0f7065603f7b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d34b63beef95b29fd703e6fdf88e5de9.setIcon(icon_97c4294363e1487ae01a0f7065603f7b);
+        
+    
+        var popup_2a107220403d89b21eb9a6da9b0c19a4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c2fee7bbad2f43e03e20668957cce9a7 = $(`<div id="html_c2fee7bbad2f43e03e20668957cce9a7" style="width: 100.0%; height: 100.0%;">장소명: 나정상회<br>장소 유형: restaurant<br>촬영 내용: 2TV생생정보 1078회 갈비조립<br>주소:광주광역시 서구 상무자유로 24</div>`)[0];
+                popup_2a107220403d89b21eb9a6da9b0c19a4.setContent(html_c2fee7bbad2f43e03e20668957cce9a7);
+            
+        
+
+        marker_d34b63beef95b29fd703e6fdf88e5de9.bindPopup(popup_2a107220403d89b21eb9a6da9b0c19a4)
+        ;
+
+        
+    
+    
+            var marker_cbdee19bfd183ed1b8a123e748b5d794 = L.marker(
+                [35.1522524, 126.8544422],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_211d0e213651aa1e94fb7466de016f91 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_cbdee19bfd183ed1b8a123e748b5d794.setIcon(icon_211d0e213651aa1e94fb7466de016f91);
+        
+    
+        var popup_e38a8400cd01ac444851e77e9e1fbb1f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e8e96d8f98cce6990ce7f7d02d6cf2b0 = $(`<div id="html_e8e96d8f98cce6990ce7f7d02d6cf2b0" style="width: 100.0%; height: 100.0%;">장소명: 육전 한옥<br>장소 유형: restaurant<br>촬영 내용: 2TV생생정보 1670회 육전 맛집<br>주소:광주광역시 서구 운천로 223 한옥1층</div>`)[0];
+                popup_e38a8400cd01ac444851e77e9e1fbb1f.setContent(html_e8e96d8f98cce6990ce7f7d02d6cf2b0);
+            
+        
+
+        marker_cbdee19bfd183ed1b8a123e748b5d794.bindPopup(popup_e38a8400cd01ac444851e77e9e1fbb1f)
+        ;
+
+        
+    
+    
+            var marker_b25bf4b3030f31c7cd08accf9dacfee8 = L.marker(
+                [35.1615827, 126.905747],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_94e5e3d3015381ca73e6a39f80d06943 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b25bf4b3030f31c7cd08accf9dacfee8.setIcon(icon_94e5e3d3015381ca73e6a39f80d06943);
+        
+    
+        var popup_36f3fe36b76e7b5694bd98cdb07118ad = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a7281c01172c23549ace4c99e16129b6 = $(`<div id="html_a7281c01172c23549ace4c99e16129b6" style="width: 100.0%; height: 100.0%;">장소명: 풍년오리탕<br>장소 유형: restaurant<br>촬영 내용: 6시내고향 7583회 오리탕 맛집<br>주소:광주광역시 북구 경양로 125</div>`)[0];
+                popup_36f3fe36b76e7b5694bd98cdb07118ad.setContent(html_a7281c01172c23549ace4c99e16129b6);
+            
+        
+
+        marker_b25bf4b3030f31c7cd08accf9dacfee8.bindPopup(popup_36f3fe36b76e7b5694bd98cdb07118ad)
+        ;
+
+        
+    
+    
+            var marker_9d1bbc112e4a2d17b298efe6351166da = L.marker(
+                [35.175866, 126.9314893],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_e26cfa6d847fee355037c49f58998eef = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_9d1bbc112e4a2d17b298efe6351166da.setIcon(icon_e26cfa6d847fee355037c49f58998eef);
+        
+    
+        var popup_954551cbb6fb9b70df751d41a12c21c7 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ae398a44820687879c3ce286c3c5fc5d = $(`<div id="html_ae398a44820687879c3ce286c3c5fc5d" style="width: 100.0%; height: 100.0%;">장소명: 광신보리밥<br>장소 유형: restaurant<br>촬영 내용: 6시내고향 7652회 보리밥맛집<br>주소:광주광역시 북구 두리봉길 2-1</div>`)[0];
+                popup_954551cbb6fb9b70df751d41a12c21c7.setContent(html_ae398a44820687879c3ce286c3c5fc5d);
+            
+        
+
+        marker_9d1bbc112e4a2d17b298efe6351166da.bindPopup(popup_954551cbb6fb9b70df751d41a12c21c7)
+        ;
+
+        
+    
+    
+            var marker_d3672f091cb04df90dd79460fa30f6e2 = L.marker(
+                [35.1538613, 126.9021342],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_cb7c127959c7585b87b17bd10dc42f35 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d3672f091cb04df90dd79460fa30f6e2.setIcon(icon_cb7c127959c7585b87b17bd10dc42f35);
+        
+    
+        var popup_ae2ada7357191d134ea7dda96068c28c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6f9990b528e2968ffbd3832b28011db3 = $(`<div id="html_6f9990b528e2968ffbd3832b28011db3" style="width: 100.0%; height: 100.0%;">장소명: 만수네 떡갈비<br>장소 유형: restaurant<br>촬영 내용: 6시내고향 7653회 떡갈비 맛집<br>주소:광주광역시 서구 천변좌로 238 나동 339</div>`)[0];
+                popup_ae2ada7357191d134ea7dda96068c28c.setContent(html_6f9990b528e2968ffbd3832b28011db3);
+            
+        
+
+        marker_d3672f091cb04df90dd79460fa30f6e2.bindPopup(popup_ae2ada7357191d134ea7dda96068c28c)
+        ;
+
+        
+    
+    
+            var marker_451f357b3eb3f27cbee1c32a62aa8b80 = L.marker(
+                [35.1538613, 126.9021342],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_01aca62b68198650c6f4ee76dbd6b4c2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_451f357b3eb3f27cbee1c32a62aa8b80.setIcon(icon_01aca62b68198650c6f4ee76dbd6b4c2);
+        
+    
+        var popup_cf865b02d6c0dd9d41919852d4b1c371 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_74bfb4ccc4e8af72ac02989881565a06 = $(`<div id="html_74bfb4ccc4e8af72ac02989881565a06" style="width: 100.0%; height: 100.0%;">장소명: 육각형국밥<br>장소 유형: restaurant<br>촬영 내용: 6시내고향 7653회 맑은돼지국밥 맛집<br>주소:광주광역시 서구 천변좌로 238 A다동 456호 쉐프먹거리길</div>`)[0];
+                popup_cf865b02d6c0dd9d41919852d4b1c371.setContent(html_74bfb4ccc4e8af72ac02989881565a06);
+            
+        
+
+        marker_451f357b3eb3f27cbee1c32a62aa8b80.bindPopup(popup_cf865b02d6c0dd9d41919852d4b1c371)
+        ;
+
+        
+    
+    
+            var marker_68bed9e640bd4637659755fc39d2ef81 = L.marker(
+                [35.1527557, 126.9044724],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_0250e9b7289c28c5ddaad5b2fc402ecb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_68bed9e640bd4637659755fc39d2ef81.setIcon(icon_0250e9b7289c28c5ddaad5b2fc402ecb);
+        
+    
+        var popup_c3b44ed62ddd44f381d9b7e5d11f6b4b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3b39905e581093d1d5a3a28b19d0ba0e = $(`<div id="html_3b39905e581093d1d5a3a28b19d0ba0e" style="width: 100.0%; height: 100.0%;">장소명: 양동통닭<br>장소 유형: restaurant<br>촬영 내용: 6시내고향 7653회 통닭 맛집<br>주소:광주광역시 서구 천변좌로 262</div>`)[0];
+                popup_c3b44ed62ddd44f381d9b7e5d11f6b4b.setContent(html_3b39905e581093d1d5a3a28b19d0ba0e);
+            
+        
+
+        marker_68bed9e640bd4637659755fc39d2ef81.bindPopup(popup_c3b44ed62ddd44f381d9b7e5d11f6b4b)
+        ;
+
+        
+    
+    
+            var marker_bc18ab66dddb018287849c0edef02e43 = L.marker(
+                [35.149746, 126.868336],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_6696c3397855825c637f6a6a79b3c650 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_bc18ab66dddb018287849c0edef02e43.setIcon(icon_6696c3397855825c637f6a6a79b3c650);
+        
+    
+        var popup_ac0accc05212f7328f1baf513b8cbd75 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_eef8349345c595f56bfd58599e09fd2d = $(`<div id="html_eef8349345c595f56bfd58599e09fd2d" style="width: 100.0%; height: 100.0%;">장소명: 천주교 광주대교구청 브레디관<br>장소 유형: playground<br>촬영 내용: 영화 검은 사제들 속 강동원의 숙소<br>주소:광주광역시 서구 상무대로 980</div>`)[0];
+                popup_ac0accc05212f7328f1baf513b8cbd75.setContent(html_eef8349345c595f56bfd58599e09fd2d);
+            
+        
+
+        marker_bc18ab66dddb018287849c0edef02e43.bindPopup(popup_ac0accc05212f7328f1baf513b8cbd75)
+        ;
+
+        
+    
+    
+            var marker_5c2f5779fbf22d6e2f36c6f8cf132ac0 = L.marker(
+                [35.161388, 126.905557],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_93381f07acf4a7963dae978b1acf78da = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_5c2f5779fbf22d6e2f36c6f8cf132ac0.setIcon(icon_93381f07acf4a7963dae978b1acf78da);
+        
+    
+        var popup_34392a8638e1ed0eb898df9b1a49632b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_272d3e55f0b90082d063070e220c47cd = $(`<div id="html_272d3e55f0b90082d063070e220c47cd" style="width: 100.0%; height: 100.0%;">장소명: 영미오리탕<br>장소 유형: restaurant<br>촬영 내용: 공감특별한세상 384회 오리탕<br>주소:광주광역시 북구 경양로 126</div>`)[0];
+                popup_34392a8638e1ed0eb898df9b1a49632b.setContent(html_272d3e55f0b90082d063070e220c47cd);
+            
+        
+
+        marker_5c2f5779fbf22d6e2f36c6f8cf132ac0.bindPopup(popup_34392a8638e1ed0eb898df9b1a49632b)
+        ;
+
+        
+    
+    
+            var marker_3998878f82e3ecfcfbacf5e56113e02b = L.marker(
+                [35.1522521, 126.899287],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_4c94a028ddef8c5ad6d961f39b5605b3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_3998878f82e3ecfcfbacf5e56113e02b.setIcon(icon_4c94a028ddef8c5ad6d961f39b5605b3);
+        
+    
+        var popup_33500042682803efcd4707e0204bd1c9 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d51e93c9aeab36badca0fa7e47c9d2b3 = $(`<div id="html_d51e93c9aeab36badca0fa7e47c9d2b3" style="width: 100.0%; height: 100.0%;">장소명: 엄마네 밥상<br>장소 유형: restaurant<br>촬영 내용: 놀라운토요일 222회 낙지볶음 맛집<br>주소:광주광역시 남구 구성로 16-1</div>`)[0];
+                popup_33500042682803efcd4707e0204bd1c9.setContent(html_d51e93c9aeab36badca0fa7e47c9d2b3);
+            
+        
+
+        marker_3998878f82e3ecfcfbacf5e56113e02b.bindPopup(popup_33500042682803efcd4707e0204bd1c9)
+        ;
+
+        
+    
+    
+            var marker_1aaeb6aa599946118c0c5ff62b248683 = L.marker(
+                [35.1486182, 126.908674],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_4f08c68d9dcd5be3044cc24a06d68f72 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_1aaeb6aa599946118c0c5ff62b248683.setIcon(icon_4f08c68d9dcd5be3044cc24a06d68f72);
+        
+    
+        var popup_4f5575cde595ded885cf690fb5618e07 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0272ca893f7e46879623cf59dc3cd222 = $(`<div id="html_0272ca893f7e46879623cf59dc3cd222" style="width: 100.0%; height: 100.0%;">장소명: 김명화서리태콩국수<br>장소 유형: restaurant<br>촬영 내용: 놀라운토요일 222회 서리태콩국수 맛집<br>주소:광주광역시 남구 천변좌로338번길 16</div>`)[0];
+                popup_4f5575cde595ded885cf690fb5618e07.setContent(html_0272ca893f7e46879623cf59dc3cd222);
+            
+        
+
+        marker_1aaeb6aa599946118c0c5ff62b248683.bindPopup(popup_4f5575cde595ded885cf690fb5618e07)
+        ;
+
+        
+    
+    
+            var marker_8a0c51eb763570e71e5b61b2c5fc799c = L.marker(
+                [35.1399472, 126.921292],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_5b4f39d16d86a5320e8262b641610795 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8a0c51eb763570e71e5b61b2c5fc799c.setIcon(icon_5b4f39d16d86a5320e8262b641610795);
+        
+    
+        var popup_1cc250b8669639cdcb00c613ecacbbeb = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_416c86f494313722826e4851a16f536c = $(`<div id="html_416c86f494313722826e4851a16f536c" style="width: 100.0%; height: 100.0%;">장소명: 꽃돼지수산식당<br>장소 유형: restaurant<br>촬영 내용: 놀라운토요일 154회 사천식해물볶음 맛집<br>주소:광주광역시 동구 양림로 120 1층 125호</div>`)[0];
+                popup_1cc250b8669639cdcb00c613ecacbbeb.setContent(html_416c86f494313722826e4851a16f536c);
+            
+        
+
+        marker_8a0c51eb763570e71e5b61b2c5fc799c.bindPopup(popup_1cc250b8669639cdcb00c613ecacbbeb)
+        ;
+
+        
+    
+    
+            var marker_44b88f6185488ba2bb170e13130d4f44 = L.marker(
+                [35.1441563, 126.921057],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_536b377a8f1860efe4fe988652fff7c4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_44b88f6185488ba2bb170e13130d4f44.setIcon(icon_536b377a8f1860efe4fe988652fff7c4);
+        
+    
+        var popup_2d73bcf87dcf516d92d25ca8908d8eff = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_258fce6da7549cb3d25d5642421c988b = $(`<div id="html_258fce6da7549cb3d25d5642421c988b" style="width: 100.0%; height: 100.0%;">장소명: 이소양과점<br>장소 유형: cafe<br>촬영 내용: 놀라운토요일 154회 커스터드푸딩 맛집<br>주소:광주광역시 동구 제봉로 63</div>`)[0];
+                popup_2d73bcf87dcf516d92d25ca8908d8eff.setContent(html_258fce6da7549cb3d25d5642421c988b);
+            
+        
+
+        marker_44b88f6185488ba2bb170e13130d4f44.bindPopup(popup_2d73bcf87dcf516d92d25ca8908d8eff)
+        ;
+
+        
+    
+    
+            var marker_e98e48659de21c079fc18d791f4a1fc7 = L.marker(
+                [35.1542189, 126.90149],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_97762fc12fc0667336b65a3b8f62dd9e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_e98e48659de21c079fc18d791f4a1fc7.setIcon(icon_97762fc12fc0667336b65a3b8f62dd9e);
+        
+    
+        var popup_e6845265aedc9953e3f8702496765922 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_363f80b08ddd83fe2e0ab1e11e55304c = $(`<div id="html_363f80b08ddd83fe2e0ab1e11e55304c" style="width: 100.0%; height: 100.0%;">장소명: 양동빵집<br>장소 유형: cafe<br>촬영 내용: 놀라운토요일 222회 소금빵 맛집<br>주소:광주광역시 서구 경열로 150</div>`)[0];
+                popup_e6845265aedc9953e3f8702496765922.setContent(html_363f80b08ddd83fe2e0ab1e11e55304c);
+            
+        
+
+        marker_e98e48659de21c079fc18d791f4a1fc7.bindPopup(popup_e6845265aedc9953e3f8702496765922)
+        ;
+
+        
+    
+    
+            var marker_6fef08d95a36a7633a52af58978d819e = L.marker(
+                [35.139174, 126.91284],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_dc8a5c93cab0f61312f4653ea230758a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_6fef08d95a36a7633a52af58978d819e.setIcon(icon_dc8a5c93cab0f61312f4653ea230758a);
+        
+    
+        var popup_69efdf8cdb9700d83b3baaf8e3d90cb6 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_87ae102c6151f389bbb992dcdc9f7ccc = $(`<div id="html_87ae102c6151f389bbb992dcdc9f7ccc" style="width: 100.0%; height: 100.0%;">장소명: 이이남스튜디오<br>장소 유형: playground<br>촬영 내용: 16회에서 박재원(지창욱)이 지은 건물로 등장한다.<br>주소:광주광역시 남구 제중로47번길 10</div>`)[0];
+                popup_69efdf8cdb9700d83b3baaf8e3d90cb6.setContent(html_87ae102c6151f389bbb992dcdc9f7ccc);
+            
+        
+
+        marker_6fef08d95a36a7633a52af58978d819e.bindPopup(popup_69efdf8cdb9700d83b3baaf8e3d90cb6)
+        ;
+
+        
+    
+    
+            var marker_0551a17a785b0988e954827236941dbd = L.marker(
+                [35.19176, 126.830473],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_8db2e52c4a2fc467d4c92028646ba8e1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_0551a17a785b0988e954827236941dbd.setIcon(icon_8db2e52c4a2fc467d4c92028646ba8e1);
+        
+    
+        var popup_9b2535a64ebf3d86b4afe18de19208bf = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8d291c8cddb984e239fd28e8502ea51d = $(`<div id="html_8d291c8cddb984e239fd28e8502ea51d" style="width: 100.0%; height: 100.0%;">장소명: 씨즐펍 수완점<br>장소 유형: restaurant<br>촬영 내용: 유노윤호가 친구들과 방문한 맥주집<br>주소:광주광역시 광산구 수완로74번길 18</div>`)[0];
+                popup_9b2535a64ebf3d86b4afe18de19208bf.setContent(html_8d291c8cddb984e239fd28e8502ea51d);
+            
+        
+
+        marker_0551a17a785b0988e954827236941dbd.bindPopup(popup_9b2535a64ebf3d86b4afe18de19208bf)
+        ;
+
+        
+    
+    
+            var marker_4849a49eaea10b4b5f102b7be8fb68c1 = L.marker(
+                [35.116044, 126.887915],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_f0d3fda48d231a499ecf01518b7dea18 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4849a49eaea10b4b5f102b7be8fb68c1.setIcon(icon_f0d3fda48d231a499ecf01518b7dea18);
+        
+    
+        var popup_4c43b4c1a8e8abbbb2b5916729802224 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4ced7b15b3023a87fa25dfa5dc651455 = $(`<div id="html_4ced7b15b3023a87fa25dfa5dc651455" style="width: 100.0%; height: 100.0%;">장소명: 금당산<br>장소 유형: playground<br>촬영 내용: 이상한 나라의 러블리즈 6화 베이비소울 등산지<br>주소:광주광역시 서구 풍암순환로128번길 86</div>`)[0];
+                popup_4c43b4c1a8e8abbbb2b5916729802224.setContent(html_4ced7b15b3023a87fa25dfa5dc651455);
+            
+        
+
+        marker_4849a49eaea10b4b5f102b7be8fb68c1.bindPopup(popup_4c43b4c1a8e8abbbb2b5916729802224)
+        ;
+
+        
+    
+    
+            var marker_e3bace94666c00b0d4d5e36e3f1a2153 = L.marker(
+                [35.113027, 126.901794],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_71c69336b712c3cfc9aed7243993c29b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_e3bace94666c00b0d4d5e36e3f1a2153.setIcon(icon_71c69336b712c3cfc9aed7243993c29b);
+        
+    
+        var popup_306e8f69c9e57a448f8e348266e69127 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4a48883da9b24b59009b31f372376bb3 = $(`<div id="html_4a48883da9b24b59009b31f372376bb3" style="width: 100.0%; height: 100.0%;">장소명: 카페 달콤한썸띵<br>장소 유형: cafe<br>촬영 내용: 레드벨벳 웬디도 반한 광주 진월동 카페<br>주소:광주광역시 남구 진제길 5</div>`)[0];
+                popup_306e8f69c9e57a448f8e348266e69127.setContent(html_4a48883da9b24b59009b31f372376bb3);
+            
+        
+
+        marker_e3bace94666c00b0d4d5e36e3f1a2153.bindPopup(popup_306e8f69c9e57a448f8e348266e69127)
+        ;
+
+        
+    
+    
+            var marker_a1729af96c24b3f2db3adf3e10f8e636 = L.marker(
+                [35.139246, 126.794978],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_4ec5bea31e1ba25548c0703ef4ce3c57 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a1729af96c24b3f2db3adf3e10f8e636.setIcon(icon_4ec5bea31e1ba25548c0703ef4ce3c57);
+        
+    
+        var popup_83ff8b1830a2be4913b2c73749ad9ea3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_038c3aaae45291f471881c9eebfed00f = $(`<div id="html_038c3aaae45291f471881c9eebfed00f" style="width: 100.0%; height: 100.0%;">장소명: 화정떡갈비<br>장소 유형: restaurant<br>촬영 내용: 맛있는 녀석들에 나온 떡갈비 전문점<br>주소:광주광역시 광산구 광산로29번길 6</div>`)[0];
+                popup_83ff8b1830a2be4913b2c73749ad9ea3.setContent(html_038c3aaae45291f471881c9eebfed00f);
+            
+        
+
+        marker_a1729af96c24b3f2db3adf3e10f8e636.bindPopup(popup_83ff8b1830a2be4913b2c73749ad9ea3)
+        ;
+
+        
+    
+    
+            var marker_a0575b0d90bd61da90820b550654e290 = L.marker(
+                [35.161388, 126.905557],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_ada7bf3a3925f9d9823d5a511c700282 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a0575b0d90bd61da90820b550654e290.setIcon(icon_ada7bf3a3925f9d9823d5a511c700282);
+        
+    
+        var popup_7c7aa11aa5eb303ecbaa3d9189844297 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5a1fa2a7dade9cdb235f528fbc1a7dfa = $(`<div id="html_5a1fa2a7dade9cdb235f528fbc1a7dfa" style="width: 100.0%; height: 100.0%;">장소명: 영미오리탕<br>장소 유형: restaurant<br>촬영 내용: 맛있는 녀석들에 나온 오리탕 전문점<br>주소:광주광역시 북구 경양로 126</div>`)[0];
+                popup_7c7aa11aa5eb303ecbaa3d9189844297.setContent(html_5a1fa2a7dade9cdb235f528fbc1a7dfa);
+            
+        
+
+        marker_a0575b0d90bd61da90820b550654e290.bindPopup(popup_7c7aa11aa5eb303ecbaa3d9189844297)
+        ;
+
+        
+    
+    
+            var marker_8a57fa035f6678c54c8004438ded2def = L.marker(
+                [35.1948245, 126.8377078],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_57fc80c342033593167073eb6d1c31f4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8a57fa035f6678c54c8004438ded2def.setIcon(icon_57fc80c342033593167073eb6d1c31f4);
+        
+    
+        var popup_f84f04dc7c17e960cfff80c99283b5d5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d83f6295f6082d8400b72472113cad6a = $(`<div id="html_d83f6295f6082d8400b72472113cad6a" style="width: 100.0%; height: 100.0%;">장소명: 백탄돈구이<br>장소 유형: restaurant<br>촬영 내용: 맛있을지도 14회 통갈매기살/통목살 맛집<br>주소:광주광역시 광산구 신창로105번길 30 1층</div>`)[0];
+                popup_f84f04dc7c17e960cfff80c99283b5d5.setContent(html_d83f6295f6082d8400b72472113cad6a);
+            
+        
+
+        marker_8a57fa035f6678c54c8004438ded2def.bindPopup(popup_f84f04dc7c17e960cfff80c99283b5d5)
+        ;
+
+        
+    
+    
+            var marker_bf325d44c54d1cad2b0e32b54bf12afd = L.marker(
+                [35.2007133, 126.82877],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_ca022e267331d3ef9a0bf73674224a76 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_bf325d44c54d1cad2b0e32b54bf12afd.setIcon(icon_ca022e267331d3ef9a0bf73674224a76);
+        
+    
+        var popup_a814b4f9cd9a7f21fdd9fffd7ba8ef38 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f54ba0c27d800ab7b02a0cbaeb089bf1 = $(`<div id="html_f54ba0c27d800ab7b02a0cbaeb089bf1" style="width: 100.0%; height: 100.0%;">장소명: 어나더키친 수완점<br>장소 유형: restaurant<br>촬영 내용: 맛있을지도 7회 안심파스타/한우불초밥 맛집<br>주소:광주광역시 광산구 임방울대로 353</div>`)[0];
+                popup_a814b4f9cd9a7f21fdd9fffd7ba8ef38.setContent(html_f54ba0c27d800ab7b02a0cbaeb089bf1);
+            
+        
+
+        marker_bf325d44c54d1cad2b0e32b54bf12afd.bindPopup(popup_a814b4f9cd9a7f21fdd9fffd7ba8ef38)
+        ;
+
+        
+    
+    
+            var marker_c38cc88caaabb73a04914f8687cefb32 = L.marker(
+                [35.2151144, 126.8451575],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_9ce430188484c2fc3cb611c18a0b3ca7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c38cc88caaabb73a04914f8687cefb32.setIcon(icon_9ce430188484c2fc3cb611c18a0b3ca7);
+        
+    
+        var popup_4c70a88fd1e0e25b622ef8ed0af00dcc = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4ffd8c55e31b83e938acacf199a49427 = $(`<div id="html_4ffd8c55e31b83e938acacf199a49427" style="width: 100.0%; height: 100.0%;">장소명: 첨단돌솥감자탕<br>장소 유형: restaurant<br>촬영 내용: 맛있을지도 34회 파지감자탕/파김치감자탕 맛집<br>주소:광주광역시 광산구 첨단중앙로106번길 37</div>`)[0];
+                popup_4c70a88fd1e0e25b622ef8ed0af00dcc.setContent(html_4ffd8c55e31b83e938acacf199a49427);
+            
+        
+
+        marker_c38cc88caaabb73a04914f8687cefb32.bindPopup(popup_4c70a88fd1e0e25b622ef8ed0af00dcc)
+        ;
+
+        
+    
+    
+            var marker_30ae3bc172cdc78708580eb952bb56ce = L.marker(
+                [35.1490843, 126.9177087],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_88bb54e1a7026906dd1c92234c0a95b8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_30ae3bc172cdc78708580eb952bb56ce.setIcon(icon_88bb54e1a7026906dd1c92234c0a95b8);
+        
+    
+        var popup_b2239e95c74cd897e8fd18b1e63611ae = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b3c7b72c821ec8bdfcd18071e36dc3a7 = $(`<div id="html_b3c7b72c821ec8bdfcd18071e36dc3a7" style="width: 100.0%; height: 100.0%;">장소명: 고려조삼계탕 금남점<br>장소 유형: restaurant<br>촬영 내용: 맛있을지도 34회 삼계탕/약삼계탕 맛집<br>주소:광주광역시 동구 금남로 231 금남빌딩</div>`)[0];
+                popup_b2239e95c74cd897e8fd18b1e63611ae.setContent(html_b3c7b72c821ec8bdfcd18071e36dc3a7);
+            
+        
+
+        marker_30ae3bc172cdc78708580eb952bb56ce.bindPopup(popup_b2239e95c74cd897e8fd18b1e63611ae)
+        ;
+
+        
+    
+    
+            var marker_467b7a34b84205dee6d6ec6d8eb55818 = L.marker(
+                [35.1906032, 126.9007646],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_31eb4c6cc2b8215724e201ee9d7fe937 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_467b7a34b84205dee6d6ec6d8eb55818.setIcon(icon_31eb4c6cc2b8215724e201ee9d7fe937);
+        
+    
+        var popup_9fad92bbca4422e4f315370209b583da = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_fe43c0ddf597cd2917bba66909e693d5 = $(`<div id="html_fe43c0ddf597cd2917bba66909e693d5" style="width: 100.0%; height: 100.0%;">장소명: 한우향가<br>장소 유형: restaurant<br>촬영 내용: 맛있을지도 39회 갈비살/생고기 맛집<br>주소:광주광역시 북구 서하로183번길 23</div>`)[0];
+                popup_9fad92bbca4422e4f315370209b583da.setContent(html_fe43c0ddf597cd2917bba66909e693d5);
+            
+        
+
+        marker_467b7a34b84205dee6d6ec6d8eb55818.bindPopup(popup_9fad92bbca4422e4f315370209b583da)
+        ;
+
+        
+    
+    
+            var marker_52790f88a89d1acbfcc9bcdb4f9df825 = L.marker(
+                [35.197384, 126.8749901],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_e786e158af6f3f0a7290cbfa0a38ab65 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_52790f88a89d1acbfcc9bcdb4f9df825.setIcon(icon_e786e158af6f3f0a7290cbfa0a38ab65);
+        
+    
+        var popup_3118c4d2dfc3e03ca3ebd79ae2dabd88 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cd9322d2bcb33838afc1a685a7657607 = $(`<div id="html_cd9322d2bcb33838afc1a685a7657607" style="width: 100.0%; height: 100.0%;">장소명: 닭꿈<br>장소 유형: restaurant<br>촬영 내용: 맛있을지도 23회 닭숯불구이 맛집<br>주소:광주광역시 북구 하서로241번길 41</div>`)[0];
+                popup_3118c4d2dfc3e03ca3ebd79ae2dabd88.setContent(html_cd9322d2bcb33838afc1a685a7657607);
+            
+        
+
+        marker_52790f88a89d1acbfcc9bcdb4f9df825.bindPopup(popup_3118c4d2dfc3e03ca3ebd79ae2dabd88)
+        ;
+
+        
+    
+    
+            var marker_7b2f3b2cd27e755fd47768fa64e0b7ac = L.marker(
+                [35.1727972, 126.92106],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_7eec2900b1cbfc51ce73e241a45bafeb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_7b2f3b2cd27e755fd47768fa64e0b7ac.setIcon(icon_7eec2900b1cbfc51ce73e241a45bafeb);
+        
+    
+        var popup_c682d1b097b7d4150ddaef8a9810db68 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8336b75abc2a10172bd8937e91c74eea = $(`<div id="html_8336b75abc2a10172bd8937e91c74eea" style="width: 100.0%; height: 100.0%;">장소명: 초원팥죽<br>장소 유형: restaurant<br>촬영 내용: 모닝와이드 7187회 팥칼국수 맛집<br>주소:광주광역시 북구 서방로73번길 21</div>`)[0];
+                popup_c682d1b097b7d4150ddaef8a9810db68.setContent(html_8336b75abc2a10172bd8937e91c74eea);
+            
+        
+
+        marker_7b2f3b2cd27e755fd47768fa64e0b7ac.bindPopup(popup_c682d1b097b7d4150ddaef8a9810db68)
+        ;
+
+        
+    
+    
+            var marker_39e4d7f332397f64fc0646a734645ec0 = L.marker(
+                [35.1470404, 126.9265744],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_68ba8360140d25cdf6e9c1c14aad361e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_39e4d7f332397f64fc0646a734645ec0.setIcon(icon_68ba8360140d25cdf6e9c1c14aad361e);
+        
+    
+        var popup_8f2d88c33b8a943be808c83b4926e810 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3a4355d2021082908381d1711af3947a = $(`<div id="html_3a4355d2021082908381d1711af3947a" style="width: 100.0%; height: 100.0%;">장소명: 미미원<br>장소 유형: restaurant<br>촬영 내용: 배틀트립 23회 육전/맛조개전/낙지전 맛집<br>주소:광주광역시 동구 백서로 218</div>`)[0];
+                popup_8f2d88c33b8a943be808c83b4926e810.setContent(html_3a4355d2021082908381d1711af3947a);
+            
+        
+
+        marker_39e4d7f332397f64fc0646a734645ec0.bindPopup(popup_8f2d88c33b8a943be808c83b4926e810)
+        ;
+
+        
+    
+    
+            var marker_94cc621e34129a927d58ba0842552c9a = L.marker(
+                [35.1389209, 126.7948576],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_dcc63df2bf4819d6aab77335acfca284 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_94cc621e34129a927d58ba0842552c9a.setIcon(icon_dcc63df2bf4819d6aab77335acfca284);
+        
+    
+        var popup_4c7956d420a7bccc3b378aa4362e5351 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0aaab3e91c58ee856ed8b70ccb7beaca = $(`<div id="html_0aaab3e91c58ee856ed8b70ccb7beaca" style="width: 100.0%; height: 100.0%;">장소명: 송정떡갈비 1호점<br>장소 유형: restaurant<br>촬영 내용: 백종원의 3대 천왕 71회 떡갈비 맛집<br>주소:광주광역시 광산구 광산로29번길 1</div>`)[0];
+                popup_4c7956d420a7bccc3b378aa4362e5351.setContent(html_0aaab3e91c58ee856ed8b70ccb7beaca);
+            
+        
+
+        marker_94cc621e34129a927d58ba0842552c9a.bindPopup(popup_4c7956d420a7bccc3b378aa4362e5351)
+        ;
+
+        
+    
+    
+            var marker_dd84020635eca0729bd16f27ee92619b = L.marker(
+                [35.1386818, 126.7963776],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_2ff0b38ae7da44733ce2ceb6a3df27ba = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_dd84020635eca0729bd16f27ee92619b.setIcon(icon_2ff0b38ae7da44733ce2ceb6a3df27ba);
+        
+    
+        var popup_4fee946c65087265c2951135e2fc65d6 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f425e4ee71538c6234115fa3de4cc325 = $(`<div id="html_f425e4ee71538c6234115fa3de4cc325" style="width: 100.0%; height: 100.0%;">장소명: 서울곱창<br>장소 유형: restaurant<br>촬영 내용: 백종원의 3대 천왕 65회 곱창구이/곱창 맛집<br>주소:광주광역시 광산구 송정로15번길 71</div>`)[0];
+                popup_4fee946c65087265c2951135e2fc65d6.setContent(html_f425e4ee71538c6234115fa3de4cc325);
+            
+        
+
+        marker_dd84020635eca0729bd16f27ee92619b.bindPopup(popup_4fee946c65087265c2951135e2fc65d6)
+        ;
+
+        
+    
+    
+            var marker_7b8feda9f0f202019767654ae4db1e5f = L.marker(
+                [35.154253, 126.9180276],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_08f9e6159da7a3385f40c8fa7ff041e9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_7b8feda9f0f202019767654ae4db1e5f.setIcon(icon_08f9e6159da7a3385f40c8fa7ff041e9);
+        
+    
+        var popup_ed7c822f053de72559ae59b3ebd73acd = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8996465c83cfe1fe0b9f359a34c86866 = $(`<div id="html_8996465c83cfe1fe0b9f359a34c86866" style="width: 100.0%; height: 100.0%;">장소명: 나주식당<br>장소 유형: restaurant<br>촬영 내용: 백종원의 3대 천왕 47회 순대국밥/순대 맛집<br>주소:광주광역시 동구 동계천로53번길 2</div>`)[0];
+                popup_ed7c822f053de72559ae59b3ebd73acd.setContent(html_8996465c83cfe1fe0b9f359a34c86866);
+            
+        
+
+        marker_7b8feda9f0f202019767654ae4db1e5f.bindPopup(popup_ed7c822f053de72559ae59b3ebd73acd)
+        ;
+
+        
+    
+    
+            var marker_90e69b380eb692aa7fc7c09f57500b70 = L.marker(
+                [35.1436822, 126.9161835],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_a306ab8e63c5fa562caa2a7c67fe5374 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_90e69b380eb692aa7fc7c09f57500b70.setIcon(icon_a306ab8e63c5fa562caa2a7c67fe5374);
+        
+    
+        var popup_7a6fa9f6f3dcade3bb23155b412570fb = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cc38d225c2b2240e01fb1f424d39b5c7 = $(`<div id="html_cc38d225c2b2240e01fb1f424d39b5c7" style="width: 100.0%; height: 100.0%;">장소명: 엄마네돼지찌개<br>장소 유형: restaurant<br>촬영 내용: 백종원의 3대 천왕 77회 매운돼지찌개  맛집<br>주소:광주광역시 동구 문화전당로23번길 33</div>`)[0];
+                popup_7a6fa9f6f3dcade3bb23155b412570fb.setContent(html_cc38d225c2b2240e01fb1f424d39b5c7);
+            
+        
+
+        marker_90e69b380eb692aa7fc7c09f57500b70.bindPopup(popup_7a6fa9f6f3dcade3bb23155b412570fb)
+        ;
+
+        
+    
+    
+            var marker_4a87e24a61fc8b701fb20ac3acaae306 = L.marker(
+                [35.1470404, 126.9265744],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_67e550f8472d29b157194c8f475afb78 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4a87e24a61fc8b701fb20ac3acaae306.setIcon(icon_67e550f8472d29b157194c8f475afb78);
+        
+    
+        var popup_5076193f2a3c92be136081c301e76548 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b5b493dff59af430851ae265c704b28e = $(`<div id="html_b5b493dff59af430851ae265c704b28e" style="width: 100.0%; height: 100.0%;">장소명: 미미원<br>장소 유형: restaurant<br>촬영 내용: 백종원의 3대 천왕 92회 육전/낙지전  맛집<br>주소:광주광역시 동구 백서로 218</div>`)[0];
+                popup_5076193f2a3c92be136081c301e76548.setContent(html_b5b493dff59af430851ae265c704b28e);
+            
+        
+
+        marker_4a87e24a61fc8b701fb20ac3acaae306.bindPopup(popup_5076193f2a3c92be136081c301e76548)
+        ;
+
+        
+    
+    
+            var marker_96f6a0e58bbbe3021e75946a86c89125 = L.marker(
+                [35.1436063, 126.9248681],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_e0ae6218649ce3db0166316b8a33ef45 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_96f6a0e58bbbe3021e75946a86c89125.setIcon(icon_e0ae6218649ce3db0166316b8a33ef45);
+        
+    
+        var popup_c8a78e5144ca2971042f2b958e158abe = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_923145bee46f0d9f85932c98c32bdfec = $(`<div id="html_923145bee46f0d9f85932c98c32bdfec" style="width: 100.0%; height: 100.0%;">장소명: 백두산<br>장소 유형: restaurant<br>촬영 내용: 백종원의 3대 천왕 33회 짬짜면 맛집<br>주소:광주광역시 동구 백서로174번길 7</div>`)[0];
+                popup_c8a78e5144ca2971042f2b958e158abe.setContent(html_923145bee46f0d9f85932c98c32bdfec);
+            
+        
+
+        marker_96f6a0e58bbbe3021e75946a86c89125.bindPopup(popup_c8a78e5144ca2971042f2b958e158abe)
+        ;
+
+        
+    
+    
+            var marker_582f556a6d179f04ca50f48bf661d1b4 = L.marker(
+                [35.1496243, 126.9447891],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_daa89bec326ebf53819586d098784cdb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_582f556a6d179f04ca50f48bf661d1b4.setIcon(icon_daa89bec326ebf53819586d098784cdb);
+        
+    
+        var popup_f5ec439652fc28eb1754fb793de3aed2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_29193b2b978f459da284709a1ed15e89 = $(`<div id="html_29193b2b978f459da284709a1ed15e89" style="width: 100.0%; height: 100.0%;">장소명: 온천 할머니집<br>장소 유형: restaurant<br>촬영 내용: 백종원의 3대 천왕 75회 보리밥 맛집<br>주소:광주광역시 동구 지호로127번길 29</div>`)[0];
+                popup_f5ec439652fc28eb1754fb793de3aed2.setContent(html_29193b2b978f459da284709a1ed15e89);
+            
+        
+
+        marker_582f556a6d179f04ca50f48bf661d1b4.bindPopup(popup_f5ec439652fc28eb1754fb793de3aed2)
+        ;
+
+        
+    
+    
+            var marker_7f3f5477b4dfe3bed911e32bb907b864 = L.marker(
+                [35.161388, 126.905557],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_e1dd28ada7e144f2c8738750ab713bba = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_7f3f5477b4dfe3bed911e32bb907b864.setIcon(icon_e1dd28ada7e144f2c8738750ab713bba);
+        
+    
+        var popup_ce260575eee1ed5cc08ccf3fe5392758 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bbc06c7ac07537562448cd2a727f9982 = $(`<div id="html_bbc06c7ac07537562448cd2a727f9982" style="width: 100.0%; height: 100.0%;">장소명: 영미오리탕<br>장소 유형: restaurant<br>촬영 내용: 백종원의 3대 천왕 49회 오리탕 맛집<br>주소:광주광역시 북구 경양로 126</div>`)[0];
+                popup_ce260575eee1ed5cc08ccf3fe5392758.setContent(html_bbc06c7ac07537562448cd2a727f9982);
+            
+        
+
+        marker_7f3f5477b4dfe3bed911e32bb907b864.bindPopup(popup_ce260575eee1ed5cc08ccf3fe5392758)
+        ;
+
+        
+    
+    
+            var marker_4117b92c597d6fb29919a13e9bdec115 = L.marker(
+                [35.1527557, 126.9044724],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_57a3da71edc87778e794fc5342d335b8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4117b92c597d6fb29919a13e9bdec115.setIcon(icon_57a3da71edc87778e794fc5342d335b8);
+        
+    
+        var popup_4fe67a64106074fcb13be251d17c7c31 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_42e92b2aca106bdd91083bbcdaab5452 = $(`<div id="html_42e92b2aca106bdd91083bbcdaab5452" style="width: 100.0%; height: 100.0%;">장소명: 양동통닭<br>장소 유형: restaurant<br>촬영 내용: 백종원의 3대 천왕 8회 치킨 맛집<br>주소:광주광역시 서구 천변좌로 262</div>`)[0];
+                popup_4fe67a64106074fcb13be251d17c7c31.setContent(html_42e92b2aca106bdd91083bbcdaab5452);
+            
+        
+
+        marker_4117b92c597d6fb29919a13e9bdec115.bindPopup(popup_4fe67a64106074fcb13be251d17c7c31)
+        ;
+
+        
+    
+    
+            var marker_b2ef3d3d9a79a0507c42a303c5538a02 = L.marker(
+                [35.1540411, 126.9175168],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_15b4599167e15abe4064782e1ccf55c5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b2ef3d3d9a79a0507c42a303c5538a02.setIcon(icon_15b4599167e15abe4064782e1ccf55c5);
+        
+    
+        var popup_5888c377cf9670d1f0a4946f737b385e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_710395a54f1c7dd41e46cf1de35649f4 = $(`<div id="html_710395a54f1c7dd41e46cf1de35649f4" style="width: 100.0%; height: 100.0%;">장소명: 해뜨는식당<br>장소 유형: restaurant<br>촬영 내용: 생방송오늘아침 3863회 백반한상 맛집<br>주소:광주광역시 동구 제봉로190번길 7-2</div>`)[0];
+                popup_5888c377cf9670d1f0a4946f737b385e.setContent(html_710395a54f1c7dd41e46cf1de35649f4);
+            
+        
+
+        marker_b2ef3d3d9a79a0507c42a303c5538a02.bindPopup(popup_5888c377cf9670d1f0a4946f737b385e)
+        ;
+
+        
+    
+    
+            var marker_91b037611746e26ee2938686864d7812 = L.marker(
+                [35.1332436, 126.9553278],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_bb12329d64526e54322c9a87f7970e27 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_91b037611746e26ee2938686864d7812.setIcon(icon_bb12329d64526e54322c9a87f7970e27);
+        
+    
+        var popup_d30acdb63b69cdb9af24bb65b475504e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4f195053a591d5bacc2e56b39858e6d5 = $(`<div id="html_4f195053a591d5bacc2e56b39858e6d5" style="width: 100.0%; height: 100.0%;">장소명: 전북식당<br>장소 유형: restaurant<br>촬영 내용: 생방송오늘아침 2242회 무등산 보리밥 맛집<br>주소:광주광역시 동구 증심사길 28-16</div>`)[0];
+                popup_d30acdb63b69cdb9af24bb65b475504e.setContent(html_4f195053a591d5bacc2e56b39858e6d5);
+            
+        
+
+        marker_91b037611746e26ee2938686864d7812.bindPopup(popup_d30acdb63b69cdb9af24bb65b475504e)
+        ;
+
+        
+    
+    
+            var marker_090f7c4065ad9ee209795cac61fec4f5 = L.marker(
+                [35.1491293, 126.9424985],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_0dcdfa045854b2b6d02441fa521ecc71 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_090f7c4065ad9ee209795cac61fec4f5.setIcon(icon_0dcdfa045854b2b6d02441fa521ecc71);
+        
+    
+        var popup_ea2cb36b4a623a802f8b538df5a5d3cf = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_105e11a05b4afc39987d94f0e8190938 = $(`<div id="html_105e11a05b4afc39987d94f0e8190938" style="width: 100.0%; height: 100.0%;">장소명: 동원 게장 백반<br>장소 유형: restaurant<br>촬영 내용: 생방송오늘아침 3238회 무한리필게장 맛집<br>주소:광주광역시 동구 지호로 128</div>`)[0];
+                popup_ea2cb36b4a623a802f8b538df5a5d3cf.setContent(html_105e11a05b4afc39987d94f0e8190938);
+            
+        
+
+        marker_090f7c4065ad9ee209795cac61fec4f5.bindPopup(popup_ea2cb36b4a623a802f8b538df5a5d3cf)
+        ;
+
+        
+    
+    
+            var marker_473bf8acf8593744325156860e97f904 = L.marker(
+                [35.1718789, 126.9299201],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_8c7aef64509a38098e9ac2e7b129afaf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_473bf8acf8593744325156860e97f904.setIcon(icon_8c7aef64509a38098e9ac2e7b129afaf);
+        
+    
+        var popup_6becbc8e3de8f54c4d321af88270e2e3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_43a5ed7713572144bc7caeae418a1a36 = $(`<div id="html_43a5ed7713572144bc7caeae418a1a36" style="width: 100.0%; height: 100.0%;">장소명: 옥자삼합<br>장소 유형: restaurant<br>촬영 내용: 생방송오늘아침 2413회 홍어삼합 맛집<br>주소:광주광역시 북구 금녕길 29</div>`)[0];
+                popup_6becbc8e3de8f54c4d321af88270e2e3.setContent(html_43a5ed7713572144bc7caeae418a1a36);
+            
+        
+
+        marker_473bf8acf8593744325156860e97f904.bindPopup(popup_6becbc8e3de8f54c4d321af88270e2e3)
+        ;
+
+        
+    
+    
+            var marker_214a9667f9b43a573debe1af20e8ab46 = L.marker(
+                [35.161388, 126.905557],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_eeb521829c8720aab37e20c06c9c876a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_214a9667f9b43a573debe1af20e8ab46.setIcon(icon_eeb521829c8720aab37e20c06c9c876a);
+        
+    
+        var popup_a00f8f4b04d7f16038011aa2341769f8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8e32e2b05d86477967b28bf289ecc11a = $(`<div id="html_8e32e2b05d86477967b28bf289ecc11a" style="width: 100.0%; height: 100.0%;">장소명: 영미오리탕<br>장소 유형: restaurant<br>촬영 내용: 생방송오늘저녁 170회 오리탕/오리주물럭<br>주소:광주광역시 북구 경양로 126</div>`)[0];
+                popup_a00f8f4b04d7f16038011aa2341769f8.setContent(html_8e32e2b05d86477967b28bf289ecc11a);
+            
+        
+
+        marker_214a9667f9b43a573debe1af20e8ab46.bindPopup(popup_a00f8f4b04d7f16038011aa2341769f8)
+        ;
+
+        
+    
+    
+            var marker_fdaa2299e955e1676cc8025c09ad4e7e = L.marker(
+                [35.1512097, 126.836712],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_f0820e1c15ed7239ff333a702ade7838 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_fdaa2299e955e1676cc8025c09ad4e7e.setIcon(icon_f0820e1c15ed7239ff333a702ade7838);
+        
+    
+        var popup_427e7005ec2717abfdc5f2dcae54eedb = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_caf85eed84d0a5f585f69c0cc5ceccd5 = $(`<div id="html_caf85eed84d0a5f585f69c0cc5ceccd5" style="width: 100.0%; height: 100.0%;">장소명: 나정상회<br>장소 유형: restaurant<br>촬영 내용: 생방송투데이 649회 돼지갈비<br>주소:광주광역시 서구 상무자유로 24</div>`)[0];
+                popup_427e7005ec2717abfdc5f2dcae54eedb.setContent(html_caf85eed84d0a5f585f69c0cc5ceccd5);
+            
+        
+
+        marker_fdaa2299e955e1676cc8025c09ad4e7e.bindPopup(popup_427e7005ec2717abfdc5f2dcae54eedb)
+        ;
+
+        
+    
+    
+            var marker_f4c66c35e12de2793120cd78c5a228ce = L.marker(
+                [35.1512097, 126.836712],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_9218aa91f3c8457617734f9ac56deab0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f4c66c35e12de2793120cd78c5a228ce.setIcon(icon_9218aa91f3c8457617734f9ac56deab0);
+        
+    
+        var popup_e24212476be4fc3bda6f80ef4acef188 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3416b97e1ccb4c180ffe8cf9924ee381 = $(`<div id="html_3416b97e1ccb4c180ffe8cf9924ee381" style="width: 100.0%; height: 100.0%;">장소명: 나정상회<br>장소 유형: restaurant<br>촬영 내용: 생생정보통 516회 돼지갈비조림<br>주소:광주광역시 서구 상무자유로 24</div>`)[0];
+                popup_e24212476be4fc3bda6f80ef4acef188.setContent(html_3416b97e1ccb4c180ffe8cf9924ee381);
+            
+        
+
+        marker_f4c66c35e12de2793120cd78c5a228ce.bindPopup(popup_e24212476be4fc3bda6f80ef4acef188)
+        ;
+
+        
+    
+    
+            var marker_870ee390641fcf1ee4ffbb1e62d48e6b = L.marker(
+                [35.1745759, 126.814072],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_d94d1ae097ddb34db90c4a33691a4a70 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_870ee390641fcf1ee4ffbb1e62d48e6b.setIcon(icon_d94d1ae097ddb34db90c4a33691a4a70);
+        
+    
+        var popup_fc6e1c163fd5030b04e15d5108b09c8f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e36cbc9633c720015be8531ac81c0779 = $(`<div id="html_e36cbc9633c720015be8531ac81c0779" style="width: 100.0%; height: 100.0%;">장소명: 다연닭갈비<br>장소 유형: restaurant<br>촬영 내용: 생활의달인 734회 닭갈비 맛집<br>주소:광주광역시 광산구 목련로153번안길 46-3</div>`)[0];
+                popup_fc6e1c163fd5030b04e15d5108b09c8f.setContent(html_e36cbc9633c720015be8531ac81c0779);
+            
+        
+
+        marker_870ee390641fcf1ee4ffbb1e62d48e6b.bindPopup(popup_fc6e1c163fd5030b04e15d5108b09c8f)
+        ;
+
+        
+    
+    
+            var marker_b860a0a52b12de20625145c6ffc222c1 = L.marker(
+                [35.1361376, 126.8945299],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_17381ba6703426bf89dddeed2a29de4f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b860a0a52b12de20625145c6ffc222c1.setIcon(icon_17381ba6703426bf89dddeed2a29de4f);
+        
+    
+        var popup_d0d3d1dd4e8e38001fe6ea4f422cf37c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4ecad32de1398345cd041e75b5b7b9c2 = $(`<div id="html_4ecad32de1398345cd041e75b5b7b9c2" style="width: 100.0%; height: 100.0%;">장소명: 무등쑥호떡<br>장소 유형: restaurant<br>촬영 내용: 생활의달인 825회 호떡 맛집<br>주소:광주광역시 남구 군분로 27</div>`)[0];
+                popup_d0d3d1dd4e8e38001fe6ea4f422cf37c.setContent(html_4ecad32de1398345cd041e75b5b7b9c2);
+            
+        
+
+        marker_b860a0a52b12de20625145c6ffc222c1.bindPopup(popup_d0d3d1dd4e8e38001fe6ea4f422cf37c)
+        ;
+
+        
+    
+    
+            var marker_071030e304b294c403263b2173942c33 = L.marker(
+                [35.132341, 126.901884],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_1c4aab3df1f686fd1cf8507cf719c6eb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_071030e304b294c403263b2173942c33.setIcon(icon_1c4aab3df1f686fd1cf8507cf719c6eb);
+        
+    
+        var popup_a6b96674b686eb58d86c88362bd466ce = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cfb8482017a840e1ef16bd7aec4ebb1f = $(`<div id="html_cfb8482017a840e1ef16bd7aec4ebb1f" style="width: 100.0%; height: 100.0%;">장소명: 윤영<br>장소 유형: restaurant<br>촬영 내용: 서울촌놈 광주편에서 김병현의 단골 한식집<br>주소:광주광역시 남구 주월동 봉선로 8</div>`)[0];
+                popup_a6b96674b686eb58d86c88362bd466ce.setContent(html_cfb8482017a840e1ef16bd7aec4ebb1f);
+            
+        
+
+        marker_071030e304b294c403263b2173942c33.bindPopup(popup_a6b96674b686eb58d86c88362bd466ce)
+        ;
+
+        
+    
+    
+            var marker_5ca65fa92d7a88b0163f50001f0f6085 = L.marker(
+                [35.147712, 126.917662],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_4b3ea82540851cb7cc7c199a89813a16 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_5ca65fa92d7a88b0163f50001f0f6085.setIcon(icon_4b3ea82540851cb7cc7c199a89813a16);
+        
+    
+        var popup_00f9d211b25c46d87257d1e4dc6f2630 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_897b5d967b636ed676875a7e79bfd27b = $(`<div id="html_897b5d967b636ed676875a7e79bfd27b" style="width: 100.0%; height: 100.0%;">장소명: 궁전제과 충장점<br>장소 유형: cafe<br>촬영 내용: 서울촌놈 광주편에서 홍진영이 픽한 빵집<br>주소:광주광역시 동구 충장로 93-6</div>`)[0];
+                popup_00f9d211b25c46d87257d1e4dc6f2630.setContent(html_897b5d967b636ed676875a7e79bfd27b);
+            
+        
+
+        marker_5ca65fa92d7a88b0163f50001f0f6085.bindPopup(popup_00f9d211b25c46d87257d1e4dc6f2630)
+        ;
+
+        
+    
+    
+            var marker_507947bac0a4d637b4cc4d3d8f9b3616 = L.marker(
+                [35.157737, 126.883872],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_f7502c66a179cf8a8f1655dd56978001 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_507947bac0a4d637b4cc4d3d8f9b3616.setIcon(icon_f7502c66a179cf8a8f1655dd56978001);
+        
+    
+        var popup_4acd8d3575985b915e636703b057eda1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b0a44e6b625f7f1619610f8c2565e5ac = $(`<div id="html_b0a44e6b625f7f1619610f8c2565e5ac" style="width: 100.0%; height: 100.0%;">장소명: 전통나주곰탕<br>장소 유형: restaurant<br>촬영 내용: 서울촌놈 광주편에 나온 나주곰탕집<br>주소:광주광역시 서구 내방로 398</div>`)[0];
+                popup_4acd8d3575985b915e636703b057eda1.setContent(html_b0a44e6b625f7f1619610f8c2565e5ac);
+            
+        
+
+        marker_507947bac0a4d637b4cc4d3d8f9b3616.bindPopup(popup_4acd8d3575985b915e636703b057eda1)
+        ;
+
+        
+    
+    
+            var marker_98fe35e50a1576be103b1345454e7790 = L.marker(
+                [35.136795, 126.79222],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_0a6c4535c2fe7e2c853a503d65ba5184 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_98fe35e50a1576be103b1345454e7790.setIcon(icon_0a6c4535c2fe7e2c853a503d65ba5184);
+        
+    
+        var popup_854a9bff6d414fc41be0e4259cd429c1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_921780a1a1dd022f902ab87cb4821069 = $(`<div id="html_921780a1a1dd022f902ab87cb4821069" style="width: 100.0%; height: 100.0%;">장소명: 영명국밥<br>장소 유형: restaurant<br>촬영 내용: 윤아가 방문한 사인이 있는 국밥집<br>주소:광주광역시 광산구 송정로 8번길 5</div>`)[0];
+                popup_854a9bff6d414fc41be0e4259cd429c1.setContent(html_921780a1a1dd022f902ab87cb4821069);
+            
+        
+
+        marker_98fe35e50a1576be103b1345454e7790.bindPopup(popup_854a9bff6d414fc41be0e4259cd429c1)
+        ;
+
+        
+    
+    
+            var marker_066333613681d440ba3fbd8ad1c0cb35 = L.marker(
+                [35.136795, 126.79222],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_5cb367671f36867f4d322fef6eedc75c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_066333613681d440ba3fbd8ad1c0cb35.setIcon(icon_5cb367671f36867f4d322fef6eedc75c);
+        
+    
+        var popup_acb4d4ceef04056651b4b98f973fbcb9 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8e10203cb6c1401510a13bd62e618cee = $(`<div id="html_8e10203cb6c1401510a13bd62e618cee" style="width: 100.0%; height: 100.0%;">장소명: 영명국밥<br>장소 유형: restaurant<br>촬영 내용: 수요미식회 86회 모둠국밥<br>주소:광주광역시 광산구 송정로 8번길 5</div>`)[0];
+                popup_acb4d4ceef04056651b4b98f973fbcb9.setContent(html_8e10203cb6c1401510a13bd62e618cee);
+            
+        
+
+        marker_066333613681d440ba3fbd8ad1c0cb35.bindPopup(popup_acb4d4ceef04056651b4b98f973fbcb9)
+        ;
+
+        
+    
+    
+            var marker_0fac782bc63293f52d51f79b35720bf1 = L.marker(
+                [35.139246, 126.794978],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_8a019451ff2a127c4825561725b80c29 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_0fac782bc63293f52d51f79b35720bf1.setIcon(icon_8a019451ff2a127c4825561725b80c29);
+        
+    
+        var popup_c6cd347a956b292fdc51bc2c819c07b0 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_256ac3f70470322cbf3011620c914341 = $(`<div id="html_256ac3f70470322cbf3011620c914341" style="width: 100.0%; height: 100.0%;">장소명: 화정떡갈비<br>장소 유형: restaurant<br>촬영 내용: 수지가 런닝맨에서 OX 퀴즈를 했던 떡갈비집<br>주소:광주광역시 광산구 광산로29번길 6</div>`)[0];
+                popup_c6cd347a956b292fdc51bc2c819c07b0.setContent(html_256ac3f70470322cbf3011620c914341);
+            
+        
+
+        marker_0fac782bc63293f52d51f79b35720bf1.bindPopup(popup_c6cd347a956b292fdc51bc2c819c07b0)
+        ;
+
+        
+    
+    
+            var marker_04c1c375986ead77d6bd7b6e32c72092 = L.marker(
+                [35.177058, 126.925863],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_fd4d6bb2820857568bb056d24e4945cd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_04c1c375986ead77d6bd7b6e32c72092.setIcon(icon_fd4d6bb2820857568bb056d24e4945cd);
+        
+    
+        var popup_df0f3037d22e57e63d4c61ee2df9070d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1e144dc3d91616e9773c611655c14d92 = $(`<div id="html_1e144dc3d91616e9773c611655c14d92" style="width: 100.0%; height: 100.0%;">장소명: 카페 수<br>장소 유형: cafe<br>촬영 내용: 수지 어머니가 운영했던 카페<br>주소:광주광역시 북구 면앙로 127</div>`)[0];
+                popup_df0f3037d22e57e63d4c61ee2df9070d.setContent(html_1e144dc3d91616e9773c611655c14d92);
+            
+        
+
+        marker_04c1c375986ead77d6bd7b6e32c72092.bindPopup(popup_df0f3037d22e57e63d4c61ee2df9070d)
+        ;
+
+        
+    
+    
+            var marker_d4c1372b7b89d9804d81a93128df8b9c = L.marker(
+                [35.177725, 126.917838],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_c798c4750c843da3c8373073b9ca06b9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d4c1372b7b89d9804d81a93128df8b9c.setIcon(icon_c798c4750c843da3c8373073b9ca06b9);
+        
+    
+        var popup_1d7a44a4fbea8e1e72b727d07ed626c2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_44ea5288589964f836fc32df3e847c0d = $(`<div id="html_44ea5288589964f836fc32df3e847c0d" style="width: 100.0%; height: 100.0%;">장소명: 코끼리손짜장 문흥점<br>장소 유형: restaurant<br>촬영 내용: 수지 본가에 왔다가 먹은 동네 중식당<br>주소:광주광역시 북구 호동로 67</div>`)[0];
+                popup_1d7a44a4fbea8e1e72b727d07ed626c2.setContent(html_44ea5288589964f836fc32df3e847c0d);
+            
+        
+
+        marker_d4c1372b7b89d9804d81a93128df8b9c.bindPopup(popup_1d7a44a4fbea8e1e72b727d07ed626c2)
+        ;
+
+        
+    
+    
+            var marker_b3b88e79c877587e297c3a9a078ef469 = L.marker(
+                [35.150823, 126.913103],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_21aa14cfe0a2546225000950687c1149 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b3b88e79c877587e297c3a9a078ef469.setIcon(icon_21aa14cfe0a2546225000950687c1149);
+        
+    
+        var popup_6c347fda96dc60aaade35b155c732974 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7c6f33be1f292a11816000a9ef3998c4 = $(`<div id="html_7c6f33be1f292a11816000a9ef3998c4" style="width: 100.0%; height: 100.0%;">장소명: 스시오 NC웨이브충장점<br>장소 유형: restaurant<br>촬영 내용: 은혁이 사인 남기고 간 광주 회전초밥 무한리필집<br>주소:광주광역시 동구 중앙로 163</div>`)[0];
+                popup_6c347fda96dc60aaade35b155c732974.setContent(html_7c6f33be1f292a11816000a9ef3998c4);
+            
+        
+
+        marker_b3b88e79c877587e297c3a9a078ef469.bindPopup(popup_6c347fda96dc60aaade35b155c732974)
+        ;
+
+        
+    
+    
+            var marker_94a1d778ce883799e6fb02c025fd2b90 = L.marker(
+                [35.1389209, 126.7948576],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_78980176ecd93b9daee806b572f01b9b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_94a1d778ce883799e6fb02c025fd2b90.setIcon(icon_78980176ecd93b9daee806b572f01b9b);
+        
+    
+        var popup_9c9b4dc85b1101a7359237b6c8082046 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8500c2916241e63e733f5bd5ddab6e00 = $(`<div id="html_8500c2916241e63e733f5bd5ddab6e00" style="width: 100.0%; height: 100.0%;">장소명: 송정떡갈비 1호점<br>장소 유형: restaurant<br>촬영 내용: 식객허영만의백반기행 170회 육회비빔밥/떡갈비 맛집<br>주소:광주광역시 광산구 광산로29번길 1</div>`)[0];
+                popup_9c9b4dc85b1101a7359237b6c8082046.setContent(html_8500c2916241e63e733f5bd5ddab6e00);
+            
+        
+
+        marker_94a1d778ce883799e6fb02c025fd2b90.bindPopup(popup_9c9b4dc85b1101a7359237b6c8082046)
+        ;
+
+        
+    
+    
+            var marker_b6c4c41bbc4079500a67449d38083e70 = L.marker(
+                [35.1263535, 126.9062019],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_c85857451f44902919c33577f0b8a9fa = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b6c4c41bbc4079500a67449d38083e70.setIcon(icon_c85857451f44902919c33577f0b8a9fa);
+        
+    
+        var popup_b3106c3d087aac5013f577e79f5a6522 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_45a98addd87f26416fd4b76803982f8a = $(`<div id="html_45a98addd87f26416fd4b76803982f8a" style="width: 100.0%; height: 100.0%;">장소명: 앵무동<br>장소 유형: restaurant<br>촬영 내용: 식객허영만의백반기행 170회 연포탕/소고기낙지탕탕이 맛집<br>주소:광주광역시 남구 봉선로79번길 2</div>`)[0];
+                popup_b3106c3d087aac5013f577e79f5a6522.setContent(html_45a98addd87f26416fd4b76803982f8a);
+            
+        
+
+        marker_b6c4c41bbc4079500a67449d38083e70.bindPopup(popup_b3106c3d087aac5013f577e79f5a6522)
+        ;
+
+        
+    
+    
+            var marker_1eb5b0dc4f583771cbadaddbe626b046 = L.marker(
+                [35.1257017, 126.9319617],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_345ce2672f051f2a653510d562f68a13 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_1eb5b0dc4f583771cbadaddbe626b046.setIcon(icon_345ce2672f051f2a653510d562f68a13);
+        
+    
+        var popup_4dc989d54874773b6e45b8248838b3c1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_adae6c03a48bf92a5111d5755838fe58 = $(`<div id="html_adae6c03a48bf92a5111d5755838fe58" style="width: 100.0%; height: 100.0%;">장소명: 막동이회관<br>장소 유형: restaurant<br>촬영 내용: 식객허영만의백반기행 170회 생고기/토시살 맛집<br>주소:광주광역시 동구 남문로 614</div>`)[0];
+                popup_4dc989d54874773b6e45b8248838b3c1.setContent(html_adae6c03a48bf92a5111d5755838fe58);
+            
+        
+
+        marker_1eb5b0dc4f583771cbadaddbe626b046.bindPopup(popup_4dc989d54874773b6e45b8248838b3c1)
+        ;
+
+        
+    
+    
+            var marker_b250ba9391664a86673cb85f8336849d = L.marker(
+                [35.175866, 126.9314893],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_e68aefe99efe70dea62c60bcfc7a2e5a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b250ba9391664a86673cb85f8336849d.setIcon(icon_e68aefe99efe70dea62c60bcfc7a2e5a);
+        
+    
+        var popup_424f3e59694a354375c8600cef7c8413 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b9bacad89ccae424420d29c52e57dd20 = $(`<div id="html_b9bacad89ccae424420d29c52e57dd20" style="width: 100.0%; height: 100.0%;">장소명: 광신보리밥<br>장소 유형: restaurant<br>촬영 내용: 식객허영만의백반기행 23회 보리밥<br>주소:광주광역시 북구 두리봉길 2-1</div>`)[0];
+                popup_424f3e59694a354375c8600cef7c8413.setContent(html_b9bacad89ccae424420d29c52e57dd20);
+            
+        
+
+        marker_b250ba9391664a86673cb85f8336849d.bindPopup(popup_424f3e59694a354375c8600cef7c8413)
+        ;
+
+        
+    
+    
+            var marker_6c84f4c0734c800fbeaa9365a1ba63b3 = L.marker(
+                [35.170136, 126.8944311],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_55f693ab7147f1db0b328f6f2ea1765f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_6c84f4c0734c800fbeaa9365a1ba63b3.setIcon(icon_55f693ab7147f1db0b328f6f2ea1765f);
+        
+    
+        var popup_de0d0e7aa623bd74c6df7da7f3279cb6 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_94f2d5252683894c8557a7cf00605b54 = $(`<div id="html_94f2d5252683894c8557a7cf00605b54" style="width: 100.0%; height: 100.0%;">장소명: 행복한밥상지도로<br>장소 유형: restaurant<br>촬영 내용: 식객허영만의백반기행 170회 계절음식특선메뉴/농어회방풍낫토무침 맛집<br>주소:광주광역시 북구 서암대로100번길 25</div>`)[0];
+                popup_de0d0e7aa623bd74c6df7da7f3279cb6.setContent(html_94f2d5252683894c8557a7cf00605b54);
+            
+        
+
+        marker_6c84f4c0734c800fbeaa9365a1ba63b3.bindPopup(popup_de0d0e7aa623bd74c6df7da7f3279cb6)
+        ;
+
+        
+    
+    
+            var marker_3821b33ae5e2f739ebf51f912c086308 = L.marker(
+                [35.1470404, 126.9265744],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_ee5f4ab04123a221f4a26ecbe93a3cb7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_3821b33ae5e2f739ebf51f912c086308.setIcon(icon_ee5f4ab04123a221f4a26ecbe93a3cb7);
+        
+    
+        var popup_11aef827d10285985e2602687e224a39 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e0853a2e71a408eec96e0b6659dbf619 = $(`<div id="html_e0853a2e71a408eec96e0b6659dbf619" style="width: 100.0%; height: 100.0%;">장소명: 미미원<br>장소 유형: restaurant<br>촬영 내용: 식신로드1 120회 육전/산낙지전접기 맛집<br>주소:광주광역시 동구 백서로 218</div>`)[0];
+                popup_11aef827d10285985e2602687e224a39.setContent(html_e0853a2e71a408eec96e0b6659dbf619);
+            
+        
+
+        marker_3821b33ae5e2f739ebf51f912c086308.bindPopup(popup_11aef827d10285985e2602687e224a39)
+        ;
+
+        
+    
+    
+            var marker_8361df8b63bcccaffe4bb3232db9d900 = L.marker(
+                [35.138288, 126.915896],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_594a1c9bccada20f93eddcfb42a2a84d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8361df8b63bcccaffe4bb3232db9d900.setIcon(icon_594a1c9bccada20f93eddcfb42a2a84d);
+        
+    
+        var popup_f540f04e21a0c29c870f5d6a78901be8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f08274b21bdb9989372cba48d06dfb97 = $(`<div id="html_f08274b21bdb9989372cba48d06dfb97" style="width: 100.0%; height: 100.0%;">장소명: 오웬 기념각<br>장소 유형: playground<br>촬영 내용: 암살을 촬영한 광주의 이국적 기념관<br>주소:광주광역시 남구 백서로70번길 6</div>`)[0];
+                popup_f540f04e21a0c29c870f5d6a78901be8.setContent(html_f08274b21bdb9989372cba48d06dfb97);
+            
+        
+
+        marker_8361df8b63bcccaffe4bb3232db9d900.bindPopup(popup_f540f04e21a0c29c870f5d6a78901be8)
+        ;
+
+        
+    
+    
+            var marker_3844a4934b62214879eba4e06df00fbe = L.marker(
+                [35.14893, 126.9153],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_f1c09a318c7771eb4171d2e695ae2b6a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_3844a4934b62214879eba4e06df00fbe.setIcon(icon_f1c09a318c7771eb4171d2e695ae2b6a);
+        
+    
+        var popup_c04f54981934c02b2637ae7a982c1aa5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a3c61dbc813907740cf7048dc7785e9b = $(`<div id="html_a3c61dbc813907740cf7048dc7785e9b" style="width: 100.0%; height: 100.0%;">장소명: 충장로<br>장소 유형: playground<br>촬영 내용: 6화에서 학교 동창회가 끝난 후 나지나(신도현)는 막 택시를 잡으려고 한다. 이현규(강태오)가 그녀를 집에 데려다 주겠다고 제안하고 그녀는 거절하고 그는 떠난다. 둘은 이렇게 헤어지고 첫 사랑이 끝난다<br>주소:광주광역시 동구 충장로3가</div>`)[0];
+                popup_c04f54981934c02b2637ae7a982c1aa5.setContent(html_a3c61dbc813907740cf7048dc7785e9b);
+            
+        
+
+        marker_3844a4934b62214879eba4e06df00fbe.bindPopup(popup_c04f54981934c02b2637ae7a982c1aa5)
+        ;
+
+        
+    
+    
+            var marker_a0d8f1e73f4a3cbb8c52b7e6e1aa2c86 = L.marker(
+                [35.1364035, 126.791996],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_c94fb259f2437a73775c99196f8048ba = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a0d8f1e73f4a3cbb8c52b7e6e1aa2c86.setIcon(icon_c94fb259f2437a73775c99196f8048ba);
+        
+    
+        var popup_efe2ea7ebc7b52b3f89958e0a8498003 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_61843fc54f4aba3e4df90f02cb520394 = $(`<div id="html_61843fc54f4aba3e4df90f02cb520394" style="width: 100.0%; height: 100.0%;">장소명: 1913 송정역 시장<br>장소 유형: playground<br>촬영 내용: 에버글로우LAND에서 아샤와 이런이 간 곳<br>주소:광주광역시 광산구 송정로8번길 13</div>`)[0];
+                popup_efe2ea7ebc7b52b3f89958e0a8498003.setContent(html_61843fc54f4aba3e4df90f02cb520394);
+            
+        
+
+        marker_a0d8f1e73f4a3cbb8c52b7e6e1aa2c86.bindPopup(popup_efe2ea7ebc7b52b3f89958e0a8498003)
+        ;
+
+        
+    
+    
+            var marker_e7e6cfe972d7936231bbd56b3cd439e7 = L.marker(
+                [35.136559, 126.79221],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_3051eebb7cd27152954439f82c953c72 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_e7e6cfe972d7936231bbd56b3cd439e7.setIcon(icon_3051eebb7cd27152954439f82c953c72);
+        
+    
+        var popup_6731ccab10b2e6d590d0a59c26e70062 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_fd8800fb523651a1d00cfdd61d53f2f1 = $(`<div id="html_fd8800fb523651a1d00cfdd61d53f2f1" style="width: 100.0%; height: 100.0%;">장소명: 갱소년<br>장소 유형: cafe<br>촬영 내용: 아샤와 이런이 방문한 젤리양갱 디저트 카페<br>주소:광주광역시 광산구 송정로8번길 7-4</div>`)[0];
+                popup_6731ccab10b2e6d590d0a59c26e70062.setContent(html_fd8800fb523651a1d00cfdd61d53f2f1);
+            
+        
+
+        marker_e7e6cfe972d7936231bbd56b3cd439e7.bindPopup(popup_6731ccab10b2e6d590d0a59c26e70062)
+        ;
+
+        
+    
+    
+            var marker_a04ba12c388929cbbde22910cc2e3fc8 = L.marker(
+                [35.148844, 126.921423],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_69d1694473c306b72e42e709198cdd36 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a04ba12c388929cbbde22910cc2e3fc8.setIcon(icon_69d1694473c306b72e42e709198cdd36);
+        
+    
+        var popup_34e1f5f6437e42911c039dd451f66baf = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_56265d158d70cdbf94a8ce4cbf187e85 = $(`<div id="html_56265d158d70cdbf94a8ce4cbf187e85" style="width: 100.0%; height: 100.0%;">장소명: 국립아시아문화전당 하늘마당<br>장소 유형: playground<br>촬영 내용: 하영이가 공원을 거닐며 짠짠짠 노래 부르던 곳<br>주소:광주광역시 동구 문화전당로 38</div>`)[0];
+                popup_34e1f5f6437e42911c039dd451f66baf.setContent(html_56265d158d70cdbf94a8ce4cbf187e85);
+            
+        
+
+        marker_a04ba12c388929cbbde22910cc2e3fc8.bindPopup(popup_34e1f5f6437e42911c039dd451f66baf)
+        ;
+
+        
+    
+    
+            var marker_b2c6d9f70cd3ce4cffeabb43e0fd40b2 = L.marker(
+                [35.147228, 126.914446],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_9e7c0d34cf93db038afb0a53af8d6f5d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b2c6d9f70cd3ce4cffeabb43e0fd40b2.setIcon(icon_9e7c0d34cf93db038afb0a53af8d6f5d);
+        
+    
+        var popup_0d8c112b125816777f02b0af097b0ecb = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3827f6b11cfbc8b7df955783ace8cec6 = $(`<div id="html_3827f6b11cfbc8b7df955783ace8cec6" style="width: 100.0%; height: 100.0%;">장소명: 고수닭갈비 충장점<br>장소 유형: restaurant<br>촬영 내용: 하영이 친구들이랑 광주 시내에서 먹은 닭갈비집<br>주소:광주광역시 동구 중앙로 160번길 16-4</div>`)[0];
+                popup_0d8c112b125816777f02b0af097b0ecb.setContent(html_3827f6b11cfbc8b7df955783ace8cec6);
+            
+        
+
+        marker_b2c6d9f70cd3ce4cffeabb43e0fd40b2.bindPopup(popup_0d8c112b125816777f02b0af097b0ecb)
+        ;
+
+        
+    
+    
+            var marker_ee7f774e6741157293ac96179d5fa1c3 = L.marker(
+                [35.147701, 126.917662],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_5e58e2fa58169df3d77d59d9648b6a56 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ee7f774e6741157293ac96179d5fa1c3.setIcon(icon_5e58e2fa58169df3d77d59d9648b6a56);
+        
+    
+        var popup_9a81cbfae4482b703fbae1cf6cbc71b4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_da3d97ed4b899229717801d649c4fdad = $(`<div id="html_da3d97ed4b899229717801d649c4fdad" style="width: 100.0%; height: 100.0%;">장소명: 궁전제과 충장점<br>장소 유형: cafe<br>촬영 내용: 하영이가 광주에서 친구들이랑 먹으러 간 빵집<br>주소:광주광역시 동구 충장로 93-6</div>`)[0];
+                popup_9a81cbfae4482b703fbae1cf6cbc71b4.setContent(html_da3d97ed4b899229717801d649c4fdad);
+            
+        
+
+        marker_ee7f774e6741157293ac96179d5fa1c3.bindPopup(popup_9a81cbfae4482b703fbae1cf6cbc71b4)
+        ;
+
+        
+    
+    
+            var marker_4c822913f1640c0e5de4c57cb4df73e3 = L.marker(
+                [35.1591047, 126.842787],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_b4fdd0f196ad3fd6bf9644dc8f1a293c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4c822913f1640c0e5de4c57cb4df73e3.setIcon(icon_b4fdd0f196ad3fd6bf9644dc8f1a293c);
+        
+    
+        var popup_70de179758d0302e55d77f4104cdaf28 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_645a756d96a1e9586da0910bb954ae03 = $(`<div id="html_645a756d96a1e9586da0910bb954ae03" style="width: 100.0%; height: 100.0%;">장소명: 빛고을흑염소광주본점<br>장소 유형: restaurant<br>촬영 내용: 한국인의밥상 232회 흑염소탕, 흑염소수육 맛집<br>주소:광주광역시 서구 내방로 19</div>`)[0];
+                popup_70de179758d0302e55d77f4104cdaf28.setContent(html_645a756d96a1e9586da0910bb954ae03);
+            
+        
+
+        marker_4c822913f1640c0e5de4c57cb4df73e3.bindPopup(popup_70de179758d0302e55d77f4104cdaf28)
+        ;
+
+        
+    
+    
+            var marker_794013f8fcd3717763d69e4c31e259da = L.marker(
+                [35.179424, 126.810937],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_523a6b39990d364dc42e2b58671c8f1e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_794013f8fcd3717763d69e4c31e259da.setIcon(icon_523a6b39990d364dc42e2b58671c8f1e);
+        
+    
+        var popup_83eadd850d8e556e323ed5a469276e25 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6e53b09a5cf45634ef2370e66b145ba5 = $(`<div id="html_6e53b09a5cf45634ef2370e66b145ba5" style="width: 100.0%; height: 100.0%;">장소명: 클럽300롤러<br>장소 유형: playground<br>촬영 내용: ATEEZ 윤호가 휴가 때 방문한 롤러장<br>주소:광주광역시 서구 시청로 67 프리미엄아울렛2층</div>`)[0];
+                popup_83eadd850d8e556e323ed5a469276e25.setContent(html_6e53b09a5cf45634ef2370e66b145ba5);
+            
+        
+
+        marker_794013f8fcd3717763d69e4c31e259da.bindPopup(popup_83eadd850d8e556e323ed5a469276e25)
+        ;
+
+        
+    
+    
+            var marker_c920706626003879096adc8b4d04ad23 = L.marker(
+                [35.1364035, 126.791996],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_9523ba7bebefa08b03b30b086002b625 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c920706626003879096adc8b4d04ad23.setIcon(icon_9523ba7bebefa08b03b30b086002b625);
+        
+    
+        var popup_e65a9ce733e8105ab09545464c20be9d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9502eafaa1b5f5a8e2d07cc06eb9ed62 = $(`<div id="html_9502eafaa1b5f5a8e2d07cc06eb9ed62" style="width: 100.0%; height: 100.0%;">장소명: 1913 송정역 시장<br>장소 유형: playground<br>촬영 내용: 이민혁과 서은광이 방문한 시장 거리<br>주소:광주광역시 광산구 송정로8번길 13</div>`)[0];
+                popup_e65a9ce733e8105ab09545464c20be9d.setContent(html_9502eafaa1b5f5a8e2d07cc06eb9ed62);
+            
+        
+
+        marker_c920706626003879096adc8b4d04ad23.bindPopup(popup_e65a9ce733e8105ab09545464c20be9d)
+        ;
+
+        
+    
+    
+            var marker_e34c59e94ff4f235f1735bef51778388 = L.marker(
+                [35.1365004, 126.7917562],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_b66403d485b9946b02c773da0f3acbcb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_e34c59e94ff4f235f1735bef51778388.setIcon(icon_b66403d485b9946b02c773da0f3acbcb);
+        
+    
+        var popup_24722b6ab5201fc500ffe1858d622d00 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e1a779e94f84c6caaecf5922ffe40401 = $(`<div id="html_e1a779e94f84c6caaecf5922ffe40401" style="width: 100.0%; height: 100.0%;">장소명: 동네호떡<br>장소 유형: cafe<br>촬영 내용: VJ특공대 890회 호떡 맛집<br>주소:광주광역시 광산구 송정로8번길 14</div>`)[0];
+                popup_24722b6ab5201fc500ffe1858d622d00.setContent(html_e1a779e94f84c6caaecf5922ffe40401);
+            
+        
+
+        marker_e34c59e94ff4f235f1735bef51778388.bindPopup(popup_24722b6ab5201fc500ffe1858d622d00)
+        ;
+
+        
+    
+    
+            var marker_31f174f17c7516a68fe0c2aba26b4171 = L.marker(
+                [35.1365563, 126.7922096],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_78e2514cdf622cf1c55b86548c980074 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_31f174f17c7516a68fe0c2aba26b4171.setIcon(icon_78e2514cdf622cf1c55b86548c980074);
+        
+    
+        var popup_cd8e7f2d8462b2275c890b8c2bd62365 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c1f4baa6574830338d495f8f25778f1b = $(`<div id="html_c1f4baa6574830338d495f8f25778f1b" style="width: 100.0%; height: 100.0%;">장소명: 갱소년<br>장소 유형: restaurant<br>촬영 내용: VJ특공대 888회 양갱 맛집<br>주소:광주광역시 광산구 송정로8번길 7-4</div>`)[0];
+                popup_cd8e7f2d8462b2275c890b8c2bd62365.setContent(html_c1f4baa6574830338d495f8f25778f1b);
+            
+        
+
+        marker_31f174f17c7516a68fe0c2aba26b4171.bindPopup(popup_cd8e7f2d8462b2275c890b8c2bd62365)
+        ;
+
+        
+    
+    
+            var marker_b6ddf905163f09e01c8043e5314872e1 = L.marker(
+                [35.1540411, 126.9175168],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_9c0f6f7260938109f6ee912aab8bff77 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b6ddf905163f09e01c8043e5314872e1.setIcon(icon_9c0f6f7260938109f6ee912aab8bff77);
+        
+    
+        var popup_92879af6ad865ed9e7fa8b08fd706ca3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_289fb50cb3073709de89bb5bd14cb368 = $(`<div id="html_289fb50cb3073709de89bb5bd14cb368" style="width: 100.0%; height: 100.0%;">장소명: 해뜨는식당<br>장소 유형: restaurant<br>촬영 내용: VJ특공대 853회 백반 맛집<br>주소:광주광역시 동구 제봉로190번길 7-2</div>`)[0];
+                popup_92879af6ad865ed9e7fa8b08fd706ca3.setContent(html_289fb50cb3073709de89bb5bd14cb368);
+            
+        
+
+        marker_b6ddf905163f09e01c8043e5314872e1.bindPopup(popup_92879af6ad865ed9e7fa8b08fd706ca3)
+        ;
+
+        
+    
+    
+            var marker_ed99e30ee91aa1ea5b5118ef80686b4e = L.marker(
+                [35.161388, 126.905557],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_cce94d7b4ee3bba2dfc73212be00f7a7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ed99e30ee91aa1ea5b5118ef80686b4e.setIcon(icon_cce94d7b4ee3bba2dfc73212be00f7a7);
+        
+    
+        var popup_0e29e612555f58fdf3869b298ed96771 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_eef1851fd2b7b7e8a6a5fc1e444eead2 = $(`<div id="html_eef1851fd2b7b7e8a6a5fc1e444eead2" style="width: 100.0%; height: 100.0%;">장소명: 영미오리탕<br>장소 유형: restaurant<br>촬영 내용: VJ특공대 668회 들깨오리탕<br>주소:광주광역시 북구 경양로 126</div>`)[0];
+                popup_0e29e612555f58fdf3869b298ed96771.setContent(html_eef1851fd2b7b7e8a6a5fc1e444eead2);
+            
+        
+
+        marker_ed99e30ee91aa1ea5b5118ef80686b4e.bindPopup(popup_0e29e612555f58fdf3869b298ed96771)
+        ;
+
+        
+    
+    
+            var marker_81871cd7b37d0beac4bc267cc9ebad5a = L.marker(
+                [35.1750813, 126.9606409],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_10172e60846ea17ea1d7b3250096e08a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_81871cd7b37d0beac4bc267cc9ebad5a.setIcon(icon_10172e60846ea17ea1d7b3250096e08a);
+        
+    
+        var popup_87ce12d0457338a093c65c7346c678e1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f6819f543529a03979252a3e21b05b51 = $(`<div id="html_f6819f543529a03979252a3e21b05b51" style="width: 100.0%; height: 100.0%;">장소명: 무돌주막<br>장소 유형: restaurant<br>촬영 내용: VJ특공대 884회 막걸리/통삼겹살 맛집<br>주소:광주광역시 북구 신촌샛강길 120-3</div>`)[0];
+                popup_87ce12d0457338a093c65c7346c678e1.setContent(html_f6819f543529a03979252a3e21b05b51);
+            
+        
+
+        marker_81871cd7b37d0beac4bc267cc9ebad5a.bindPopup(popup_87ce12d0457338a093c65c7346c678e1)
+        ;
+
+        
+    
+    
+            var marker_204fcb97cb3bd497f0519f3d9bf5bbdd = L.marker(
+                [35.1510301, 126.8499685],
+                {}
+            ).addTo(marker_cluster_c434e2cb8329e2c54c2537733eba19d5);
+        
+    
+            var icon_60b2cca5cbb288754f58a2f33d0e72a2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_204fcb97cb3bd497f0519f3d9bf5bbdd.setIcon(icon_60b2cca5cbb288754f58a2f33d0e72a2);
+        
+    
+        var popup_70d67437d73a126c3e9d8be5f559fcfd = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1f29d3d26b1e75d97cd4ea599e3e1a69 = $(`<div id="html_1f29d3d26b1e75d97cd4ea599e3e1a69" style="width: 100.0%; height: 100.0%;">장소명: 갓포이에<br>장소 유형: restaurant<br>촬영 내용: VJ특공대 849회 모둠회정식 맛집<br>주소:광주광역시 서구 상무연하로 31 2층</div>`)[0];
+                popup_70d67437d73a126c3e9d8be5f559fcfd.setContent(html_1f29d3d26b1e75d97cd4ea599e3e1a69);
+            
+        
+
+        marker_204fcb97cb3bd497f0519f3d9bf5bbdd.bindPopup(popup_70d67437d73a126c3e9d8be5f559fcfd)
+        ;
+
+        
+    
+</script>
+</html>

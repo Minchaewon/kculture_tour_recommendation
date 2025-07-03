@@ -1,0 +1,2575 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_39bbeff6d81232eb603090fc94e9c54b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_39bbeff6d81232eb603090fc94e9c54b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_39bbeff6d81232eb603090fc94e9c54b = L.map(
+                "map_39bbeff6d81232eb603090fc94e9c54b",
+                {
+                    center: [36.3504, 127.3845],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_bf30c953cc74b35bc40738c02ccd9ec3 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_39bbeff6d81232eb603090fc94e9c54b);
+        
+    
+            var tile_layer_f8fe14420b0522d87b52431bdfd9e913 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+            var mini_map_2a922a6f7a4d1999030f79fdca640979 = new L.Control.MiniMap(
+                tile_layer_f8fe14420b0522d87b52431bdfd9e913,
+                {"autoToggleDisplay": false, "centerFixed": false, "collapsedHeight": 25, "collapsedWidth": 25, "height": 150, "minimized": false, "position": "bottomright", "tiles": "OpenStreetMap", "toggleDisplay": true, "width": 150, "zoomAnimation": false, "zoomLevelOffset": -5}
+            );
+            map_39bbeff6d81232eb603090fc94e9c54b.addControl(mini_map_2a922a6f7a4d1999030f79fdca640979);
+        
+    
+            var marker_cluster_5e274e38ced1b5b149df8f695c4cf13e = L.markerClusterGroup(
+                {}
+            );
+            map_39bbeff6d81232eb603090fc94e9c54b.addLayer(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var marker_e01b42a12a86f2dc899e710404ac07de = L.marker(
+                [36.3069083, 127.4510313],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_19ac87a5c01069b1ad9e7d56d5ca48e4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_e01b42a12a86f2dc899e710404ac07de.setIcon(icon_19ac87a5c01069b1ad9e7d56d5ca48e4);
+        
+    
+        var popup_0df77c32ef3023153f3263c0abbdf5f3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b8209b4aedab4a7837279fe53edc32a8 = $(`<div id="html_b8209b4aedab4a7837279fe53edc32a8" style="width: 100.0%; height: 100.0%;">장소명: 짬뽕차이나<br>장소 유형: restaurant<br>촬영 내용: 2TV생생정보 1618회 중화요리뷔페 맛집<br>주소:대전광역시 동구 대전로 463</div>`)[0];
+                popup_0df77c32ef3023153f3263c0abbdf5f3.setContent(html_b8209b4aedab4a7837279fe53edc32a8);
+            
+        
+
+        marker_e01b42a12a86f2dc899e710404ac07de.bindPopup(popup_0df77c32ef3023153f3263c0abbdf5f3)
+        ;
+
+        
+    
+    
+            var marker_ce1d1ea2da913640041ca5c66d962213 = L.marker(
+                [36.3866823, 127.480494],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_764916dbd91664f5a5e730bcdad2c1bb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ce1d1ea2da913640041ca5c66d962213.setIcon(icon_764916dbd91664f5a5e730bcdad2c1bb);
+        
+    
+        var popup_f776248ce8d18abe9edadb4439c92d37 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_609c60fc553650aea88e9ae9634df99f = $(`<div id="html_609c60fc553650aea88e9ae9634df99f" style="width: 100.0%; height: 100.0%;">장소명: 큰뫼골<br>장소 유형: restaurant<br>촬영 내용: 2TV생생정보 1587회 민물새우탕 맛집<br>주소:대전광역시 동구 대청호수로 723-5</div>`)[0];
+                popup_f776248ce8d18abe9edadb4439c92d37.setContent(html_609c60fc553650aea88e9ae9634df99f);
+            
+        
+
+        marker_ce1d1ea2da913640041ca5c66d962213.bindPopup(popup_f776248ce8d18abe9edadb4439c92d37)
+        ;
+
+        
+    
+    
+            var marker_07258a092b043050ae4ad0683dad828f = L.marker(
+                [36.3692968, 127.3817551],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_dc3ebeaa7e9d3b7607419b470d670dab = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_07258a092b043050ae4ad0683dad828f.setIcon(icon_dc3ebeaa7e9d3b7607419b470d670dab);
+        
+    
+        var popup_9bf3bf1ccd6eca80fb86d1e09664f9d3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_20df69c1c35b29a57aa10f24c236fe71 = $(`<div id="html_20df69c1c35b29a57aa10f24c236fe71" style="width: 100.0%; height: 100.0%;">장소명: 바보곰탕<br>장소 유형: restaurant<br>촬영 내용: 2TV생생정보 1641회 한우방치찜 맛집<br>주소:대전광역시 서구 둔산대로117번길 95 리더스타운</div>`)[0];
+                popup_9bf3bf1ccd6eca80fb86d1e09664f9d3.setContent(html_20df69c1c35b29a57aa10f24c236fe71);
+            
+        
+
+        marker_07258a092b043050ae4ad0683dad828f.bindPopup(popup_9bf3bf1ccd6eca80fb86d1e09664f9d3)
+        ;
+
+        
+    
+    
+            var marker_912044d0cce13b34c1b760f10b36ad74 = L.marker(
+                [36.3591291, 127.3772627],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_bb2eedae8b710d8901e6954ca4bb9ad4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_912044d0cce13b34c1b760f10b36ad74.setIcon(icon_bb2eedae8b710d8901e6954ca4bb9ad4);
+        
+    
+        var popup_4266a161927dd77d6fb2123ebdd4e5dc = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_986ded9a86e7d98dabf9fdbae0f109fa = $(`<div id="html_986ded9a86e7d98dabf9fdbae0f109fa" style="width: 100.0%; height: 100.0%;">장소명: 월광박속낙지탕<br>장소 유형: restaurant<br>촬영 내용: 2TV생생정보 1663회 박속낙지탕 맛집<br>주소:대전광역시 서구 한밭대로707번길 27 2층</div>`)[0];
+                popup_4266a161927dd77d6fb2123ebdd4e5dc.setContent(html_986ded9a86e7d98dabf9fdbae0f109fa);
+            
+        
+
+        marker_912044d0cce13b34c1b760f10b36ad74.bindPopup(popup_4266a161927dd77d6fb2123ebdd4e5dc)
+        ;
+
+        
+    
+    
+            var marker_fc192fb7c955a6a10e5d7e4f6a0e5e66 = L.marker(
+                [36.416073, 127.3840753],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_a8f2c88600543c453223e150db1e7fb2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_fc192fb7c955a6a10e5d7e4f6a0e5e66.setIcon(icon_a8f2c88600543c453223e150db1e7fb2);
+        
+    
+        var popup_dbfe64502c237c52116672883bfc0ee5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5694c56826e688c2482025bb6b237583 = $(`<div id="html_5694c56826e688c2482025bb6b237583" style="width: 100.0%; height: 100.0%;">장소명: 산골묵집<br>장소 유형: restaurant<br>촬영 내용: 2TV생생정보 1600회 채묵, 도토리전, 보리밥 맛집<br>주소:대전광역시 유성구 관용로63번길 47</div>`)[0];
+                popup_dbfe64502c237c52116672883bfc0ee5.setContent(html_5694c56826e688c2482025bb6b237583);
+            
+        
+
+        marker_fc192fb7c955a6a10e5d7e4f6a0e5e66.bindPopup(popup_dbfe64502c237c52116672883bfc0ee5)
+        ;
+
+        
+    
+    
+            var marker_30c427fa4002215dfbef31c9271abd5a = L.marker(
+                [36.3901104, 127.3502532],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_cf5826ad7103b09a40fff83b42005e59 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_30c427fa4002215dfbef31c9271abd5a.setIcon(icon_cf5826ad7103b09a40fff83b42005e59);
+        
+    
+        var popup_725231b73d38f0314f684eb54c693e03 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7357ae3f18ce0494870e679fac8a8c86 = $(`<div id="html_7357ae3f18ce0494870e679fac8a8c86" style="width: 100.0%; height: 100.0%;">장소명: 숯골원냉면 본점<br>장소 유형: restaurant<br>촬영 내용: 2TV생생정보 1616회 냉면 맛집<br>주소:대전광역시 유성구 신성로84번길 18</div>`)[0];
+                popup_725231b73d38f0314f684eb54c693e03.setContent(html_7357ae3f18ce0494870e679fac8a8c86);
+            
+        
+
+        marker_30c427fa4002215dfbef31c9271abd5a.bindPopup(popup_725231b73d38f0314f684eb54c693e03)
+        ;
+
+        
+    
+    
+            var marker_6ffa13fecfca57e8172162afc262a027 = L.marker(
+                [36.369464, 127.294854],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_73426b4e915e921c6e519365943124a0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_6ffa13fecfca57e8172162afc262a027.setIcon(icon_73426b4e915e921c6e519365943124a0);
+        
+    
+        var popup_e190a432328bf0db2bac2d647cce892e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3149769c903e6132e103e38dff47d93b = $(`<div id="html_3149769c903e6132e103e38dff47d93b" style="width: 100.0%; height: 100.0%;">장소명: 국립대전현충원<br>장소 유형: playground<br>촬영 내용: 5회에서 '국회의사당 폭탄 테러 희생자 추도식'이 열리는 곳이 바로 이 묘지다.<br>주소:대전광역시 유성구 현충원로 251</div>`)[0];
+                popup_e190a432328bf0db2bac2d647cce892e.setContent(html_3149769c903e6132e103e38dff47d93b);
+            
+        
+
+        marker_6ffa13fecfca57e8172162afc262a027.bindPopup(popup_e190a432328bf0db2bac2d647cce892e)
+        ;
+
+        
+    
+    
+            var marker_844509699e0aea01e8efcb44212dadbd = L.marker(
+                [36.3297717, 127.4316496],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_7ddac6bb6d853c8fcc25bacf7af31619 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_844509699e0aea01e8efcb44212dadbd.setIcon(icon_7ddac6bb6d853c8fcc25bacf7af31619);
+        
+    
+        var popup_c9a3943b83e4326939a8bf00e5b99a9e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_32efbd18a689d279eb407ccb3cc802bd = $(`<div id="html_32efbd18a689d279eb407ccb3cc802bd" style="width: 100.0%; height: 100.0%;">장소명: 서울치킨<br>장소 유형: restaurant<br>촬영 내용: 6시내고향 7647회 치킨 맛집<br>주소:대전광역시 동구 대전로791번길 28</div>`)[0];
+                popup_c9a3943b83e4326939a8bf00e5b99a9e.setContent(html_32efbd18a689d279eb407ccb3cc802bd);
+            
+        
+
+        marker_844509699e0aea01e8efcb44212dadbd.bindPopup(popup_c9a3943b83e4326939a8bf00e5b99a9e)
+        ;
+
+        
+    
+    
+            var marker_c567605c6ad095a07769e39b75b8a0db = L.marker(
+                [36.3540697, 127.3685334],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_fd79285bb934cfe0ebd3b73fe18997e8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c567605c6ad095a07769e39b75b8a0db.setIcon(icon_fd79285bb934cfe0ebd3b73fe18997e8);
+        
+    
+        var popup_9ed5b5b1723080507c876d6b11592e7f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_102cac3fb3cb54c5eafbb67e1be8b0c3 = $(`<div id="html_102cac3fb3cb54c5eafbb67e1be8b0c3" style="width: 100.0%; height: 100.0%;">장소명: 옛날손칼국수<br>장소 유형: restaurant<br>촬영 내용: 6시내고향 7626회 칼국수 맛집<br>주소:대전광역시 서구 월평중로4번길 82</div>`)[0];
+                popup_9ed5b5b1723080507c876d6b11592e7f.setContent(html_102cac3fb3cb54c5eafbb67e1be8b0c3);
+            
+        
+
+        marker_c567605c6ad095a07769e39b75b8a0db.bindPopup(popup_9ed5b5b1723080507c876d6b11592e7f)
+        ;
+
+        
+    
+    
+            var marker_d3100932bc8d0cb315edf14157241ebe = L.marker(
+                [36.376321, 127.39045],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_70be98491872ca2f9dcec5178dd283be = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d3100932bc8d0cb315edf14157241ebe.setIcon(icon_70be98491872ca2f9dcec5178dd283be);
+        
+    
+        var popup_cab715c29de0858fce29848723dc4a5f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3fff44b72bab59e5dbc82e21eb054452 = $(`<div id="html_3fff44b72bab59e5dbc82e21eb054452" style="width: 100.0%; height: 100.0%;">장소명: 골프존 조이마루<br>장소 유형: playground<br>촬영 내용: 드라마에서 바로오피스의 일부로 나온다.<br>주소:대전광역시 유성구 엑스포로97번길 40</div>`)[0];
+                popup_cab715c29de0858fce29848723dc4a5f.setContent(html_3fff44b72bab59e5dbc82e21eb054452);
+            
+        
+
+        marker_d3100932bc8d0cb315edf14157241ebe.bindPopup(popup_cab715c29de0858fce29848723dc4a5f)
+        ;
+
+        
+    
+    
+            var marker_beb86f70aa6a3245e587881b158111c3 = L.marker(
+                [36.32977, 127.4393],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_1bb2e073eea799c2b0c74e09d192e428 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_beb86f70aa6a3245e587881b158111c3.setIcon(icon_1bb2e073eea799c2b0c74e09d192e428);
+        
+    
+        var popup_342a0d3735a2494d2705955346956e99 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_65cf11938b6183c4963a30a3b60edda0 = $(`<div id="html_65cf11938b6183c4963a30a3b60edda0" style="width: 100.0%; height: 100.0%;">장소명: 블루부코<br>장소 유형: restaurant<br>촬영 내용: 경찰학교 캠퍼스 인근에 위치한 펍 '고씨맥주'로 등장한다. 학원의 학생들은 물론 교직원들 사이에서도 인기가 많다.<br>주소:대전광역시 동구 동광장로 16</div>`)[0];
+                popup_342a0d3735a2494d2705955346956e99.setContent(html_65cf11938b6183c4963a30a3b60edda0);
+            
+        
+
+        marker_beb86f70aa6a3245e587881b158111c3.bindPopup(popup_342a0d3735a2494d2705955346956e99)
+        ;
+
+        
+    
+    
+            var marker_ed3b0e5e147d42cb8504c4174e3b972a = L.marker(
+                [36.336274, 127.46021],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_a52fbc309efa1409e321eed04f358de9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ed3b0e5e147d42cb8504c4174e3b972a.setIcon(icon_a52fbc309efa1409e321eed04f358de9);
+        
+    
+        var popup_a05b504516a0d2dab65ebd9880d0ead8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d77b2d63dc48d8dfa17d8707e7934448 = $(`<div id="html_d77b2d63dc48d8dfa17d8707e7934448" style="width: 100.0%; height: 100.0%;">장소명: 대전대학교<br>장소 유형: playground<br>촬영 내용: 3회에서 대학축제가 열리는 곳, 그곳에서 K/송이경(김혜준) 여자친구의 불법 영상물을 유포하고 벌금을 물고 풀려난 박규일(신윤섭)을 죽이기 위한 교묘한 음모를 꾸민다<br>주소:대전광역시 동구 대학로 62</div>`)[0];
+                popup_a05b504516a0d2dab65ebd9880d0ead8.setContent(html_d77b2d63dc48d8dfa17d8707e7934448);
+            
+        
+
+        marker_ed3b0e5e147d42cb8504c4174e3b972a.bindPopup(popup_a05b504516a0d2dab65ebd9880d0ead8)
+        ;
+
+        
+    
+    
+            var marker_9afc36d25903051207ffebe091eb627c = L.marker(
+                [36.366507, 127.383873],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_d3ee991da965cc055abb219212d6eddb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_9afc36d25903051207ffebe091eb627c.setIcon(icon_d3ee991da965cc055abb219212d6eddb);
+        
+    
+        var popup_c994f21cb7ccdf065e85cbb5d877d6b7 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a7f896eee99c94026266b6b4b16f2cb8 = $(`<div id="html_a7f896eee99c94026266b6b4b16f2cb8" style="width: 100.0%; height: 100.0%;">장소명: 대전예술의전당<br>장소 유형: playground<br>촬영 내용: 박서준과 황정음이 성인이 되어 처음 만나는 장소<br>주소:대전광역시 서구 둔산대로 135</div>`)[0];
+                popup_c994f21cb7ccdf065e85cbb5d877d6b7.setContent(html_a7f896eee99c94026266b6b4b16f2cb8);
+            
+        
+
+        marker_9afc36d25903051207ffebe091eb627c.bindPopup(popup_c994f21cb7ccdf065e85cbb5d877d6b7)
+        ;
+
+        
+    
+    
+            var marker_1a5d917532c09bc35a03507b08f1b318 = L.marker(
+                [36.3657138, 127.426381],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_f62db67dd48965a06362989cbfb79ec8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_1a5d917532c09bc35a03507b08f1b318.setIcon(icon_f62db67dd48965a06362989cbfb79ec8);
+        
+    
+        var popup_a76ee5f41029fa13a86d8722882e82df = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7403f21cec938de3d580e4d0a1694eb3 = $(`<div id="html_7403f21cec938de3d580e4d0a1694eb3" style="width: 100.0%; height: 100.0%;">장소명: 형제횟집<br>장소 유형: restaurant<br>촬영 내용: 놀라운토요일 162회 물회 맛집<br>주소:대전광역시 대덕구 중리로76번길 22</div>`)[0];
+                popup_a76ee5f41029fa13a86d8722882e82df.setContent(html_7403f21cec938de3d580e4d0a1694eb3);
+            
+        
+
+        marker_1a5d917532c09bc35a03507b08f1b318.bindPopup(popup_a76ee5f41029fa13a86d8722882e82df)
+        ;
+
+        
+    
+    
+            var marker_88509d8406a5a98241930ac3e79722c1 = L.marker(
+                [36.3663453, 127.426183],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_c378246899c47cf7cf97d774ec715866 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_88509d8406a5a98241930ac3e79722c1.setIcon(icon_c378246899c47cf7cf97d774ec715866);
+        
+    
+        var popup_861d07ffc88321257bb697e9e20db378 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3eb27066ff8777908fa089d9ea8bec25 = $(`<div id="html_3eb27066ff8777908fa089d9ea8bec25" style="width: 100.0%; height: 100.0%;">장소명: 등뼈감자탕&등갈비<br>장소 유형: restaurant<br>촬영 내용: 놀라운토요일 162회 묵은지감자탕 맛집<br>주소:대전광역시 대덕구 중리북로 35</div>`)[0];
+                popup_861d07ffc88321257bb697e9e20db378.setContent(html_3eb27066ff8777908fa089d9ea8bec25);
+            
+        
+
+        marker_88509d8406a5a98241930ac3e79722c1.bindPopup(popup_861d07ffc88321257bb697e9e20db378)
+        ;
+
+        
+    
+    
+            var marker_2ce068f36a937216a6e65c025c07a3cc = L.marker(
+                [36.364739, 127.426832],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_9ea6e44e80e198ea33063daf127445f4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_2ce068f36a937216a6e65c025c07a3cc.setIcon(icon_9ea6e44e80e198ea33063daf127445f4);
+        
+    
+        var popup_ec731db29622c3fd7cfc799d2a2b59ea = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_264df6d0328e33c260d7362e42c17476 = $(`<div id="html_264df6d0328e33c260d7362e42c17476" style="width: 100.0%; height: 100.0%;">장소명: 카페공사이<br>장소 유형: cafe<br>촬영 내용: 놀라운토요일 162회 생크림폭탄와플 맛집<br>주소:대전광역시 대덕구 중리북로31번길 41 1층</div>`)[0];
+                popup_ec731db29622c3fd7cfc799d2a2b59ea.setContent(html_264df6d0328e33c260d7362e42c17476);
+            
+        
+
+        marker_2ce068f36a937216a6e65c025c07a3cc.bindPopup(popup_ec731db29622c3fd7cfc799d2a2b59ea)
+        ;
+
+        
+    
+    
+            var marker_b47e9adf9d3144b1967255741056ba96 = L.marker(
+                [36.3144621, 127.38155],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_719b70952f7c64216d3caa5e3c8fd55f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b47e9adf9d3144b1967255741056ba96.setIcon(icon_719b70952f7c64216d3caa5e3c8fd55f);
+        
+    
+        var popup_65720a2ca7b0de4bbd1c10fcdd666fa4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ffcb1fad4b5d7f045402ff4180d57987 = $(`<div id="html_ffcb1fad4b5d7f045402ff4180d57987" style="width: 100.0%; height: 100.0%;">장소명: 더가득한 패밀리레스토랑<br>장소 유형: restaurant<br>촬영 내용: 놀라운토요일 230회 파돈가스 맛집<br>주소:대전광역시 서구 도마2길 64 더가득한 2층</div>`)[0];
+                popup_65720a2ca7b0de4bbd1c10fcdd666fa4.setContent(html_ffcb1fad4b5d7f045402ff4180d57987);
+            
+        
+
+        marker_b47e9adf9d3144b1967255741056ba96.bindPopup(popup_65720a2ca7b0de4bbd1c10fcdd666fa4)
+        ;
+
+        
+    
+    
+            var marker_4b5ee746cd76ae7ed00a5d2f53ccce65 = L.marker(
+                [36.3160068, 127.380378],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_ce29020940f14d0c57620a0c348ecf0f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4b5ee746cd76ae7ed00a5d2f53ccce65.setIcon(icon_ce29020940f14d0c57620a0c348ecf0f);
+        
+    
+        var popup_9b3c353af5b11df2f35cb02e402dbe8b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2719988f34495c3e03d670b95b6349f6 = $(`<div id="html_2719988f34495c3e03d670b95b6349f6" style="width: 100.0%; height: 100.0%;">장소명: 신가네추어탕<br>장소 유형: restaurant<br>촬영 내용: 놀라운토요일 230회 추어탕 맛집<br>주소:대전광역시 서구 도마3길 69</div>`)[0];
+                popup_9b3c353af5b11df2f35cb02e402dbe8b.setContent(html_2719988f34495c3e03d670b95b6349f6);
+            
+        
+
+        marker_4b5ee746cd76ae7ed00a5d2f53ccce65.bindPopup(popup_9b3c353af5b11df2f35cb02e402dbe8b)
+        ;
+
+        
+    
+    
+            var marker_c1b96b46c39a47ec27a9a105d043c588 = L.marker(
+                [36.3581201, 127.337721],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_445397db98cf311875365325d96067e2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c1b96b46c39a47ec27a9a105d043c588.setIcon(icon_445397db98cf311875365325d96067e2);
+        
+    
+        var popup_9b2ff99a44017e9b73698073b0f21a46 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bb4b4b92096191f850f8dbd2def5d7c1 = $(`<div id="html_bb4b4b92096191f850f8dbd2def5d7c1" style="width: 100.0%; height: 100.0%;">장소명: 하오치띵호와<br>장소 유형: restaurant<br>촬영 내용: 놀라운토요일 136회 뚝배기고추짬뽕 맛집<br>주소:대전광역시 유성구 문화원로6번길 90</div>`)[0];
+                popup_9b2ff99a44017e9b73698073b0f21a46.setContent(html_bb4b4b92096191f850f8dbd2def5d7c1);
+            
+        
+
+        marker_c1b96b46c39a47ec27a9a105d043c588.bindPopup(popup_9b2ff99a44017e9b73698073b0f21a46)
+        ;
+
+        
+    
+    
+            var marker_9cc8e235079a994b79b6a2e52cc9eaaf = L.marker(
+                [36.358003, 127.334478],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_3657cce56bd32fe9f2a23769082ebfad = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_9cc8e235079a994b79b6a2e52cc9eaaf.setIcon(icon_3657cce56bd32fe9f2a23769082ebfad);
+        
+    
+        var popup_3a600b5834a16e32baa7710e7c8cb435 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4dabf7039d84d1ad2ba650b9736631fa = $(`<div id="html_4dabf7039d84d1ad2ba650b9736631fa" style="width: 100.0%; height: 100.0%;">장소명: 시장보리밥집<br>장소 유형: restaurant<br>촬영 내용: 놀라운토요일 136회 오리인삼주물럭 맛집<br>주소:대전광역시 유성구 유성대로730번길 33</div>`)[0];
+                popup_3a600b5834a16e32baa7710e7c8cb435.setContent(html_4dabf7039d84d1ad2ba650b9736631fa);
+            
+        
+
+        marker_9cc8e235079a994b79b6a2e52cc9eaaf.bindPopup(popup_3a600b5834a16e32baa7710e7c8cb435)
+        ;
+
+        
+    
+    
+            var marker_ce0534c9fbecbf0ee1cf076fecfd477a = L.marker(
+                [36.3151468, 127.387244],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_e377d8db98123e0abb5a5c21d0ea9080 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ce0534c9fbecbf0ee1cf076fecfd477a.setIcon(icon_e377d8db98123e0abb5a5c21d0ea9080);
+        
+    
+        var popup_f91aed0af8427e98de92f8d07d299c36 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d65943552cb6d42c0f19e929ae6f46de = $(`<div id="html_d65943552cb6d42c0f19e929ae6f46de" style="width: 100.0%; height: 100.0%;">장소명: 어나더그래비티<br>장소 유형: cafe<br>촬영 내용: 놀라운토요일 230회 크림브륄레 맛집<br>주소:대전광역시 중구 유등천동로 374 1층</div>`)[0];
+                popup_f91aed0af8427e98de92f8d07d299c36.setContent(html_d65943552cb6d42c0f19e929ae6f46de);
+            
+        
+
+        marker_ce0534c9fbecbf0ee1cf076fecfd477a.bindPopup(popup_f91aed0af8427e98de92f8d07d299c36)
+        ;
+
+        
+    
+    
+            var marker_0ac6c4c0daefcb7c46589fe3504b4c8a = L.marker(
+                [36.372767, 127.38798],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_a37caad4ebd055d2b083b6e66ae851aa = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_0ac6c4c0daefcb7c46589fe3504b4c8a.setIcon(icon_a37caad4ebd055d2b083b6e66ae851aa);
+        
+    
+        var popup_7f2b43e01594596a51971614085e3845 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ff2202b290110a220c63fbef13ab6a3e = $(`<div id="html_ff2202b290110a220c63fbef13ab6a3e" style="width: 100.0%; height: 100.0%;">장소명: 엑스포다리<br>장소 유형: playground<br>촬영 내용: 1화에서 이 다리 위에서 무너져 그녀가 이곳에 와서 난간 위에서 춤을 추던 때를 회상한다.<br>주소:대전광역시 유성구 도룡동</div>`)[0];
+                popup_7f2b43e01594596a51971614085e3845.setContent(html_ff2202b290110a220c63fbef13ab6a3e);
+            
+        
+
+        marker_0ac6c4c0daefcb7c46589fe3504b4c8a.bindPopup(popup_7f2b43e01594596a51971614085e3845)
+        ;
+
+        
+    
+    
+            var marker_7edaba42a41bede67ddab5aadcb86507 = L.marker(
+                [36.355149, 127.344622],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_ca0201d2fb0c89357f3ea4128aa65b34 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_7edaba42a41bede67ddab5aadcb86507.setIcon(icon_ca0201d2fb0c89357f3ea4128aa65b34);
+        
+    
+        var popup_e64deaf84d1c117f191ae0e36ff70a22 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cb1edc518d22c47797235587d4310be1 = $(`<div id="html_cb1edc518d22c47797235587d4310be1" style="width: 100.0%; height: 100.0%;">장소명: 유성온천공원 족욕체험장<br>장소 유형: playground<br>촬영 내용: 드림캐쳐 지유가 자주가는 족욕장<br>주소:대전광역시 유성구 봉명동</div>`)[0];
+                popup_e64deaf84d1c117f191ae0e36ff70a22.setContent(html_cb1edc518d22c47797235587d4310be1);
+            
+        
+
+        marker_7edaba42a41bede67ddab5aadcb86507.bindPopup(popup_e64deaf84d1c117f191ae0e36ff70a22)
+        ;
+
+        
+    
+    
+            var marker_4c77813d754ec4c5fdd2b621a92e2fea = L.marker(
+                [36.3460832, 127.3888826],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_566e119272200956ef97be9ca3ae4dbd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4c77813d754ec4c5fdd2b621a92e2fea.setIcon(icon_566e119272200956ef97be9ca3ae4dbd);
+        
+    
+        var popup_7f3f427960c1da52d92366f27c9cb4bd = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_98a9d9e16afcce327c177247eb65c6ef = $(`<div id="html_98a9d9e16afcce327c177247eb65c6ef" style="width: 100.0%; height: 100.0%;">장소명: 미세노센세<br>장소 유형: restaurant<br>촬영 내용: 매운맛 강자 솔빈이 먹은 카레 맛집<br>주소:대전광역시 서구 계룡로553번안길 65 웨스턴빌딩 1층 102호</div>`)[0];
+                popup_7f3f427960c1da52d92366f27c9cb4bd.setContent(html_98a9d9e16afcce327c177247eb65c6ef);
+            
+        
+
+        marker_4c77813d754ec4c5fdd2b621a92e2fea.bindPopup(popup_7f3f427960c1da52d92366f27c9cb4bd)
+        ;
+
+        
+    
+    
+            var marker_d5397217143d697431a8ffd31a8aebc7 = L.marker(
+                [36.3266855, 127.420912],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_73155f3ab36755b5575a429046d6a9ce = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d5397217143d697431a8ffd31a8aebc7.setIcon(icon_73155f3ab36755b5575a429046d6a9ce);
+        
+    
+        var popup_e23f6193d80c473fcae57b3c0ae6a487 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0ba6d6a2cbbe77b50a6e285f8673ade8 = $(`<div id="html_0ba6d6a2cbbe77b50a6e285f8673ade8" style="width: 100.0%; height: 100.0%;">장소명: 대전 근현대사 전시관<br>장소 유형: playground<br>촬영 내용: 1988년 주요 배경이 되는 인성 경찰서<br>주소:대전광역시 중구 중앙로 101</div>`)[0];
+                popup_e23f6193d80c473fcae57b3c0ae6a487.setContent(html_0ba6d6a2cbbe77b50a6e285f8673ade8);
+            
+        
+
+        marker_d5397217143d697431a8ffd31a8aebc7.bindPopup(popup_e23f6193d80c473fcae57b3c0ae6a487)
+        ;
+
+        
+    
+    
+            var marker_492104797ac509b18cc987529c351c89 = L.marker(
+                [36.3246986, 127.4639625],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_a3d8be3ef4e59f1b317cd0d2919fb6b7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_492104797ac509b18cc987529c351c89.setIcon(icon_a3d8be3ef4e59f1b317cd0d2919fb6b7);
+        
+    
+        var popup_f3b5183d0bbedd9cc32ef0cadca431e2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_34ecab11f1f4747c989e7c67ef1528e0 = $(`<div id="html_34ecab11f1f4747c989e7c67ef1528e0" style="width: 100.0%; height: 100.0%;">장소명: 용운국제수영장<br>장소 유형: playground<br>촬영 내용: 리얼에서 수영 장면을 촬영한 수영장<br>주소:대전광역시 동구 동부로 138 용운국제수영장</div>`)[0];
+                popup_f3b5183d0bbedd9cc32ef0cadca431e2.setContent(html_34ecab11f1f4747c989e7c67ef1528e0);
+            
+        
+
+        marker_492104797ac509b18cc987529c351c89.bindPopup(popup_f3b5183d0bbedd9cc32ef0cadca431e2)
+        ;
+
+        
+    
+    
+            var marker_3775400e88bb08fe5b14b98fda6759d5 = L.marker(
+                [36.3419729, 127.4250897],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_7654a0ddff0e71395c40082f3e83e57f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_3775400e88bb08fe5b14b98fda6759d5.setIcon(icon_7654a0ddff0e71395c40082f3e83e57f);
+        
+    
+        var popup_c3efd1b8c71f85c088df2d299fbfa322 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c32088706d112de4ed5ed87b78846c61 = $(`<div id="html_c32088706d112de4ed5ed87b78846c61" style="width: 100.0%; height: 100.0%;">장소명: 오씨칼국수<br>장소 유형: restaurant<br>촬영 내용: 맛있는녀석들 241회 칼국수 맛집<br>주소:대전광역시 동구 옛신탄진로 13</div>`)[0];
+                popup_c3efd1b8c71f85c088df2d299fbfa322.setContent(html_c32088706d112de4ed5ed87b78846c61);
+            
+        
+
+        marker_3775400e88bb08fe5b14b98fda6759d5.bindPopup(popup_c3efd1b8c71f85c088df2d299fbfa322)
+        ;
+
+        
+    
+    
+            var marker_6db716ed8202cb6c487ac90941d98b1c = L.marker(
+                [36.3499437, 127.3882687],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_e428eba156e75ebf30989fdaa4374eb7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_6db716ed8202cb6c487ac90941d98b1c.setIcon(icon_e428eba156e75ebf30989fdaa4374eb7);
+        
+    
+        var popup_99cc55616194e3a42508ddd4b474936a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_24c219999b9f0bf703346d9cc11781c3 = $(`<div id="html_24c219999b9f0bf703346d9cc11781c3" style="width: 100.0%; height: 100.0%;">장소명: 대선칼국수<br>장소 유형: restaurant<br>촬영 내용: 맛있는녀석들 319회 비빔칼국수/수육 맛집<br>주소:대전광역시 서구 둔산중로40번길 28 오성빌딩 2층</div>`)[0];
+                popup_99cc55616194e3a42508ddd4b474936a.setContent(html_24c219999b9f0bf703346d9cc11781c3);
+            
+        
+
+        marker_6db716ed8202cb6c487ac90941d98b1c.bindPopup(popup_99cc55616194e3a42508ddd4b474936a)
+        ;
+
+        
+    
+    
+            var marker_ff68dcd74a27b02743194c3485f60935 = L.marker(
+                [36.3906989, 127.3287325],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_bcb2b97dcc6b38fff30195a519383e9b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ff68dcd74a27b02743194c3485f60935.setIcon(icon_bcb2b97dcc6b38fff30195a519383e9b);
+        
+    
+        var popup_b8c41e187fe1969ab5edefec8fab6ade = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_190cd02e353384b51f78150985039100 = $(`<div id="html_190cd02e353384b51f78150985039100" style="width: 100.0%; height: 100.0%;">장소명: 오시오칼국수<br>장소 유형: restaurant<br>촬영 내용: 맛있는녀석들 366회 들깨칼국수 맛집<br>주소:대전광역시 유성구 노은로410번길 8</div>`)[0];
+                popup_b8c41e187fe1969ab5edefec8fab6ade.setContent(html_190cd02e353384b51f78150985039100);
+            
+        
+
+        marker_ff68dcd74a27b02743194c3485f60935.bindPopup(popup_b8c41e187fe1969ab5edefec8fab6ade)
+        ;
+
+        
+    
+    
+            var marker_3eefce1e5ec4d5c8ed8c28b439b976ac = L.marker(
+                [36.3574385, 127.3502207],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_67b971195d425a201e73f49438b1effd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_3eefce1e5ec4d5c8ed8c28b439b976ac.setIcon(icon_67b971195d425a201e73f49438b1effd);
+        
+    
+        var popup_09c15c0c3c056489766c32980602bb97 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d045338af2d8f38d24dbd8ad871c82ca = $(`<div id="html_d045338af2d8f38d24dbd8ad871c82ca" style="width: 100.0%; height: 100.0%;">장소명: 태평소국밥<br>장소 유형: restaurant<br>촬영 내용: 맛있는녀석들 241회 소국밥 맛집<br>주소:대전광역시 유성구 온천동로65번길 50</div>`)[0];
+                popup_09c15c0c3c056489766c32980602bb97.setContent(html_d045338af2d8f38d24dbd8ad871c82ca);
+            
+        
+
+        marker_3eefce1e5ec4d5c8ed8c28b439b976ac.bindPopup(popup_09c15c0c3c056489766c32980602bb97)
+        ;
+
+        
+    
+    
+            var marker_e3ab95655a724186eb125dba2b556ba3 = L.marker(
+                [36.3553694, 127.3449477],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_e0818ebcb718c9c9798243590e6abfde = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_e3ab95655a724186eb125dba2b556ba3.setIcon(icon_e0818ebcb718c9c9798243590e6abfde);
+        
+    
+        var popup_5909026c0d725044c84491d6cc836b29 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_42663e8eb95a17ecf8cbd1889834a4e6 = $(`<div id="html_42663e8eb95a17ecf8cbd1889834a4e6" style="width: 100.0%; height: 100.0%;">장소명: 청주해장국 유성본점<br>장소 유형: restaurant<br>촬영 내용: 맛있는녀석들 366회 황태해장국, 우거지해장국, 소내장탕 맛집<br>주소:대전광역시 유성구 온천로 63</div>`)[0];
+                popup_5909026c0d725044c84491d6cc836b29.setContent(html_42663e8eb95a17ecf8cbd1889834a4e6);
+            
+        
+
+        marker_e3ab95655a724186eb125dba2b556ba3.bindPopup(popup_5909026c0d725044c84491d6cc836b29)
+        ;
+
+        
+    
+    
+            var marker_492711b995d092c090fa4e8ce295c3ee = L.marker(
+                [36.3230131, 127.4131606],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_7675ad3a207be490ef3fa5cb1e0b5ed5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_492711b995d092c090fa4e8ce295c3ee.setIcon(icon_7675ad3a207be490ef3fa5cb1e0b5ed5);
+        
+    
+        var popup_accdbddde507a57a1e53aba9b1edfc33 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b860332cb489d679ab6cfb97805f322a = $(`<div id="html_b860332cb489d679ab6cfb97805f322a" style="width: 100.0%; height: 100.0%;">장소명: 샘골식당<br>장소 유형: restaurant<br>촬영 내용: 맛있는녀석들 348회 닭볶음탕, 청국장 맛집<br>주소:대전광역시 중구 계룡로881번길 30</div>`)[0];
+                popup_accdbddde507a57a1e53aba9b1edfc33.setContent(html_b860332cb489d679ab6cfb97805f322a);
+            
+        
+
+        marker_492711b995d092c090fa4e8ce295c3ee.bindPopup(popup_accdbddde507a57a1e53aba9b1edfc33)
+        ;
+
+        
+    
+    
+            var marker_b27a4dd50ae7a2cc7203954e878dce4f = L.marker(
+                [36.4327428, 127.3979595],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_cd51debfb0408d138d2ded7f07cebec9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b27a4dd50ae7a2cc7203954e878dce4f.setIcon(icon_cd51debfb0408d138d2ded7f07cebec9);
+        
+    
+        var popup_538c510cd46192a60d4e287de240b149 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f9fba11d6b7e99f867daf526e311c863 = $(`<div id="html_f9fba11d6b7e99f867daf526e311c863" style="width: 100.0%; height: 100.0%;">장소명: 인근주민 대전관평점<br>장소 유형: restaurant<br>촬영 내용: 맛있을지도 24회 이태리통닭/퐁듀통닭접기 맛집<br>주소:대전광역시 유성구 관평1로 82 1층</div>`)[0];
+                popup_538c510cd46192a60d4e287de240b149.setContent(html_f9fba11d6b7e99f867daf526e311c863);
+            
+        
+
+        marker_b27a4dd50ae7a2cc7203954e878dce4f.bindPopup(popup_538c510cd46192a60d4e287de240b149)
+        ;
+
+        
+    
+    
+            var marker_fff065dd3f6263d951349592282a29d6 = L.marker(
+                [36.3172322, 127.3960983],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_0982a3738f04262ee80ccc1257d63b6b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_fff065dd3f6263d951349592282a29d6.setIcon(icon_0982a3738f04262ee80ccc1257d63b6b);
+        
+    
+        var popup_17555f10bffde17b8cb66f21bbe61f98 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8db8a50b89251ec805b416b135efad82 = $(`<div id="html_8db8a50b89251ec805b416b135efad82" style="width: 100.0%; height: 100.0%;">장소명: 이리할매추어탕<br>장소 유형: restaurant<br>촬영 내용: 맛있을지도 49회 돌솥추어탕/장어 맛집<br>주소:대전광역시 중구 계백로1584번길 14</div>`)[0];
+                popup_17555f10bffde17b8cb66f21bbe61f98.setContent(html_8db8a50b89251ec805b416b135efad82);
+            
+        
+
+        marker_fff065dd3f6263d951349592282a29d6.bindPopup(popup_17555f10bffde17b8cb66f21bbe61f98)
+        ;
+
+        
+    
+    
+            var marker_12b3afd578c5f0bc6eec9733bba39020 = L.marker(
+                [36.336274, 127.46021],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_af3f5bc67442bc200635d14cace01925 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_12b3afd578c5f0bc6eec9733bba39020.setIcon(icon_af3f5bc67442bc200635d14cace01925);
+        
+    
+        var popup_974b9aea4bfd7d1ed828a4d1669db191 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_454c64eab57c30be03380fb890ad34fd = $(`<div id="html_454c64eab57c30be03380fb890ad34fd" style="width: 100.0%; height: 100.0%;">장소명: 대전대학교<br>장소 유형: playground<br>촬영 내용: 4회에서 지윤수(임수정)가 수학 세미나에 함께 참석했다.<br>주소:대전광역시 동구 대학로 62</div>`)[0];
+                popup_974b9aea4bfd7d1ed828a4d1669db191.setContent(html_454c64eab57c30be03380fb890ad34fd);
+            
+        
+
+        marker_12b3afd578c5f0bc6eec9733bba39020.bindPopup(popup_974b9aea4bfd7d1ed828a4d1669db191)
+        ;
+
+        
+    
+    
+            var marker_fc79d7639d22f71b4d2cca492db49247 = L.marker(
+                [36.376229, 127.37525],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_5560124a5f82f55a5a6976d5f441cea3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_fc79d7639d22f71b4d2cca492db49247.setIcon(icon_5560124a5f82f55a5a6976d5f441cea3);
+        
+    
+        var popup_9ac1cf1a10585d91e3b44ff18ad1ba90 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a62aa3f0097e890684ceb7a7e2871d60 = $(`<div id="html_a62aa3f0097e890684ceb7a7e2871d60" style="width: 100.0%; height: 100.0%;">장소명: 국립중앙과학관<br>장소 유형: playground<br>촬영 내용: 4회에서 2017년 국제 수학자 올림픽'이 열리는 곳. 성예린(우다비)과 백승유(이도현)가 만나는 곳이다.<br>주소:대전광역시 유성구 대덕대로 481</div>`)[0];
+                popup_9ac1cf1a10585d91e3b44ff18ad1ba90.setContent(html_a62aa3f0097e890684ceb7a7e2871d60);
+            
+        
+
+        marker_fc79d7639d22f71b4d2cca492db49247.bindPopup(popup_9ac1cf1a10585d91e3b44ff18ad1ba90)
+        ;
+
+        
+    
+    
+            var marker_b70c46cdcb08e05057e23a023112c04d = L.marker(
+                [36.3230882, 127.4141557],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_27ca219d41f52182790ea1ea62efbeaa = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b70c46cdcb08e05057e23a023112c04d.setIcon(icon_27ca219d41f52182790ea1ea62efbeaa);
+        
+    
+        var popup_9c9865beec0b9ba1700d02ccb3fbc776 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1ab93508bcd97ce3731d8e049bbf2f8d = $(`<div id="html_1ab93508bcd97ce3731d8e049bbf2f8d" style="width: 100.0%; height: 100.0%;">장소명: 뽀뽀분식<br>장소 유형: restaurant<br>촬영 내용: 모닝와이드 6993회 비빔칼국수 맛집<br>주소:대전광역시 중구 계룡로881번길 44</div>`)[0];
+                popup_9c9865beec0b9ba1700d02ccb3fbc776.setContent(html_1ab93508bcd97ce3731d8e049bbf2f8d);
+            
+        
+
+        marker_b70c46cdcb08e05057e23a023112c04d.bindPopup(popup_9c9865beec0b9ba1700d02ccb3fbc776)
+        ;
+
+        
+    
+    
+            var marker_603bb3bab8de55c644cc1c88c5ce8ef0 = L.marker(
+                [36.3355009, 127.412647],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_091cc3fc55c4ec6511a512847c9bc2a2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_603bb3bab8de55c644cc1c88c5ce8ef0.setIcon(icon_091cc3fc55c4ec6511a512847c9bc2a2);
+        
+    
+        var popup_26ced6b62625d293a5ed416e80720492 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5c95cdf634218e1ecf38016c8f730b7e = $(`<div id="html_5c95cdf634218e1ecf38016c8f730b7e" style="width: 100.0%; height: 100.0%;">장소명: 하루방만두<br>장소 유형: restaurant<br>촬영 내용: 모닝와이드 7180회 만두 맛집<br>주소:대전광역시 중구 목중로10번길 7</div>`)[0];
+                popup_26ced6b62625d293a5ed416e80720492.setContent(html_5c95cdf634218e1ecf38016c8f730b7e);
+            
+        
+
+        marker_603bb3bab8de55c644cc1c88c5ce8ef0.bindPopup(popup_26ced6b62625d293a5ed416e80720492)
+        ;
+
+        
+    
+    
+            var marker_8b127a57a3ffcf4937711af239961c11 = L.marker(
+                [36.325327, 127.4169312],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_8512e3049506d4c30cfb09c503111b3d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8b127a57a3ffcf4937711af239961c11.setIcon(icon_8512e3049506d4c30cfb09c503111b3d);
+        
+    
+        var popup_5e5b8ae1a32fc9e3176ed83a57a6a4fa = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2bc8094afa992688628065c79dd7c920 = $(`<div id="html_2bc8094afa992688628065c79dd7c920" style="width: 100.0%; height: 100.0%;">장소명: 탑집<br>장소 유형: restaurant<br>촬영 내용: 모닝와이드 7105회 콩나물밥 맛집<br>주소:대전광역시 중구 선화서로19번길 44</div>`)[0];
+                popup_5e5b8ae1a32fc9e3176ed83a57a6a4fa.setContent(html_2bc8094afa992688628065c79dd7c920);
+            
+        
+
+        marker_8b127a57a3ffcf4937711af239961c11.bindPopup(popup_5e5b8ae1a32fc9e3176ed83a57a6a4fa)
+        ;
+
+        
+    
+    
+            var marker_2a0715502d1f0157077322178c84b951 = L.marker(
+                [36.320564, 127.435988],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_74ad5529bc6e487d6019ab61d7d1eeeb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_2a0715502d1f0157077322178c84b951.setIcon(icon_74ad5529bc6e487d6019ab61d7d1eeeb);
+        
+    
+        var popup_31217d22c40b66bc671dea08a73f3f4d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1aa9f4a88955c690dc75a2e61a7c7f4a = $(`<div id="html_1aa9f4a88955c690dc75a2e61a7c7f4a" style="width: 100.0%; height: 100.0%;">장소명: 문창동광천순대<br>장소 유형: restaurant<br>촬영 내용: 모범형사를 촬영한 대전의 순대국집<br>주소:대전광역시 중구 대전천서로 337</div>`)[0];
+                popup_31217d22c40b66bc671dea08a73f3f4d.setContent(html_1aa9f4a88955c690dc75a2e61a7c7f4a);
+            
+        
+
+        marker_2a0715502d1f0157077322178c84b951.bindPopup(popup_31217d22c40b66bc671dea08a73f3f4d)
+        ;
+
+        
+    
+    
+            var marker_da9dfe46cd31660672bb55580d8b4dd4 = L.marker(
+                [36.3267291, 127.433953],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_efc30c15db84d419221d90bf659cafe1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_da9dfe46cd31660672bb55580d8b4dd4.setIcon(icon_efc30c15db84d419221d90bf659cafe1);
+        
+    
+        var popup_b300d615f488aec959af260de31db2a8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8fecb6df3f070c3c15a1fbe88bcd7566 = $(`<div id="html_8fecb6df3f070c3c15a1fbe88bcd7566" style="width: 100.0%; height: 100.0%;">장소명: 옐로우몽키즈<br>장소 유형: restaurant<br>촬영 내용: 대전의 수제버거 대표 맛집<br>주소:대전광역시 동구 중앙로200번길 99 3층 C-13호</div>`)[0];
+                popup_b300d615f488aec959af260de31db2a8.setContent(html_8fecb6df3f070c3c15a1fbe88bcd7566);
+            
+        
+
+        marker_da9dfe46cd31660672bb55580d8b4dd4.bindPopup(popup_b300d615f488aec959af260de31db2a8)
+        ;
+
+        
+    
+    
+            var marker_0143c3ba5cec266e385e0768866133dc = L.marker(
+                [36.3267291, 127.433953],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_2923d1f52f5fcd6adb25f8aa1113fffd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_0143c3ba5cec266e385e0768866133dc.setIcon(icon_2923d1f52f5fcd6adb25f8aa1113fffd);
+        
+    
+        var popup_dd8e7445412223e176aab6bdd08d58c0 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8af0324f7127e5cb1849e95c917da17b = $(`<div id="html_8af0324f7127e5cb1849e95c917da17b" style="width: 100.0%; height: 100.0%;">장소명: 수제막걸리 주로<br>장소 유형: restaurant<br>촬영 내용: 백종원의골목식당 30회 막걸리 맛집<br>주소:대전광역시 동구 중앙로200번길 99 중앙메가프라자 3층</div>`)[0];
+                popup_dd8e7445412223e176aab6bdd08d58c0.setContent(html_8af0324f7127e5cb1849e95c917da17b);
+            
+        
+
+        marker_0143c3ba5cec266e385e0768866133dc.bindPopup(popup_dd8e7445412223e176aab6bdd08d58c0)
+        ;
+
+        
+    
+    
+            var marker_544a93fe9a48496a9ff244d3f07770c6 = L.marker(
+                [36.3285367, 127.4316062],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_96ed6ef5e77c12c92835c9292be057a4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_544a93fe9a48496a9ff244d3f07770c6.setIcon(icon_96ed6ef5e77c12c92835c9292be057a4);
+        
+    
+        var popup_dc615297e21f949edab35911aa499baf = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_597fe3dfd8292a98139cadd07b8453c1 = $(`<div id="html_597fe3dfd8292a98139cadd07b8453c1" style="width: 100.0%; height: 100.0%;">장소명: 개천식당<br>장소 유형: restaurant<br>촬영 내용: 백종원의 3대 천왕 23회 만두국/접시만두  맛집<br>주소:대전광역시 동구 대전로779번길 39-2</div>`)[0];
+                popup_dc615297e21f949edab35911aa499baf.setContent(html_597fe3dfd8292a98139cadd07b8453c1);
+            
+        
+
+        marker_544a93fe9a48496a9ff244d3f07770c6.bindPopup(popup_dc615297e21f949edab35911aa499baf)
+        ;
+
+        
+    
+    
+            var marker_fce76fe3d14158653948e1c690b15137 = L.marker(
+                [36.3460832, 127.3888826],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_ae5a1f498f3122cf76395dd28d135691 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_fce76fe3d14158653948e1c690b15137.setIcon(icon_ae5a1f498f3122cf76395dd28d135691);
+        
+    
+        var popup_f6cf54880af6b76156e0dd85132ff4f8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e62c422ec4e672aa1eb8df3513e3cdab = $(`<div id="html_e62c422ec4e672aa1eb8df3513e3cdab" style="width: 100.0%; height: 100.0%;">장소명: 미세노센세<br>장소 유형: restaurant<br>촬영 내용: 백종원의 3대 천왕 77회 매운일본식카레 맛집<br>주소:대전광역시 서구 계룡로553번안길 65 웨스턴빌딩 1층 102호</div>`)[0];
+                popup_f6cf54880af6b76156e0dd85132ff4f8.setContent(html_e62c422ec4e672aa1eb8df3513e3cdab);
+            
+        
+
+        marker_fce76fe3d14158653948e1c690b15137.bindPopup(popup_f6cf54880af6b76156e0dd85132ff4f8)
+        ;
+
+        
+    
+    
+            var marker_2c39117c61c2e11a560e3af0ed171eae = L.marker(
+                [36.3233897, 127.4107655],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_1a7be93556dc7c5261e265f0bfc0e022 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_2c39117c61c2e11a560e3af0ed171eae.setIcon(icon_1a7be93556dc7c5261e265f0bfc0e022);
+        
+    
+        var popup_1c27deac7ea63d1d24cb8af2ad06e880 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6349d6186506b06b3aec0728e6c540f5 = $(`<div id="html_6349d6186506b06b3aec0728e6c540f5" style="width: 100.0%; height: 100.0%;">장소명: 한영식당<br>장소 유형: restaurant<br>촬영 내용: 백종원의 3대 천왕 2회 닭볶음탕 맛집<br>주소:대전광역시 중구 계룡로874번길 6</div>`)[0];
+                popup_1c27deac7ea63d1d24cb8af2ad06e880.setContent(html_6349d6186506b06b3aec0728e6c540f5);
+            
+        
+
+        marker_2c39117c61c2e11a560e3af0ed171eae.bindPopup(popup_1c27deac7ea63d1d24cb8af2ad06e880)
+        ;
+
+        
+    
+    
+            var marker_68e895039564483f3dccab1b91319804 = L.marker(
+                [36.3285624, 127.4235966],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_4ecd7c7ea0b5f282d78f5597affd7d30 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_68e895039564483f3dccab1b91319804.setIcon(icon_4ecd7c7ea0b5f282d78f5597affd7d30);
+        
+    
+        var popup_8ee16ecd8f5f03c05b0632d53fdd1967 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_eb22fc6f0fff53635c1f88aecb68b01b = $(`<div id="html_eb22fc6f0fff53635c1f88aecb68b01b" style="width: 100.0%; height: 100.0%;">장소명: 광천식당<br>장소 유형: restaurant<br>촬영 내용: 백종원의 3대 천왕 34회 오징어두루치기 맛집<br>주소:대전광역시 중구 대종로505번길 29</div>`)[0];
+                popup_8ee16ecd8f5f03c05b0632d53fdd1967.setContent(html_eb22fc6f0fff53635c1f88aecb68b01b);
+            
+        
+
+        marker_68e895039564483f3dccab1b91319804.bindPopup(popup_8ee16ecd8f5f03c05b0632d53fdd1967)
+        ;
+
+        
+    
+    
+            var marker_9b86e6ce73b00baa4dec3b2b219fd370 = L.marker(
+                [36.3286432, 127.4211144],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_b521be50bce83a6997280133f792695a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_9b86e6ce73b00baa4dec3b2b219fd370.setIcon(icon_b521be50bce83a6997280133f792695a);
+        
+    
+        var popup_57206666270f7b4cbcaa4aa80853a885 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e27b35a02a495fdabe5737d2ec1e59af = $(`<div id="html_e27b35a02a495fdabe5737d2ec1e59af" style="width: 100.0%; height: 100.0%;">장소명: 고단백식당<br>장소 유형: restaurant<br>촬영 내용: 백종원의 3대 천왕 41회 검은콩국수/노란콩국수 맛집<br>주소:대전광역시 중구 대종로517번길 62</div>`)[0];
+                popup_57206666270f7b4cbcaa4aa80853a885.setContent(html_e27b35a02a495fdabe5737d2ec1e59af);
+            
+        
+
+        marker_9b86e6ce73b00baa4dec3b2b219fd370.bindPopup(popup_57206666270f7b4cbcaa4aa80853a885)
+        ;
+
+        
+    
+    
+            var marker_15d36cae08abdf4509e9fd817ba43ab3 = L.marker(
+                [36.3303207, 127.4209795],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_fdf2cdc02cf55c32e948749de9001fb8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_15d36cae08abdf4509e9fd817ba43ab3.setIcon(icon_fdf2cdc02cf55c32e948749de9001fb8);
+        
+    
+        var popup_12dd4075c301a728338adc67b8af281d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bae9a84cf3a997b387e5f41fb667d43f = $(`<div id="html_bae9a84cf3a997b387e5f41fb667d43f" style="width: 100.0%; height: 100.0%;">장소명: 선화동실비식당<br>장소 유형: restaurant<br>촬영 내용: 백종원의 3대 천왕 44회 소머리국밥 맛집<br>주소:대전광역시 중구 선화로 126-10</div>`)[0];
+                popup_12dd4075c301a728338adc67b8af281d.setContent(html_bae9a84cf3a997b387e5f41fb667d43f);
+            
+        
+
+        marker_15d36cae08abdf4509e9fd817ba43ab3.bindPopup(popup_12dd4075c301a728338adc67b8af281d)
+        ;
+
+        
+    
+    
+            var marker_8f1f09e42c778dac15c97465fde8789a = L.marker(
+                [36.3266855, 127.420912],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_fe3325f753b968c8459ee8a4586ccb06 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8f1f09e42c778dac15c97465fde8789a.setIcon(icon_fe3325f753b968c8459ee8a4586ccb06);
+        
+    
+        var popup_fa43440ca3eadfbb2340882a7696ba91 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_dc97986e2ee2817f1aa4f054efeed6d9 = $(`<div id="html_dc97986e2ee2817f1aa4f054efeed6d9" style="width: 100.0%; height: 100.0%;">장소명: 대전 근현대사 전시관<br>장소 유형: playground<br>촬영 내용: 변호인 속 부산법원으로 나온 장소<br>주소:대전광역시 중구 중앙로 101</div>`)[0];
+                popup_fa43440ca3eadfbb2340882a7696ba91.setContent(html_dc97986e2ee2817f1aa4f054efeed6d9);
+            
+        
+
+        marker_8f1f09e42c778dac15c97465fde8789a.bindPopup(popup_fa43440ca3eadfbb2340882a7696ba91)
+        ;
+
+        
+    
+    
+            var marker_8d80e5013b19e786133e4d6fe33d3bca = L.marker(
+                [36.357435, 127.381145],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_ce89922135aab1919c1c70b2e859a7e5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8d80e5013b19e786133e4d6fe33d3bca.setIcon(icon_ce89922135aab1919c1c70b2e859a7e5);
+        
+    
+        var popup_f5058b9a2834b70315f7b79d4355a451 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f8542e6929f7115d196f770779f166dc = $(`<div id="html_f8542e6929f7115d196f770779f166dc" style="width: 100.0%; height: 100.0%;">장소명: 대전 도시철도 1호선 정부청사역<br>장소 유형: station<br>촬영 내용: 극 중 지하철 폭탄 테러범을 제압한 장소<br>주소:대전광역시 서구 한밭대로 744</div>`)[0];
+                popup_f5058b9a2834b70315f7b79d4355a451.setContent(html_f8542e6929f7115d196f770779f166dc);
+            
+        
+
+        marker_8d80e5013b19e786133e4d6fe33d3bca.bindPopup(popup_f5058b9a2834b70315f7b79d4355a451)
+        ;
+
+        
+    
+    
+            var marker_dc3a2f0fcdd9bc1122bfdf8bd788516f = L.marker(
+                [36.369464, 127.294854],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_7783ca97c9d4a5c8e9e35a1627f91af7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_dc3a2f0fcdd9bc1122bfdf8bd788516f.setIcon(icon_7783ca97c9d4a5c8e9e35a1627f91af7);
+        
+    
+        var popup_e47caa47f560d2f36146e6456d8e3115 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_fb61231c751915d3ac535039a9414d4d = $(`<div id="html_fb61231c751915d3ac535039a9414d4d" style="width: 100.0%; height: 100.0%;">장소명: 국립대전현충원<br>장소 유형: playground<br>촬영 내용: 극 중 이해영의 묘소로 등장한 곳<br>주소:대전광역시 유성구 현충원로 251</div>`)[0];
+                popup_e47caa47f560d2f36146e6456d8e3115.setContent(html_fb61231c751915d3ac535039a9414d4d);
+            
+        
+
+        marker_dc3a2f0fcdd9bc1122bfdf8bd788516f.bindPopup(popup_e47caa47f560d2f36146e6456d8e3115)
+        ;
+
+        
+    
+    
+            var marker_b82c26b341b986a7c870f8ab49ecfc17 = L.marker(
+                [36.366867, 127.387037],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_146be634911428b1c1d880943593d024 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b82c26b341b986a7c870f8ab49ecfc17.setIcon(icon_146be634911428b1c1d880943593d024);
+        
+    
+        var popup_17d8cf39c204a2fb135bc7ba83beea2b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_833be6031e663dc5ed07249ab08f7ef6 = $(`<div id="html_833be6031e663dc5ed07249ab08f7ef6" style="width: 100.0%; height: 100.0%;">장소명: 이응노미술관<br>장소 유형: playground<br>촬영 내용: 영화 부당거래 파티 장소로 나오는 곳<br>주소:대전광역시 서구 둔산대로 157</div>`)[0];
+                popup_17d8cf39c204a2fb135bc7ba83beea2b.setContent(html_833be6031e663dc5ed07249ab08f7ef6);
+            
+        
+
+        marker_b82c26b341b986a7c870f8ab49ecfc17.bindPopup(popup_17d8cf39c204a2fb135bc7ba83beea2b)
+        ;
+
+        
+    
+    
+            var marker_ec3a3c7525ebfe5b01e1f56af0e6880a = L.marker(
+                [36.363441, 127.346065],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_c12f0db519ea07b804b4f730930b8e12 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ec3a3c7525ebfe5b01e1f56af0e6880a.setIcon(icon_c12f0db519ea07b804b4f730930b8e12);
+        
+    
+        var popup_1f5dc1453fa4d6b0d2e624faf5a14d3e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1ee02186c1d60c6df8d3ae1141053bbe = $(`<div id="html_1ee02186c1d60c6df8d3ae1141053bbe" style="width: 100.0%; height: 100.0%;">장소명: 충남대학교 정심화홀<br>장소 유형: playground<br>촬영 내용: 부당거래에서 황정민이 상을 받는 곳<br>주소:대전광역시 유성구 대학로 99 충남대학교</div>`)[0];
+                popup_1f5dc1453fa4d6b0d2e624faf5a14d3e.setContent(html_1ee02186c1d60c6df8d3ae1141053bbe);
+            
+        
+
+        marker_ec3a3c7525ebfe5b01e1f56af0e6880a.bindPopup(popup_1f5dc1453fa4d6b0d2e624faf5a14d3e)
+        ;
+
+        
+    
+    
+            var marker_4745d31acb1694b11729dd7d21fa0929 = L.marker(
+                [36.320593, 127.36621],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_ff1ca4b8397c40272f643a21eecdd4ba = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4745d31acb1694b11729dd7d21fa0929.setIcon(icon_ff1ca4b8397c40272f643a21eecdd4ba);
+        
+    
+        var popup_d7f042ad5f682b576d9ee4cd811157ab = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a99017a3f2e9f82abee38389abab1b32 = $(`<div id="html_a99017a3f2e9f82abee38389abab1b32" style="width: 100.0%; height: 100.0%;">장소명: 배재대학교<br>장소 유형: playground<br>촬영 내용: 차현태(박성근)는 1회에서 유명한 설교자 행세를 하며 이 교회 건물로 끌려온다. 대본을 잃어버렸음에도 불구하고 격앙된 설교를 하고, 이후에도 많은 설교가 이어지며 교인들이 교회 건축 기금에 아낌없이 기부할 것을 독려한다.<br>주소:대전광역시 서구 배재로 155-40</div>`)[0];
+                popup_d7f042ad5f682b576d9ee4cd811157ab.setContent(html_a99017a3f2e9f82abee38389abab1b32);
+            
+        
+
+        marker_4745d31acb1694b11729dd7d21fa0929.bindPopup(popup_d7f042ad5f682b576d9ee4cd811157ab)
+        ;
+
+        
+    
+    
+            var marker_032a2101f37eebb94faf6627ae4610b8 = L.marker(
+                [36.3564715, 127.4156583],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_2a4886dae6d91c77ddd9705623867afc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_032a2101f37eebb94faf6627ae4610b8.setIcon(icon_2a4886dae6d91c77ddd9705623867afc);
+        
+    
+        var popup_dbbde7d68cbb7f012f23d17ee864fadd = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f57865da62cb3b2b282421218ff6e908 = $(`<div id="html_f57865da62cb3b2b282421218ff6e908" style="width: 100.0%; height: 100.0%;">장소명: 황금어장식품<br>장소 유형: cafe<br>촬영 내용: 생방송오늘아침 2426회 대왕붕어빵 맛집<br>주소:대전광역시 대덕구 대전로1142번길 10</div>`)[0];
+                popup_dbbde7d68cbb7f012f23d17ee864fadd.setContent(html_f57865da62cb3b2b282421218ff6e908);
+            
+        
+
+        marker_032a2101f37eebb94faf6627ae4610b8.bindPopup(popup_dbbde7d68cbb7f012f23d17ee864fadd)
+        ;
+
+        
+    
+    
+            var marker_ebf79a0de4f5e1de67d26f83e81fa2c2 = L.marker(
+                [36.31747, 127.3683442],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_0f6c8e2efd8d436e0a74be0cce1d8590 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ebf79a0de4f5e1de67d26f83e81fa2c2.setIcon(icon_0f6c8e2efd8d436e0a74be0cce1d8590);
+        
+    
+        var popup_4f43da89752c90296d7db99910c4247b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_285de5dc825c51382398a9968a2166fe = $(`<div id="html_285de5dc825c51382398a9968a2166fe" style="width: 100.0%; height: 100.0%;">장소명: 나영왕돈까스<br>장소 유형: restaurant<br>촬영 내용: 생방송오늘아침 3514회 수제돈가스 맛집<br>주소:대전광역시 서구 배재로91번길 57</div>`)[0];
+                popup_4f43da89752c90296d7db99910c4247b.setContent(html_285de5dc825c51382398a9968a2166fe);
+            
+        
+
+        marker_ebf79a0de4f5e1de67d26f83e81fa2c2.bindPopup(popup_4f43da89752c90296d7db99910c4247b)
+        ;
+
+        
+    
+    
+            var marker_2b23ba9bac1e809075d6ac39ed9e0c76 = L.marker(
+                [36.3566719, 127.3475546],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_92b3e34a891dd48f0b652e22e2b5fd1f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_2b23ba9bac1e809075d6ac39ed9e0c76.setIcon(icon_92b3e34a891dd48f0b652e22e2b5fd1f);
+        
+    
+        var popup_70e4fc4b55dae0449e235c292edcb193 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_afb29b455393601dba284442c7a7e0d5 = $(`<div id="html_afb29b455393601dba284442c7a7e0d5" style="width: 100.0%; height: 100.0%;">장소명: 테판정 오마카세 철판요리<br>장소 유형: restaurant<br>촬영 내용: 생방송오늘아침 4039회 일본식코스요리 맛집<br>주소:대전광역시 유성구 온천북로 19 2층 201호</div>`)[0];
+                popup_70e4fc4b55dae0449e235c292edcb193.setContent(html_afb29b455393601dba284442c7a7e0d5);
+            
+        
+
+        marker_2b23ba9bac1e809075d6ac39ed9e0c76.bindPopup(popup_70e4fc4b55dae0449e235c292edcb193)
+        ;
+
+        
+    
+    
+            var marker_921484afba7c473d1c20256b454ad0e0 = L.marker(
+                [36.3253335, 127.3973378],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_4c649d3fabf8a2bee5ee039671536920 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_921484afba7c473d1c20256b454ad0e0.setIcon(icon_4c649d3fabf8a2bee5ee039671536920);
+        
+    
+        var popup_f56a9b1887a32ba86468883112f4c46e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_55c7bc4073c6ad59f460d4ade47c2405 = $(`<div id="html_55c7bc4073c6ad59f460d4ade47c2405" style="width: 100.0%; height: 100.0%;">장소명: 이대감손만두<br>장소 유형: restaurant<br>촬영 내용: 생방송오늘아침 2843회 만두 맛집<br>주소:대전광역시 중구 평촌로105번길 59</div>`)[0];
+                popup_f56a9b1887a32ba86468883112f4c46e.setContent(html_55c7bc4073c6ad59f460d4ade47c2405);
+            
+        
+
+        marker_921484afba7c473d1c20256b454ad0e0.bindPopup(popup_f56a9b1887a32ba86468883112f4c46e)
+        ;
+
+        
+    
+    
+            var marker_328dd74b5d88871752e948a3cc7a28e5 = L.marker(
+                [36.3531142, 127.3772627],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_452297013b78d86dfb21d78c540a89a7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_328dd74b5d88871752e948a3cc7a28e5.setIcon(icon_452297013b78d86dfb21d78c540a89a7);
+        
+    
+        var popup_ed2f586aa62ce521410b081405c3a146 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5fc3986d7c5a4b62bcb16cf435adea52 = $(`<div id="html_5fc3986d7c5a4b62bcb16cf435adea52" style="width: 100.0%; height: 100.0%;">장소명: 이태리국시 본점<br>장소 유형: restaurant<br>촬영 내용: 생방송오늘저녁 1784회 곱창돌솥파스타, 대파삼겹살로제파스타, 청양크림봉골레파스타, 닭한마리크림리소토, 깍두기갈비로제리소토 맛집<br>주소:대전광역시 서구 둔산로31번길 31 2층</div>`)[0];
+                popup_ed2f586aa62ce521410b081405c3a146.setContent(html_5fc3986d7c5a4b62bcb16cf435adea52);
+            
+        
+
+        marker_328dd74b5d88871752e948a3cc7a28e5.bindPopup(popup_ed2f586aa62ce521410b081405c3a146)
+        ;
+
+        
+    
+    
+            var marker_b144c3923e56f46d01bcbde72d3f6148 = L.marker(
+                [36.425617, 127.3826516],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_f4582b39287e5f47f7d56fb8a9e2a79d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b144c3923e56f46d01bcbde72d3f6148.setIcon(icon_f4582b39287e5f47f7d56fb8a9e2a79d);
+        
+    
+        var popup_ed17c5967bc83e278da5514ad38d8598 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_edd74fe61df8dfbc915dc343123f85aa = $(`<div id="html_edd74fe61df8dfbc915dc343123f85aa" style="width: 100.0%; height: 100.0%;">장소명: 동막골흑돼지<br>장소 유형: restaurant<br>촬영 내용: 생방송투데이 3109회 흑돼지감자탕, 삼겹살, 제육볶음, 김치전골 맛집<br>주소:대전광역시 유성구 대덕대로1111번길 1-25</div>`)[0];
+                popup_ed17c5967bc83e278da5514ad38d8598.setContent(html_edd74fe61df8dfbc915dc343123f85aa);
+            
+        
+
+        marker_b144c3923e56f46d01bcbde72d3f6148.bindPopup(popup_ed17c5967bc83e278da5514ad38d8598)
+        ;
+
+        
+    
+    
+            var marker_5c00a1fa0e8c5d49a2f73b250ccac87e = L.marker(
+                [36.3656944, 127.4261834],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_b03eacdb957dd3f16aa0e9183164c92c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_5c00a1fa0e8c5d49a2f73b250ccac87e.setIcon(icon_b03eacdb957dd3f16aa0e9183164c92c);
+        
+    
+        var popup_9a9a2d1015ad2b3e104afa112182f156 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2b623472a7a640e54f68a02ad19fc1bf = $(`<div id="html_2b623472a7a640e54f68a02ad19fc1bf" style="width: 100.0%; height: 100.0%;">장소명: 불티나만두찐빵<br>장소 유형: cafe<br>촬영 내용: 생활의달인 764회 찐빵 맛집<br>주소:대전광역시 대덕구 중리로76번길 18</div>`)[0];
+                popup_9a9a2d1015ad2b3e104afa112182f156.setContent(html_2b623472a7a640e54f68a02ad19fc1bf);
+            
+        
+
+        marker_5c00a1fa0e8c5d49a2f73b250ccac87e.bindPopup(popup_9a9a2d1015ad2b3e104afa112182f156)
+        ;
+
+        
+    
+    
+            var marker_51cc84bf74856d773c207da1a58fbd79 = L.marker(
+                [36.3553175, 127.3705379],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_c4c798ccce9e38cd1942be72623a92c0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_51cc84bf74856d773c207da1a58fbd79.setIcon(icon_c4c798ccce9e38cd1942be72623a92c0);
+        
+    
+        var popup_e67799806d084aae89f8ddc3f9f0bd85 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d6351ed6b1519eaac14e0b911b2610c4 = $(`<div id="html_d6351ed6b1519eaac14e0b911b2610c4" style="width: 100.0%; height: 100.0%;">장소명: 로얄라멘<br>장소 유형: restaurant<br>촬영 내용: 생활의달인 845회 츠케멘 맛집<br>주소:대전광역시 서구 계룡로367번길 13</div>`)[0];
+                popup_e67799806d084aae89f8ddc3f9f0bd85.setContent(html_d6351ed6b1519eaac14e0b911b2610c4);
+            
+        
+
+        marker_51cc84bf74856d773c207da1a58fbd79.bindPopup(popup_e67799806d084aae89f8ddc3f9f0bd85)
+        ;
+
+        
+    
+    
+            var marker_af0a7583cb99d9b9ad4b1908ba09c085 = L.marker(
+                [36.3991296, 127.4019457],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_f660a2fda0d2d715a6d7c76d2d3bebdb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_af0a7583cb99d9b9ad4b1908ba09c085.setIcon(icon_f660a2fda0d2d715a6d7c76d2d3bebdb);
+        
+    
+        var popup_a2a50f3be50c48be6070e825bbd6d736 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2d95b88ec203928e92667d96a9a26a9d = $(`<div id="html_2d95b88ec203928e92667d96a9a26a9d" style="width: 100.0%; height: 100.0%;">장소명: 심스 스모크하우스<br>장소 유형: restaurant<br>촬영 내용: 생활의달인 745회 바비큐 맛집<br>주소:대전광역시 유성구 전민로6번길 99</div>`)[0];
+                popup_a2a50f3be50c48be6070e825bbd6d736.setContent(html_2d95b88ec203928e92667d96a9a26a9d);
+            
+        
+
+        marker_af0a7583cb99d9b9ad4b1908ba09c085.bindPopup(popup_a2a50f3be50c48be6070e825bbd6d736)
+        ;
+
+        
+    
+    
+            var marker_38182b42b8335cb88c0ee1d7175e0f92 = L.marker(
+                [36.336646, 127.436982],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_1a1b55391ace4d1d437e226bb48418b5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_38182b42b8335cb88c0ee1d7175e0f92.setIcon(icon_1a1b55391ace4d1d437e226bb48418b5);
+        
+    
+        var popup_4fb8d4e0cd3cf607731dc22f4fb3eed5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_41c48c7d84c356a1e11847aa38c1af3f = $(`<div id="html_41c48c7d84c356a1e11847aa38c1af3f" style="width: 100.0%; height: 100.0%;">장소명: 풍뉴가<br>장소 유형: cafe<br>촬영 내용: 서울촌놈 대전편에 나온 대나무숲 속 카페<br>주소:대전광역시 동구 수향길 31</div>`)[0];
+                popup_4fb8d4e0cd3cf607731dc22f4fb3eed5.setContent(html_41c48c7d84c356a1e11847aa38c1af3f);
+            
+        
+
+        marker_38182b42b8335cb88c0ee1d7175e0f92.bindPopup(popup_4fb8d4e0cd3cf607731dc22f4fb3eed5)
+        ;
+
+        
+    
+    
+            var marker_26918abb1fa435107839a81b9a629b15 = L.marker(
+                [36.3497664, 127.3890321],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_84ca2592a3a37e80496b3d73093937b9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_26918abb1fa435107839a81b9a629b15.setIcon(icon_84ca2592a3a37e80496b3d73093937b9);
+        
+    
+        var popup_8c5cec852ff2d5e0fd80d68c372f3ee8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_79cfd86d29790cc9dc8ff2309aaf7e96 = $(`<div id="html_79cfd86d29790cc9dc8ff2309aaf7e96" style="width: 100.0%; height: 100.0%;">장소명: 지리산산골농장<br>장소 유형: restaurant<br>촬영 내용: 식객남녀잘먹었습니다 시즌3 11회 명품모둠/묵은지촌돼지찌개 맛집<br>주소:대전광역시 서구 둔산남로105번길 15</div>`)[0];
+                popup_8c5cec852ff2d5e0fd80d68c372f3ee8.setContent(html_79cfd86d29790cc9dc8ff2309aaf7e96);
+            
+        
+
+        marker_26918abb1fa435107839a81b9a629b15.bindPopup(popup_8c5cec852ff2d5e0fd80d68c372f3ee8)
+        ;
+
+        
+    
+    
+            var marker_30ea4a5df26c8c05a26594f87d99a3db = L.marker(
+                [36.3701824, 127.4352139],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_23bd96677a46c66411ea78a0d04c125a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_30ea4a5df26c8c05a26594f87d99a3db.setIcon(icon_23bd96677a46c66411ea78a0d04c125a);
+        
+    
+        var popup_39d829a259dca0229e0369e2814835c0 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0c81f79b914ee24631f04adf68022af4 = $(`<div id="html_0c81f79b914ee24631f04adf68022af4" style="width: 100.0%; height: 100.0%;">장소명: 매봉식당<br>장소 유형: restaurant<br>촬영 내용: 식객허영만의백반기행 171회 두부전골 맛집<br>주소:대전광역시 대덕구 계족로664번길 113</div>`)[0];
+                popup_39d829a259dca0229e0369e2814835c0.setContent(html_0c81f79b914ee24631f04adf68022af4);
+            
+        
+
+        marker_30ea4a5df26c8c05a26594f87d99a3db.bindPopup(popup_39d829a259dca0229e0369e2814835c0)
+        ;
+
+        
+    
+    
+            var marker_36cdde39045e3044fda88578bf5d1025 = L.marker(
+                [36.3447577, 127.433185],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_b2e19c4b8ce62a8a7767a9c3f3ec4eb3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_36cdde39045e3044fda88578bf5d1025.setIcon(icon_b2e19c4b8ce62a8a7767a9c3f3ec4eb3);
+        
+    
+        var popup_74bc96a53308c62fcc9747cdc00cc02b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d73d77c8954570c612d6b25b0d64c2f3 = $(`<div id="html_d73d77c8954570c612d6b25b0d64c2f3" style="width: 100.0%; height: 100.0%;">장소명: 경동 오징어 국수<br>장소 유형: restaurant<br>촬영 내용: 식객허영만의백반기행 129회 두부오징어두루치기/족발양념구이 맛집<br>주소:대전광역시 동구 계족로 369</div>`)[0];
+                popup_74bc96a53308c62fcc9747cdc00cc02b.setContent(html_d73d77c8954570c612d6b25b0d64c2f3);
+            
+        
+
+        marker_36cdde39045e3044fda88578bf5d1025.bindPopup(popup_74bc96a53308c62fcc9747cdc00cc02b)
+        ;
+
+        
+    
+    
+            var marker_9c17783b085530a71a4606f3ba85f9ce = L.marker(
+                [36.1963955, 127.3365884],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_2c1e5eb36626b261a3a6f59113d2ddd4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_9c17783b085530a71a4606f3ba85f9ce.setIcon(icon_2c1e5eb36626b261a3a6f59113d2ddd4);
+        
+    
+        var popup_90bf91f6186ec652b62ef95f8b34a368 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2ba1a900492240bfee0383ec2862ac5a = $(`<div id="html_2ba1a900492240bfee0383ec2862ac5a" style="width: 100.0%; height: 100.0%;">장소명: 산막골가든<br>장소 유형: restaurant<br>촬영 내용: 식객허영만의백반기행 171회 흑돼지구이 맛집<br>주소:대전광역시 서구 장안로 772-62</div>`)[0];
+                popup_90bf91f6186ec652b62ef95f8b34a368.setContent(html_2ba1a900492240bfee0383ec2862ac5a);
+            
+        
+
+        marker_9c17783b085530a71a4606f3ba85f9ce.bindPopup(popup_90bf91f6186ec652b62ef95f8b34a368)
+        ;
+
+        
+    
+    
+            var marker_8521aad6fff47a3a6e5673a9ab66099e = L.marker(
+                [36.3138289, 127.3789896],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_eeac2358305712ffa6ba1cbd42ab8256 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8521aad6fff47a3a6e5673a9ab66099e.setIcon(icon_eeac2358305712ffa6ba1cbd42ab8256);
+        
+    
+        var popup_c838dbfbd6021ba85067fd0d01bdff02 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_44b19add6d0418deac1e2f0222dded78 = $(`<div id="html_44b19add6d0418deac1e2f0222dded78" style="width: 100.0%; height: 100.0%;">장소명: 회랑<br>장소 유형: restaurant<br>촬영 내용: 식객허영만의백반기행 129회 청국장 맛집<br>주소:대전광역시 서구 제비네4길 9</div>`)[0];
+                popup_c838dbfbd6021ba85067fd0d01bdff02.setContent(html_44b19add6d0418deac1e2f0222dded78);
+            
+        
+
+        marker_8521aad6fff47a3a6e5673a9ab66099e.bindPopup(popup_c838dbfbd6021ba85067fd0d01bdff02)
+        ;
+
+        
+    
+    
+            var marker_f8e205999c245a4a2482daf61c8a6680 = L.marker(
+                [36.2984584, 127.3184991],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_58445591b8b64b44708e81bccc0ca7b7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f8e205999c245a4a2482daf61c8a6680.setIcon(icon_58445591b8b64b44708e81bccc0ca7b7);
+        
+    
+        var popup_ec06f659d62b86dd3160cac8e8eb4604 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e314f442af623615149457152da1e535 = $(`<div id="html_e314f442af623615149457152da1e535" style="width: 100.0%; height: 100.0%;">장소명: 한마음 냉면<br>장소 유형: restaurant<br>촬영 내용: 식객허영만의백반기행 171회 냉면/김치비빔 맛집<br>주소:대전광역시 유성구 진잠로70번길 41</div>`)[0];
+                popup_ec06f659d62b86dd3160cac8e8eb4604.setContent(html_e314f442af623615149457152da1e535);
+            
+        
+
+        marker_f8e205999c245a4a2482daf61c8a6680.bindPopup(popup_ec06f659d62b86dd3160cac8e8eb4604)
+        ;
+
+        
+    
+    
+            var marker_35de2ac1dd885218d4454c2d787c775a = L.marker(
+                [36.3111006, 127.4397093],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_c7da25f402f0530f587553eb7e19e2dd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_35de2ac1dd885218d4454c2d787c775a.setIcon(icon_c7da25f402f0530f587553eb7e19e2dd);
+        
+    
+        var popup_bf337c8e8041e4f0e7c1b98ae6ba39bc = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7669e943944402f35da2615e7365d45f = $(`<div id="html_7669e943944402f35da2615e7365d45f" style="width: 100.0%; height: 100.0%;">장소명: 홍두깨칼국수<br>장소 유형: restaurant<br>촬영 내용: 식객허영만의백반기행 129회 얼큰이칼국수/수육 맛집<br>주소:대전광역시 중구 대종로 258</div>`)[0];
+                popup_bf337c8e8041e4f0e7c1b98ae6ba39bc.setContent(html_7669e943944402f35da2615e7365d45f);
+            
+        
+
+        marker_35de2ac1dd885218d4454c2d787c775a.bindPopup(popup_bf337c8e8041e4f0e7c1b98ae6ba39bc)
+        ;
+
+        
+    
+    
+            var marker_a92885b4e1f522d200959a5185afbb60 = L.marker(
+                [36.3265377, 127.4306439],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_31d6b2920b519be700c77acf4718fc9d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a92885b4e1f522d200959a5185afbb60.setIcon(icon_31d6b2920b519be700c77acf4718fc9d);
+        
+    
+        var popup_4bbc2d064f07f25d5bbcdc8f4b37161e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ba2fce48b7f92576a66dc0badc642d24 = $(`<div id="html_ba2fce48b7f92576a66dc0badc642d24" style="width: 100.0%; height: 100.0%;">장소명: 대전갈비집<br>장소 유형: restaurant<br>촬영 내용: 식객허영만의백반기행 129회 돼지갈비 맛집<br>주소:대전광역시 중구 대흥로175번길 28</div>`)[0];
+                popup_4bbc2d064f07f25d5bbcdc8f4b37161e.setContent(html_ba2fce48b7f92576a66dc0badc642d24);
+            
+        
+
+        marker_a92885b4e1f522d200959a5185afbb60.bindPopup(popup_4bbc2d064f07f25d5bbcdc8f4b37161e)
+        ;
+
+        
+    
+    
+            var marker_9162eecbcc34f1cbb678f0c492632ff5 = L.marker(
+                [36.3293757, 127.4199607],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_f9968c99c039860e5f3a607f9ddd2d73 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_9162eecbcc34f1cbb678f0c492632ff5.setIcon(icon_f9968c99c039860e5f3a607f9ddd2d73);
+        
+    
+        var popup_81731c03be43119ddab2087a7c76e012 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9c2687605183b2fdf33b828cb05f2707 = $(`<div id="html_9c2687605183b2fdf33b828cb05f2707" style="width: 100.0%; height: 100.0%;">장소명: 고향콩나물집<br>장소 유형: restaurant<br>촬영 내용: 식객허영만의백반기행 171회 콩나물밥/육회/북어찜 맛집<br>주소:대전광역시 중구 보문로 305</div>`)[0];
+                popup_81731c03be43119ddab2087a7c76e012.setContent(html_9c2687605183b2fdf33b828cb05f2707);
+            
+        
+
+        marker_9162eecbcc34f1cbb678f0c492632ff5.bindPopup(popup_81731c03be43119ddab2087a7c76e012)
+        ;
+
+        
+    
+    
+            var marker_60e3c52cf6c8dc5a14ec98273ad7ee92 = L.marker(
+                [36.33627, 127.4602],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_810889531d8cd398d90dde7c705fb636 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_60e3c52cf6c8dc5a14ec98273ad7ee92.setIcon(icon_810889531d8cd398d90dde7c705fb636);
+        
+    
+        var popup_c43d8334dfc445f755a82bafbbb5e44d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c4ab497f9edcfb09347759846a85c5d1 = $(`<div id="html_c4ab497f9edcfb09347759846a85c5d1" style="width: 100.0%; height: 100.0%;">장소명: 대전대학교<br>장소 유형: playground<br>촬영 내용: 극중 등장인물인 이성용(신재휘)이 다니는 '용파고등학교'의 촬영지 이다.<br>주소:대전광역시 동구 대학로 62</div>`)[0];
+                popup_c43d8334dfc445f755a82bafbbb5e44d.setContent(html_c4ab497f9edcfb09347759846a85c5d1);
+            
+        
+
+        marker_60e3c52cf6c8dc5a14ec98273ad7ee92.bindPopup(popup_c43d8334dfc445f755a82bafbbb5e44d)
+        ;
+
+        
+    
+    
+            var marker_d3be2c25055ad3941dc327526f3c4841 = L.marker(
+                [36.336271, 127.43482],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_150d753e3da381edaa0e421746a04a19 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d3be2c25055ad3941dc327526f3c4841.setIcon(icon_150d753e3da381edaa0e421746a04a19);
+        
+    
+        var popup_347629c398edf5eb8aaec5421f92fbd3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7320c66ed43a7f89ecf7350866208254 = $(`<div id="html_7320c66ed43a7f89ecf7350866208254" style="width: 100.0%; height: 100.0%;">장소명: 대전 삼성동 집<br>장소 유형: stay<br>촬영 내용: 4회에서 황희태(이도현)와 김명희(고민시)가 고아원에서 돌아온 후 이 집 근처 골목을 걷고 있다.<br>주소:대전광역시 동구 솔랑5길 36</div>`)[0];
+                popup_347629c398edf5eb8aaec5421f92fbd3.setContent(html_7320c66ed43a7f89ecf7350866208254);
+            
+        
+
+        marker_d3be2c25055ad3941dc327526f3c4841.bindPopup(popup_347629c398edf5eb8aaec5421f92fbd3)
+        ;
+
+        
+    
+    
+            var marker_2d384c7c24bc5cf5178e1cef1223a23b = L.marker(
+                [36.3266855, 127.420912],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_793beb89fc16175de2274284d451a324 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_2d384c7c24bc5cf5178e1cef1223a23b.setIcon(icon_793beb89fc16175de2274284d451a324);
+        
+    
+        var popup_948ae3fb299c867888c7ea7398ebe246 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2da4cafc0fa0b53dde2f2905b9ca2ab5 = $(`<div id="html_2da4cafc0fa0b53dde2f2905b9ca2ab5" style="width: 100.0%; height: 100.0%;">장소명: 대전근현대사전시관<br>장소 유형: playground<br>촬영 내용: 7회에서 강미나/조연주(이하늬)가 심문을 위해 소환되는 '서평지검'으로 등장한다.<br>주소:대전광역시 중구 중앙로 101</div>`)[0];
+                popup_948ae3fb299c867888c7ea7398ebe246.setContent(html_2da4cafc0fa0b53dde2f2905b9ca2ab5);
+            
+        
+
+        marker_2d384c7c24bc5cf5178e1cef1223a23b.bindPopup(popup_948ae3fb299c867888c7ea7398ebe246)
+        ;
+
+        
+    
+    
+            var marker_ab5933ee5dc7186362bfa69a706f1742 = L.marker(
+                [36.332137, 127.450639],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_3b613b85c14c633d9244bf6df7e27461 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ab5933ee5dc7186362bfa69a706f1742.setIcon(icon_3b613b85c14c633d9244bf6df7e27461);
+        
+    
+        var popup_cacd8117bb510e235928e1a9d5182f3a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b18dca1d9da51461ff7cc9a6677a34a9 = $(`<div id="html_b18dca1d9da51461ff7cc9a6677a34a9" style="width: 100.0%; height: 100.0%;">장소명: 대동단결<br>장소 유형: cafe<br>촬영 내용: 수수한 벽화와 레트로한 분위기의 카페<br>주소:대전광역시 동구 백룡로48번길 41-16</div>`)[0];
+                popup_cacd8117bb510e235928e1a9d5182f3a.setContent(html_b18dca1d9da51461ff7cc9a6677a34a9);
+            
+        
+
+        marker_ab5933ee5dc7186362bfa69a706f1742.bindPopup(popup_cacd8117bb510e235928e1a9d5182f3a)
+        ;
+
+        
+    
+    
+            var marker_438989259cc85f0558b10b6ae4a4cfc0 = L.marker(
+                [36.3564406, 127.3498401],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_ca4c97c2cc5c3922f135e75fb96f8a81 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_438989259cc85f0558b10b6ae4a4cfc0.setIcon(icon_ca4c97c2cc5c3922f135e75fb96f8a81);
+        
+    
+        var popup_1111f25ec376363b2c923d7a03d74ba6 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f6dd0997c95a7e14b2aa96ea0d281a63 = $(`<div id="html_f6dd0997c95a7e14b2aa96ea0d281a63" style="width: 100.0%; height: 100.0%;">장소명: 온천칼국수<br>장소 유형: restaurant<br>촬영 내용: 전지적참견시점 61회 물총칼국수, 쭈꾸미볶음 맛집<br>주소:대전광역시 유성구 온천북로59번길 2</div>`)[0];
+                popup_1111f25ec376363b2c923d7a03d74ba6.setContent(html_f6dd0997c95a7e14b2aa96ea0d281a63);
+            
+        
+
+        marker_438989259cc85f0558b10b6ae4a4cfc0.bindPopup(popup_1111f25ec376363b2c923d7a03d74ba6)
+        ;
+
+        
+    
+    
+            var marker_b0e8bb27b02e095a86aaab1da14a48a3 = L.marker(
+                [36.3277183, 127.4272516],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_931b913f51b6fe42f17424c99d0d0d1c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b0e8bb27b02e095a86aaab1da14a48a3.setIcon(icon_931b913f51b6fe42f17424c99d0d0d1c);
+        
+    
+        var popup_beae786bf0f224cfae9b114d555d2a19 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2bf2263eeb2e9b90b134f37c1ba82498 = $(`<div id="html_2bf2263eeb2e9b90b134f37c1ba82498" style="width: 100.0%; height: 100.0%;">장소명: 성심당 본점<br>장소 유형: cafe<br>촬영 내용: 전지적참견시점 5회 빵 맛집<br>주소:대전광역시 중구 대종로480번길 15</div>`)[0];
+                popup_beae786bf0f224cfae9b114d555d2a19.setContent(html_2bf2263eeb2e9b90b134f37c1ba82498);
+            
+        
+
+        marker_b0e8bb27b02e095a86aaab1da14a48a3.bindPopup(popup_beae786bf0f224cfae9b114d555d2a19)
+        ;
+
+        
+    
+    
+            var marker_2faacdb1491757f7e2808cd87c9fd6b1 = L.marker(
+                [36.317956, 127.4263018],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_55737556f1d9c114551274cd6a1bd93c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_2faacdb1491757f7e2808cd87c9fd6b1.setIcon(icon_55737556f1d9c114551274cd6a1bd93c);
+        
+    
+        var popup_0080c67e2ba582f2abf9625880026f9f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_59101e50dc5d553ffde6028c3fade6d9 = $(`<div id="html_59101e50dc5d553ffde6028c3fade6d9" style="width: 100.0%; height: 100.0%;">장소명: 복수분식 본점<br>장소 유형: restaurant<br>촬영 내용: 전지적참견시점 5회 두부두루치기 맛집<br>주소:대전광역시 중구 보문로162번길 9</div>`)[0];
+                popup_0080c67e2ba582f2abf9625880026f9f.setContent(html_59101e50dc5d553ffde6028c3fade6d9);
+            
+        
+
+        marker_2faacdb1491757f7e2808cd87c9fd6b1.bindPopup(popup_0080c67e2ba582f2abf9625880026f9f)
+        ;
+
+        
+    
+    
+            var marker_9c4fa00ce9566b0fa4f3b5b9172a35e2 = L.marker(
+                [36.331374, 127.42335],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_35367737951073d4b84876c89fd57e80 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_9c4fa00ce9566b0fa4f3b5b9172a35e2.setIcon(icon_35367737951073d4b84876c89fd57e80);
+        
+    
+        var popup_31289678586a344a61752e32b85892b9 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3b0e99a87ed1c6c5fc981ed5d3de79d1 = $(`<div id="html_3b0e99a87ed1c6c5fc981ed5d3de79d1" style="width: 100.0%; height: 100.0%;">장소명: 안도르<br>장소 유형: cafe<br>촬영 내용: 13회에 시니어 센터로 등장한다. 여성 중 한 명이 독살당하면서 7부대에 대한 새로운 사건이 시작되고, 14화에서 유설옥(최강희)에 의해 결국 해결된다<br>주소:대전광역시 중구 선화로 148</div>`)[0];
+                popup_31289678586a344a61752e32b85892b9.setContent(html_3b0e99a87ed1c6c5fc981ed5d3de79d1);
+            
+        
+
+        marker_9c4fa00ce9566b0fa4f3b5b9172a35e2.bindPopup(popup_31289678586a344a61752e32b85892b9)
+        ;
+
+        
+    
+    
+            var marker_823791d20f598874452ca27bb6526fbf = L.marker(
+                [36.3266855, 127.420912],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_eb452c59990f1dd3441ab1baa90d5b14 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_823791d20f598874452ca27bb6526fbf.setIcon(icon_eb452c59990f1dd3441ab1baa90d5b14);
+        
+    
+        var popup_934b070f235f19383dc65a1f0fceb858 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e21b23183ad93b8dc5fb651e0c14614e = $(`<div id="html_e21b23183ad93b8dc5fb651e0c14614e" style="width: 100.0%; height: 100.0%;">장소명: 대전근현대사전시관<br>장소 유형: playground<br>촬영 내용: 이곳은 드라마에서 '서동경찰서'로 등장한다. 등장인물들이 주로 나타나는 메인 촬영지중 하나이다<br>주소:대전광역시 중구 중앙로 101</div>`)[0];
+                popup_934b070f235f19383dc65a1f0fceb858.setContent(html_e21b23183ad93b8dc5fb651e0c14614e);
+            
+        
+
+        marker_823791d20f598874452ca27bb6526fbf.bindPopup(popup_934b070f235f19383dc65a1f0fceb858)
+        ;
+
+        
+    
+    
+            var marker_c3699f2016e38edf7ef1e4e6163b8212 = L.marker(
+                [36.352533, 127.3443],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_91c0e4af923ca68c8afc13d6d2365677 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c3699f2016e38edf7ef1e4e6163b8212.setIcon(icon_91c0e4af923ca68c8afc13d6d2365677);
+        
+    
+        var popup_d8511cc92ec49906479fd64918376aee = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_429b722e74a123027f4cd6df5f28ea8c = $(`<div id="html_429b722e74a123027f4cd6df5f28ea8c" style="width: 100.0%; height: 100.0%;">장소명: 미즈제일여성병원<br>장소 유형: playground<br>촬영 내용: 3회에서 손연희 박사(양진성)는 강인규(고경표)를 산부인과로 데려가 조산아의 상태를 확인한다.<br>주소:대전광역시 유성구 계룡로 126</div>`)[0];
+                popup_d8511cc92ec49906479fd64918376aee.setContent(html_429b722e74a123027f4cd6df5f28ea8c);
+            
+        
+
+        marker_c3699f2016e38edf7ef1e4e6163b8212.bindPopup(popup_d8511cc92ec49906479fd64918376aee)
+        ;
+
+        
+    
+    
+            var marker_a5a8f6b85b1634c647d74e6b7d908ebf = L.marker(
+                [36.388683, 127.347144],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_9be23052458db976d6cd29136d2b5574 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a5a8f6b85b1634c647d74e6b7d908ebf.setIcon(icon_9be23052458db976d6cd29136d2b5574);
+        
+    
+        var popup_732de9d3ee8abb8d5d83d52e7154bc87 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_269825afe023fad490d7cd79ecb3b1df = $(`<div id="html_269825afe023fad490d7cd79ecb3b1df" style="width: 100.0%; height: 100.0%;">장소명: 장동묵집<br>장소 유형: restaurant<br>촬영 내용: 태양이 군생활 중 방문한 음식점<br>주소:대전광역시 유성구 신성로 51</div>`)[0];
+                popup_732de9d3ee8abb8d5d83d52e7154bc87.setContent(html_269825afe023fad490d7cd79ecb3b1df);
+            
+        
+
+        marker_a5a8f6b85b1634c647d74e6b7d908ebf.bindPopup(popup_732de9d3ee8abb8d5d83d52e7154bc87)
+        ;
+
+        
+    
+    
+            var marker_27d45185674d88ab9d75b3b8c922d7c9 = L.marker(
+                [36.3901104, 127.3502532],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_56113293f04cd250e453a8c0117a2046 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_27d45185674d88ab9d75b3b8c922d7c9.setIcon(icon_56113293f04cd250e453a8c0117a2046);
+        
+    
+        var popup_9074691afc428589e991c3fe54842022 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f54cce0a5e7d985263c1fe40d5691f43 = $(`<div id="html_f54cce0a5e7d985263c1fe40d5691f43" style="width: 100.0%; height: 100.0%;">장소명: 숯골원냉면 본점<br>장소 유형: restaurant<br>촬영 내용: 태양이 방문한 대전에 냉면집<br>주소:대전광역시 유성구 신성로84번길 18</div>`)[0];
+                popup_9074691afc428589e991c3fe54842022.setContent(html_f54cce0a5e7d985263c1fe40d5691f43);
+            
+        
+
+        marker_27d45185674d88ab9d75b3b8c922d7c9.bindPopup(popup_9074691afc428589e991c3fe54842022)
+        ;
+
+        
+    
+    
+            var marker_6fbba82299d903e30a3d4e2f985b1920 = L.marker(
+                [36.336271, 127.43482],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_0af5558d3d77ea9b87f529caffb45ddc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_6fbba82299d903e30a3d4e2f985b1920.setIcon(icon_0af5558d3d77ea9b87f529caffb45ddc);
+        
+    
+        var popup_ef05d81ab502737cd0ed46d030de9077 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b3bf6b0ee298b24443f1bc90bdc3fbca = $(`<div id="html_b3bf6b0ee298b24443f1bc90bdc3fbca" style="width: 100.0%; height: 100.0%;">장소명: 대전 삼성동 집<br>장소 유형: stay<br>촬영 내용: 1980년대 장면에 등장한 박광호(최진혁)와 신연숙(이시아)의 신혼집 외관이다.<br>주소:대전광역시 동구 솔랑5길 36</div>`)[0];
+                popup_ef05d81ab502737cd0ed46d030de9077.setContent(html_b3bf6b0ee298b24443f1bc90bdc3fbca);
+            
+        
+
+        marker_6fbba82299d903e30a3d4e2f985b1920.bindPopup(popup_ef05d81ab502737cd0ed46d030de9077)
+        ;
+
+        
+    
+    
+            var marker_3bc2f55b246b77c399c1808637410d50 = L.marker(
+                [36.4153663, 127.3819567],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_464b2710efef2bad441565618c9c0508 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_3bc2f55b246b77c399c1808637410d50.setIcon(icon_464b2710efef2bad441565618c9c0508);
+        
+    
+        var popup_f1c6c07881bf07b8fcf2dbcaac462ca4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4c718a78d5e33808995af4c6bb54cc76 = $(`<div id="html_4c718a78d5e33808995af4c6bb54cc76" style="width: 100.0%; height: 100.0%;">장소명: 솔밭묵집<br>장소 유형: restaurant<br>촬영 내용: 한국인의밥상 488회 채묵/묵말랭이잡채/묵전 맛집<br>주소:대전광역시 유성구 관용로 51</div>`)[0];
+                popup_f1c6c07881bf07b8fcf2dbcaac462ca4.setContent(html_4c718a78d5e33808995af4c6bb54cc76);
+            
+        
+
+        marker_3bc2f55b246b77c399c1808637410d50.bindPopup(popup_f1c6c07881bf07b8fcf2dbcaac462ca4)
+        ;
+
+        
+    
+    
+            var marker_79ce78c7ef020a63e477a2c33823d5be = L.marker(
+                [36.416498, 127.39758],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_fcb61dce904fe624825de621d2cf222b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_79ce78c7ef020a63e477a2c33823d5be.setIcon(icon_fcb61dce904fe624825de621d2cf222b);
+        
+    
+        var popup_fa83bee3e38d5d9a3a809ab67628e05f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7d036dec589a0509a53247d39214832f = $(`<div id="html_7d036dec589a0509a53247d39214832f" style="width: 100.0%; height: 100.0%;">장소명: 대전외국인학교<br>장소 유형: playground<br>촬영 내용: 한재현(유지태)의 아들 한준서(박민수)와 윤지수(이보영)의 아들 이영이 다니는 기숙학교로 나온다<br>주소:대전광역시 유성구 용산2로 77</div>`)[0];
+                popup_fa83bee3e38d5d9a3a809ab67628e05f.setContent(html_7d036dec589a0509a53247d39214832f);
+            
+        
+
+        marker_79ce78c7ef020a63e477a2c33823d5be.bindPopup(popup_fa83bee3e38d5d9a3a809ab67628e05f)
+        ;
+
+        
+    
+    
+            var marker_b731fc05507d4ccee769d50dd2be5bf0 = L.marker(
+                [36.3265623, 127.4229999],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_c8b6cc56083a424bb140b0e16d3a3969 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b731fc05507d4ccee769d50dd2be5bf0.setIcon(icon_c8b6cc56083a424bb140b0e16d3a3969);
+        
+    
+        var popup_6630955a40aaad1631724c35c281124c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6bc6ffd0ba622fed807a5c3ebcee9571 = $(`<div id="html_6bc6ffd0ba622fed807a5c3ebcee9571" style="width: 100.0%; height: 100.0%;">장소명: 가치있는초콜릿<br>장소 유형: cafe<br>촬영 내용: MBC파워매거진 290회 초콜릿 맛집<br>주소:대전광역시 중구 중앙로112번길 19</div>`)[0];
+                popup_6630955a40aaad1631724c35c281124c.setContent(html_6bc6ffd0ba622fed807a5c3ebcee9571);
+            
+        
+
+        marker_b731fc05507d4ccee769d50dd2be5bf0.bindPopup(popup_6630955a40aaad1631724c35c281124c)
+        ;
+
+        
+    
+    
+            var marker_b1ef87f9505eea05195ab35ca24eb70b = L.marker(
+                [36.3564715, 127.4156583],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_f9a2bc025d9585e76b37b43b5e145c03 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b1ef87f9505eea05195ab35ca24eb70b.setIcon(icon_f9a2bc025d9585e76b37b43b5e145c03);
+        
+    
+        var popup_0a27c1c58c7e74b8003cf23ab3dcd829 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cf394935c4f566b953b09da95a123b50 = $(`<div id="html_cf394935c4f566b953b09da95a123b50" style="width: 100.0%; height: 100.0%;">장소명: 황금어장식품<br>장소 유형: cafe<br>촬영 내용: VJ특공대 795회 대왕붕어빵 맛집<br>주소:대전광역시 대덕구 대전로1142번길 10</div>`)[0];
+                popup_0a27c1c58c7e74b8003cf23ab3dcd829.setContent(html_cf394935c4f566b953b09da95a123b50);
+            
+        
+
+        marker_b1ef87f9505eea05195ab35ca24eb70b.bindPopup(popup_0a27c1c58c7e74b8003cf23ab3dcd829)
+        ;
+
+        
+    
+    
+            var marker_bb37c2cd0fcad37b0dd556a6b4cb0f88 = L.marker(
+                [36.3294598, 127.4342983],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_ee5b371f65c5ee23016d2b56aa95c730 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_bb37c2cd0fcad37b0dd556a6b4cb0f88.setIcon(icon_ee5b371f65c5ee23016d2b56aa95c730);
+        
+    
+        var popup_32bfc94e8307fb6ab11b36ed52f00aa8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_39ceba42be7bd5e7397b4b45d8194c28 = $(`<div id="html_39ceba42be7bd5e7397b4b45d8194c28" style="width: 100.0%; height: 100.0%;">장소명: 원조선지국<br>장소 유형: restaurant<br>촬영 내용: VJ특공대 853회 선짓국 맛집<br>주소:대전광역시 동구 역전시장길 84</div>`)[0];
+                popup_32bfc94e8307fb6ab11b36ed52f00aa8.setContent(html_39ceba42be7bd5e7397b4b45d8194c28);
+            
+        
+
+        marker_bb37c2cd0fcad37b0dd556a6b4cb0f88.bindPopup(popup_32bfc94e8307fb6ab11b36ed52f00aa8)
+        ;
+
+        
+    
+    
+            var marker_940aac6cca0108f966328d60a3c89558 = L.marker(
+                [36.3172322, 127.3960983],
+                {}
+            ).addTo(marker_cluster_5e274e38ced1b5b149df8f695c4cf13e);
+        
+    
+            var icon_59493e95a0dd65488eb191c907c161d8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_940aac6cca0108f966328d60a3c89558.setIcon(icon_59493e95a0dd65488eb191c907c161d8);
+        
+    
+        var popup_b21e2d1fded1c4dcc5d6a43d4bb1dcff = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b2e870ecb31f9c5cef0a7d694cc819bd = $(`<div id="html_b2e870ecb31f9c5cef0a7d694cc819bd" style="width: 100.0%; height: 100.0%;">장소명: 이리할매추어탕<br>장소 유형: restaurant<br>촬영 내용: VJ특공대 868회 추어탕 맛집<br>주소:대전광역시 중구 계백로1584번길 14</div>`)[0];
+                popup_b21e2d1fded1c4dcc5d6a43d4bb1dcff.setContent(html_b2e870ecb31f9c5cef0a7d694cc819bd);
+            
+        
+
+        marker_940aac6cca0108f966328d60a3c89558.bindPopup(popup_b21e2d1fded1c4dcc5d6a43d4bb1dcff)
+        ;
+
+        
+    
+</script>
+</html>

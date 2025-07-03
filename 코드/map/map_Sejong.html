@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e5f5051a43b3131e58f83097d370f2f7 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_e5f5051a43b3131e58f83097d370f2f7" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_e5f5051a43b3131e58f83097d370f2f7 = L.map(
+                "map_e5f5051a43b3131e58f83097d370f2f7",
+                {
+                    center: [36.4808, 127.2892],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_aa9863a70bfc5a96b03103776fda1f73 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_e5f5051a43b3131e58f83097d370f2f7);
+        
+    
+            var tile_layer_3ee05302dda6d93104e2c0a4ca1d268f = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+            var mini_map_cf33de4e7bbd090d0b9d10c05933901a = new L.Control.MiniMap(
+                tile_layer_3ee05302dda6d93104e2c0a4ca1d268f,
+                {"autoToggleDisplay": false, "centerFixed": false, "collapsedHeight": 25, "collapsedWidth": 25, "height": 150, "minimized": false, "position": "bottomright", "tiles": "OpenStreetMap", "toggleDisplay": true, "width": 150, "zoomAnimation": false, "zoomLevelOffset": -5}
+            );
+            map_e5f5051a43b3131e58f83097d370f2f7.addControl(mini_map_cf33de4e7bbd090d0b9d10c05933901a);
+        
+    
+            var marker_cluster_23b779e6b8879812d2b99c4f12023707 = L.markerClusterGroup(
+                {}
+            );
+            map_e5f5051a43b3131e58f83097d370f2f7.addLayer(marker_cluster_23b779e6b8879812d2b99c4f12023707);
+        
+    
+            var marker_6e908d78d94026163e07f64e618e715c = L.marker(
+                [36.529449, 127.3680532],
+                {}
+            ).addTo(marker_cluster_23b779e6b8879812d2b99c4f12023707);
+        
+    
+            var icon_ac4cc62fe78795073a3595498c8dc34d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_6e908d78d94026163e07f64e618e715c.setIcon(icon_ac4cc62fe78795073a3595498c8dc34d);
+        
+    
+        var popup_477ae71e5569a85dc8825c2b452d9932 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5cb94fc549932404b5467ffc8b091345 = $(`<div id="html_5cb94fc549932404b5467ffc8b091345" style="width: 100.0%; height: 100.0%;">장소명: 신설집<br>장소 유형: restaurant<br>촬영 내용: 6시내고향 7617회 순댓국 맛집<br>주소:세종특별자치시 부강면 부강4길 15 1층</div>`)[0];
+                popup_477ae71e5569a85dc8825c2b452d9932.setContent(html_5cb94fc549932404b5467ffc8b091345);
+            
+        
+
+        marker_6e908d78d94026163e07f64e618e715c.bindPopup(popup_477ae71e5569a85dc8825c2b452d9932)
+        ;
+
+        
+    
+    
+            var marker_4d71f57e35e30882ae9e77ced97f7a42 = L.marker(
+                [36.670592, 127.209267],
+                {}
+            ).addTo(marker_cluster_23b779e6b8879812d2b99c4f12023707);
+        
+    
+            var icon_8a1941b30cbd03462a9b9f07c212f099 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4d71f57e35e30882ae9e77ced97f7a42.setIcon(icon_8a1941b30cbd03462a9b9f07c212f099);
+        
+    
+        var popup_89ce714e4ead4e25be19e7355ca21b04 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_edd3c9ad0f2df0726d724292c3f9460d = $(`<div id="html_edd3c9ad0f2df0726d724292c3f9460d" style="width: 100.0%; height: 100.0%;">장소명: 베어트리파크<br>장소 유형: playground<br>촬영 내용: 이 공원은 현명진(오미희)의 맨션으로 나온다.<br>주소:세종특별자치시 전동면 신송로 217</div>`)[0];
+                popup_89ce714e4ead4e25be19e7355ca21b04.setContent(html_edd3c9ad0f2df0726d724292c3f9460d);
+            
+        
+
+        marker_4d71f57e35e30882ae9e77ced97f7a42.bindPopup(popup_89ce714e4ead4e25be19e7355ca21b04)
+        ;
+
+        
+    
+    
+            var marker_566d932bc8060ed986e5732b601f9a3b = L.marker(
+                [36.51648, 127.25514],
+                {}
+            ).addTo(marker_cluster_23b779e6b8879812d2b99c4f12023707);
+        
+    
+            var icon_4028950b1ce87ce6ef46ed6bb5236465 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_566d932bc8060ed986e5732b601f9a3b.setIcon(icon_4028950b1ce87ce6ef46ed6bb5236465);
+        
+    
+        var popup_6ddb645b33d9c659475dbe9e30bfa146 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_015591189557444e70d0a6bda164ad31 = $(`<div id="html_015591189557444e70d0a6bda164ad31" style="width: 100.0%; height: 100.0%;">장소명: 도담동 길마당<br>장소 유형: playground<br>촬영 내용: 신혼부부 정희주(고현정)와 안현성(최원영)의 집이 있는 곳이다. 현성의 어머니 박영선 김보연 분과 여동생 안민서(장혜진 분)는 남편 이형기(홍서준 분)와 함께 같은 주택단지다.<br>주소:세종특별자치시 도담동 686-1</div>`)[0];
+                popup_6ddb645b33d9c659475dbe9e30bfa146.setContent(html_015591189557444e70d0a6bda164ad31);
+            
+        
+
+        marker_566d932bc8060ed986e5732b601f9a3b.bindPopup(popup_6ddb645b33d9c659475dbe9e30bfa146)
+        ;
+
+        
+    
+    
+            var marker_f29e4991e200dc181df156cd30eb934b = L.marker(
+                [36.4680907, 127.281115],
+                {}
+            ).addTo(marker_cluster_23b779e6b8879812d2b99c4f12023707);
+        
+    
+            var icon_e7a12e4bbebf0a41c606e510698607f0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f29e4991e200dc181df156cd30eb934b.setIcon(icon_e7a12e4bbebf0a41c606e510698607f0);
+        
+    
+        var popup_a7fbd604b9f169b82d77b4753ee59723 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cb5575044993c8ae712b9113ce8cbbae = $(`<div id="html_cb5575044993c8ae712b9113ce8cbbae" style="width: 100.0%; height: 100.0%;">장소명: 물맷돌 한우 곰탕<br>장소 유형: restaurant<br>촬영 내용: 놀라운토요일 183회 갈비수육 맛집<br>주소:세종특별자치시 금남면 용포로 107-1</div>`)[0];
+                popup_a7fbd604b9f169b82d77b4753ee59723.setContent(html_cb5575044993c8ae712b9113ce8cbbae);
+            
+        
+
+        marker_f29e4991e200dc181df156cd30eb934b.bindPopup(popup_a7fbd604b9f169b82d77b4753ee59723)
+        ;
+
+        
+    
+    
+            var marker_aa16c6d14b7677848db837f5458bb7de = L.marker(
+                [36.4676289, 127.278202],
+                {}
+            ).addTo(marker_cluster_23b779e6b8879812d2b99c4f12023707);
+        
+    
+            var icon_c142acef3b444b5418bb85b02fbfafc6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_aa16c6d14b7677848db837f5458bb7de.setIcon(icon_c142acef3b444b5418bb85b02fbfafc6);
+        
+    
+        var popup_3a1d6f4ca796a27f65c183d603bb35b6 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_de2792ead54ddebb7802390664fffb24 = $(`<div id="html_de2792ead54ddebb7802390664fffb24" style="width: 100.0%; height: 100.0%;">장소명: 그랜드 제빵소<br>장소 유형: cafe<br>촬영 내용: 놀라운토요일 183회 복숭아빵 맛집<br>주소:세종특별자치시 금남면 용포로 119-55 1층~2층</div>`)[0];
+                popup_3a1d6f4ca796a27f65c183d603bb35b6.setContent(html_de2792ead54ddebb7802390664fffb24);
+            
+        
+
+        marker_aa16c6d14b7677848db837f5458bb7de.bindPopup(popup_3a1d6f4ca796a27f65c183d603bb35b6)
+        ;
+
+        
+    
+    
+            var marker_7ae52eab8223b1ec4ad0dcdc94a8fed9 = L.marker(
+                [36.4636379, 127.281579],
+                {}
+            ).addTo(marker_cluster_23b779e6b8879812d2b99c4f12023707);
+        
+    
+            var icon_1e1d6bcd460a8103ae4b3e5db3325588 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_7ae52eab8223b1ec4ad0dcdc94a8fed9.setIcon(icon_1e1d6bcd460a8103ae4b3e5db3325588);
+        
+    
+        var popup_98307277a0d8699a46eeb7d30f977a76 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_113000127ec19e19cc23ffe8e50b76eb = $(`<div id="html_113000127ec19e19cc23ffe8e50b76eb" style="width: 100.0%; height: 100.0%;">장소명: 북어찜전문점<br>장소 유형: restaurant<br>촬영 내용: 놀라운토요일 183회 북어찜 맛집<br>주소:세종특별자치시 금남면 용포쑥티1길 8</div>`)[0];
+                popup_98307277a0d8699a46eeb7d30f977a76.setContent(html_113000127ec19e19cc23ffe8e50b76eb);
+            
+        
+
+        marker_7ae52eab8223b1ec4ad0dcdc94a8fed9.bindPopup(popup_98307277a0d8699a46eeb7d30f977a76)
+        ;
+
+        
+    
+    
+            var marker_ff707b04b9040afe1f6d18399599d498 = L.marker(
+                [36.6021922, 127.298821],
+                {}
+            ).addTo(marker_cluster_23b779e6b8879812d2b99c4f12023707);
+        
+    
+            var icon_2ad5a02a2a60a88d73b39470069773cd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ff707b04b9040afe1f6d18399599d498.setIcon(icon_2ad5a02a2a60a88d73b39470069773cd);
+        
+    
+        var popup_65c732dccdc61294d0003d954fbb274b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5da386381b86b967a5dd012529afd76a = $(`<div id="html_5da386381b86b967a5dd012529afd76a" style="width: 100.0%; height: 100.0%;">장소명: 명우네수구레국밥<br>장소 유형: restaurant<br>촬영 내용: 놀라운토요일 138회 수구레무침 맛집<br>주소:세종특별자치시 조치원읍 새내12길 16</div>`)[0];
+                popup_65c732dccdc61294d0003d954fbb274b.setContent(html_5da386381b86b967a5dd012529afd76a);
+            
+        
+
+        marker_ff707b04b9040afe1f6d18399599d498.bindPopup(popup_65c732dccdc61294d0003d954fbb274b)
+        ;
+
+        
+    
+    
+            var marker_5c9b266a6909b56fbbf8b99eb66596bd = L.marker(
+                [36.6019366, 127.296518],
+                {}
+            ).addTo(marker_cluster_23b779e6b8879812d2b99c4f12023707);
+        
+    
+            var icon_d293e2af111f2f69e73aaa1efafb0884 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_5c9b266a6909b56fbbf8b99eb66596bd.setIcon(icon_d293e2af111f2f69e73aaa1efafb0884);
+        
+    
+        var popup_85a92f784ab8d728a85d17ab516bc9e7 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_72d9fc869c7c40d99a34e87ef539aa83 = $(`<div id="html_72d9fc869c7c40d99a34e87ef539aa83" style="width: 100.0%; height: 100.0%;">장소명: MODEST IMPACT<br>장소 유형: cafe<br>촬영 내용: 놀라운토요일 138회 딸기티라미수 맛집<br>주소:세종특별자치시 조치원읍 으뜸길 233 1층</div>`)[0];
+                popup_85a92f784ab8d728a85d17ab516bc9e7.setContent(html_72d9fc869c7c40d99a34e87ef539aa83);
+            
+        
+
+        marker_5c9b266a6909b56fbbf8b99eb66596bd.bindPopup(popup_85a92f784ab8d728a85d17ab516bc9e7)
+        ;
+
+        
+    
+    
+            var marker_4c4ec027aafdba31d27f36403fd93064 = L.marker(
+                [36.6007359, 127.297374],
+                {}
+            ).addTo(marker_cluster_23b779e6b8879812d2b99c4f12023707);
+        
+    
+            var icon_1d9d97c7d36c9b51cf20436decfdcca3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4c4ec027aafdba31d27f36403fd93064.setIcon(icon_1d9d97c7d36c9b51cf20436decfdcca3);
+        
+    
+        var popup_c23bde33d642ec2de13fe2c23bfc5916 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_84d9d5c54ea793df80037748d908d046 = $(`<div id="html_84d9d5c54ea793df80037748d908d046" style="width: 100.0%; height: 100.0%;">장소명: 세종설렁탕<br>장소 유형: restaurant<br>촬영 내용: 놀라운토요일 138회 도가니탕 맛집<br>주소:세종특별자치시 조치원읍 조치원2길 10</div>`)[0];
+                popup_c23bde33d642ec2de13fe2c23bfc5916.setContent(html_84d9d5c54ea793df80037748d908d046);
+            
+        
+
+        marker_4c4ec027aafdba31d27f36403fd93064.bindPopup(popup_c23bde33d642ec2de13fe2c23bfc5916)
+        ;
+
+        
+    
+    
+            var marker_2b620511dc53bd749dea91aba60a8bf7 = L.marker(
+                [36.602961, 127.2973],
+                {}
+            ).addTo(marker_cluster_23b779e6b8879812d2b99c4f12023707);
+        
+    
+            var icon_fdd4407904ebcf77a9fe179f030399e8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_2b620511dc53bd749dea91aba60a8bf7.setIcon(icon_fdd4407904ebcf77a9fe179f030399e8);
+        
+    
+        var popup_e2ee353cf611006f5ce2964e11d13acf = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b9cff089847f83d330f0909c2686ff33 = $(`<div id="html_b9cff089847f83d330f0909c2686ff33" style="width: 100.0%; height: 100.0%;">장소명: 연기복싱체육관<br>장소 유형: playground<br>촬영 내용: 2-3회에서 한득구(현빈)는 절친의 죽음으로 학교를 그만둔 후 이 체육관에서 일하고 훈련한다.<br>주소:세종특별자치시 조치원읍 새내13길 7</div>`)[0];
+                popup_e2ee353cf611006f5ce2964e11d13acf.setContent(html_b9cff089847f83d330f0909c2686ff33);
+            
+        
+
+        marker_2b620511dc53bd749dea91aba60a8bf7.bindPopup(popup_e2ee353cf611006f5ce2964e11d13acf)
+        ;
+
+        
+    
+    
+            var marker_6a7999e06bb963476fa9f2b23bd77a2e = L.marker(
+                [36.602961, 127.2973],
+                {}
+            ).addTo(marker_cluster_23b779e6b8879812d2b99c4f12023707);
+        
+    
+            var icon_9516d3fd34c3c3ea240da430c1bdd396 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_6a7999e06bb963476fa9f2b23bd77a2e.setIcon(icon_9516d3fd34c3c3ea240da430c1bdd396);
+        
+    
+        var popup_b3c0aec770e2308f7262f78425b671d8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_872b5fd00639f30221c4a852ae6e534a = $(`<div id="html_872b5fd00639f30221c4a852ae6e534a" style="width: 100.0%; height: 100.0%;">장소명: 연기복싱체육관<br>장소 유형: playground<br>촬영 내용: 유혜정(박신혜)은 4회에서 그녀를 찾아온 홍지홍(김래원)과 함께 이곳에서 훈련을 하고 있다.<br>주소:세종특별자치시 조치원읍 새내13길 7</div>`)[0];
+                popup_b3c0aec770e2308f7262f78425b671d8.setContent(html_872b5fd00639f30221c4a852ae6e534a);
+            
+        
+
+        marker_6a7999e06bb963476fa9f2b23bd77a2e.bindPopup(popup_b3c0aec770e2308f7262f78425b671d8)
+        ;
+
+        
+    
+    
+            var marker_679c81ff894ad267e3f52e47846003ec = L.marker(
+                [36.670592, 127.209267],
+                {}
+            ).addTo(marker_cluster_23b779e6b8879812d2b99c4f12023707);
+        
+    
+            var icon_9ea5a58abc970aa22d9d9298a1aa8210 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_679c81ff894ad267e3f52e47846003ec.setIcon(icon_9ea5a58abc970aa22d9d9298a1aa8210);
+        
+    
+        var popup_a5f511b06a9cab845c356ac2664354c1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5686baac0620fd9b9bd70ab9e07c68d7 = $(`<div id="html_5686baac0620fd9b9bd70ab9e07c68d7" style="width: 100.0%; height: 100.0%;">장소명: 베어트리파크<br>장소 유형: playground<br>촬영 내용: 4회에 이설(김태희)이 입주하는 황궁으로 나온다.<br>주소:세종특별자치시 전동면 신송로 217</div>`)[0];
+                popup_a5f511b06a9cab845c356ac2664354c1.setContent(html_5686baac0620fd9b9bd70ab9e07c68d7);
+            
+        
+
+        marker_679c81ff894ad267e3f52e47846003ec.bindPopup(popup_a5f511b06a9cab845c356ac2664354c1)
+        ;
+
+        
+    
+    
+            var marker_589532611caab0e1b17373046f30c81e = L.marker(
+                [36.613906, 127.28924],
+                {}
+            ).addTo(marker_cluster_23b779e6b8879812d2b99c4f12023707);
+        
+    
+            var icon_e89b067b1d70f796e91ecc9b3cf0b431 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_589532611caab0e1b17373046f30c81e.setIcon(icon_e89b067b1d70f796e91ecc9b3cf0b431);
+        
+    
+        var popup_a4da33562650b0e6fdc4a77ec7775157 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_72fabb09b1651d587feab1d8a75b93e8 = $(`<div id="html_72fabb09b1651d587feab1d8a75b93e8" style="width: 100.0%; height: 100.0%;">장소명: 단콩<br>장소 유형: cafe<br>촬영 내용: 여기는 강연두(정은지) 엄마의 카페.<br>주소:세종특별자치시 조치원읍 섭골길 35-4 단콩</div>`)[0];
+                popup_a4da33562650b0e6fdc4a77ec7775157.setContent(html_72fabb09b1651d587feab1d8a75b93e8);
+            
+        
+
+        marker_589532611caab0e1b17373046f30c81e.bindPopup(popup_a4da33562650b0e6fdc4a77ec7775157)
+        ;
+
+        
+    
+    
+            var marker_93bc110e957fe6fa3b593cacbed29be1 = L.marker(
+                [36.497909, 127.2729],
+                {}
+            ).addTo(marker_cluster_23b779e6b8879812d2b99c4f12023707);
+        
+    
+            var icon_7ccd9ca2aa421cc28db72e36da3c9bae = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_93bc110e957fe6fa3b593cacbed29be1.setIcon(icon_7ccd9ca2aa421cc28db72e36da3c9bae);
+        
+    
+        var popup_930fbb8b258e2a50d8e07f954ef8d613 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0621d65d879533de81b60028d7627b8b = $(`<div id="html_0621d65d879533de81b60028d7627b8b" style="width: 100.0%; height: 100.0%;">장소명: 세종호수공원<br>장소 유형: playground<br>촬영 내용: 아들과 눈을 마주치는 것이 불편한 아버지에게 연두의 어머니가 “미안해요, 고마워요, 사랑해요”라는 말은 아이가 잘 자라기 위해 들어야 할 세 가지 요소라고 설명한다.<br>주소:세종특별자치시 호수공원길 155</div>`)[0];
+                popup_930fbb8b258e2a50d8e07f954ef8d613.setContent(html_0621d65d879533de81b60028d7627b8b);
+            
+        
+
+        marker_93bc110e957fe6fa3b593cacbed29be1.bindPopup(popup_930fbb8b258e2a50d8e07f954ef8d613)
+        ;
+
+        
+    
+    
+            var marker_d5ff1a5264aee9ca299be7884dcecdcf = L.marker(
+                [36.5966645, 127.2954944],
+                {}
+            ).addTo(marker_cluster_23b779e6b8879812d2b99c4f12023707);
+        
+    
+            var icon_d1fb54daab00528de1e70eba6f239263 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d5ff1a5264aee9ca299be7884dcecdcf.setIcon(icon_d1fb54daab00528de1e70eba6f239263);
+        
+    
+        var popup_d24d62a5a661be325037da6444bef6e1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1a8ff0bbea3b7d91e1a8f5ccacd44c88 = $(`<div id="html_1a8ff0bbea3b7d91e1a8f5ccacd44c88" style="width: 100.0%; height: 100.0%;">장소명: 신흥파닭<br>장소 유형: restaurant<br>촬영 내용: 백종원의 3대 천왕 15회 양념치킨 맛집<br>주소:세종특별자치시 조치원읍 충현로 91</div>`)[0];
+                popup_d24d62a5a661be325037da6444bef6e1.setContent(html_1a8ff0bbea3b7d91e1a8f5ccacd44c88);
+            
+        
+
+        marker_d5ff1a5264aee9ca299be7884dcecdcf.bindPopup(popup_d24d62a5a661be325037da6444bef6e1)
+        ;
+
+        
+    
+    
+            var marker_09073f9e9d735e9bb32a3e1160e87515 = L.marker(
+                [36.670592, 127.209267],
+                {}
+            ).addTo(marker_cluster_23b779e6b8879812d2b99c4f12023707);
+        
+    
+            var icon_6f30cd3a63baf63aff2926d4643eb4c9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_09073f9e9d735e9bb32a3e1160e87515.setIcon(icon_6f30cd3a63baf63aff2926d4643eb4c9);
+        
+    
+        var popup_f4773e50be81c0f55bddfcd1b9338838 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8573be9ab7bfedaab4e339e43f3ac8ca = $(`<div id="html_8573be9ab7bfedaab4e339e43f3ac8ca" style="width: 100.0%; height: 100.0%;">장소명: 베어트리파크<br>장소 유형: playground<br>촬영 내용: 4회에 이다희의 가족 만찬 장면에서 나오는 곳<br>주소:세종특별자치시 전동면 신송로 217</div>`)[0];
+                popup_f4773e50be81c0f55bddfcd1b9338838.setContent(html_8573be9ab7bfedaab4e339e43f3ac8ca);
+            
+        
+
+        marker_09073f9e9d735e9bb32a3e1160e87515.bindPopup(popup_f4773e50be81c0f55bddfcd1b9338838)
+        ;
+
+        
+    
+    
+            var marker_0f83d67d5a71e2f414732d0a29250414 = L.marker(
+                [36.479931, 127.289047],
+                {}
+            ).addTo(marker_cluster_23b779e6b8879812d2b99c4f12023707);
+        
+    
+            var icon_1400b03d459112a13285e9a5330b139d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_0f83d67d5a71e2f414732d0a29250414.setIcon(icon_1400b03d459112a13285e9a5330b139d);
+        
+    
+        var popup_39f59bd209355810d882b240e25d7bea = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1efa2e578c555cbd9dd0ab1f5a6c074f = $(`<div id="html_1efa2e578c555cbd9dd0ab1f5a6c074f" style="width: 100.0%; height: 100.0%;">장소명: 세종특별자치시청<br>장소 유형: playground<br>촬영 내용: 주인공들의 사건을 찾아 배회하던 곳<br>주소:세종특별자치시 한누리대로 2130</div>`)[0];
+                popup_39f59bd209355810d882b240e25d7bea.setContent(html_1efa2e578c555cbd9dd0ab1f5a6c074f);
+            
+        
+
+        marker_0f83d67d5a71e2f414732d0a29250414.bindPopup(popup_39f59bd209355810d882b240e25d7bea)
+        ;
+
+        
+    
+    
+            var marker_38951666c2494ea69a30982d5cc0cc5a = L.marker(
+                [36.602961, 127.2973],
+                {}
+            ).addTo(marker_cluster_23b779e6b8879812d2b99c4f12023707);
+        
+    
+            var icon_a12270776b593a9d40d17a8b0ab1646e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_38951666c2494ea69a30982d5cc0cc5a.setIcon(icon_a12270776b593a9d40d17a8b0ab1646e);
+        
+    
+        var popup_8ef996047081438eff4baa352d07057f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ea44083c366e88ac41fa792e7379548a = $(`<div id="html_ea44083c366e88ac41fa792e7379548a" style="width: 100.0%; height: 100.0%;">장소명: 연기복싱체육관<br>장소 유형: playground<br>촬영 내용: 최정우(곽동연)가 오는 체육관.<br>주소:세종특별자치시 조치원읍 새내13길 7</div>`)[0];
+                popup_8ef996047081438eff4baa352d07057f.setContent(html_ea44083c366e88ac41fa792e7379548a);
+            
+        
+
+        marker_38951666c2494ea69a30982d5cc0cc5a.bindPopup(popup_8ef996047081438eff4baa352d07057f)
+        ;
+
+        
+    
+    
+            var marker_11790d54eec1b106051cb6e57ca47208 = L.marker(
+                [36.5833299, 127.2932935],
+                {}
+            ).addTo(marker_cluster_23b779e6b8879812d2b99c4f12023707);
+        
+    
+            var icon_eab273c5fc33b35e789d6b6333d91046 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_11790d54eec1b106051cb6e57ca47208.setIcon(icon_eab273c5fc33b35e789d6b6333d91046);
+        
+    
+        var popup_ed52b2f93382fd42cc50337d438b8f75 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9fdbb375bc4dac7dde19b13e1db24d33 = $(`<div id="html_9fdbb375bc4dac7dde19b13e1db24d33" style="width: 100.0%; height: 100.0%;">장소명: 번암반점<br>장소 유형: restaurant<br>촬영 내용: 생활의달인 800회 간짜장, 탕수육 맛집<br>주소:세종특별자치시 조치원읍 허만석로 13-5</div>`)[0];
+                popup_ed52b2f93382fd42cc50337d438b8f75.setContent(html_9fdbb375bc4dac7dde19b13e1db24d33);
+            
+        
+
+        marker_11790d54eec1b106051cb6e57ca47208.bindPopup(popup_ed52b2f93382fd42cc50337d438b8f75)
+        ;
+
+        
+    
+    
+            var marker_6fe751aa860523e2b7766c06288d9b4b = L.marker(
+                [36.501678, 127.27309],
+                {}
+            ).addTo(marker_cluster_23b779e6b8879812d2b99c4f12023707);
+        
+    
+            var icon_25bdfd7b792ccb916a5628bd3208e60e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_6fe751aa860523e2b7766c06288d9b4b.setIcon(icon_25bdfd7b792ccb916a5628bd3208e60e);
+        
+    
+        var popup_8360de336e1c08a4fccf1af8fd75cfb3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6025a3eadfa0c5c476e3655ab32ee7ec = $(`<div id="html_6025a3eadfa0c5c476e3655ab32ee7ec" style="width: 100.0%; height: 100.0%;">장소명: 대통령기록관<br>장소 유형: playground<br>촬영 내용: 이 건물의 외관은 제2화에서 사람미디어그룹과 사회책임재단이 공동 주최하는 자선 패션쇼가 열리는 장소로 등장한다. 이 행사의 명예 게스트로는 강요한(지성)과 리얼리티 텔레비전 쇼 '라이브 코트 쇼'의 동료 심사위원 오진주(김재경)가 나온다.<br>주소:세종특별자치시 다솜로 250 대통령기록관</div>`)[0];
+                popup_8360de336e1c08a4fccf1af8fd75cfb3.setContent(html_6025a3eadfa0c5c476e3655ab32ee7ec);
+            
+        
+
+        marker_6fe751aa860523e2b7766c06288d9b4b.bindPopup(popup_8360de336e1c08a4fccf1af8fd75cfb3)
+        ;
+
+        
+    
+    
+            var marker_7138951e73de41e97f4fc6da04f32a44 = L.marker(
+                [36.670592, 127.209267],
+                {}
+            ).addTo(marker_cluster_23b779e6b8879812d2b99c4f12023707);
+        
+    
+            var icon_c54bc2327559ede2c3faca17002ea03b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_7138951e73de41e97f4fc6da04f32a44.setIcon(icon_c54bc2327559ede2c3faca17002ea03b);
+        
+    
+        var popup_8e28c828fe7825702c42530bb5838673 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b45594c832fe604e44f844932b28a909 = $(`<div id="html_b45594c832fe604e44f844932b28a909" style="width: 100.0%; height: 100.0%;">장소명: 베어트리파크<br>장소 유형: playground<br>촬영 내용: 이 건물은 화장품 회사 '천하 사옥'으로 등장한다.<br>주소:세종특별자치시 전동면 신송로 217</div>`)[0];
+                popup_8e28c828fe7825702c42530bb5838673.setContent(html_b45594c832fe604e44f844932b28a909);
+            
+        
+
+        marker_7138951e73de41e97f4fc6da04f32a44.bindPopup(popup_8e28c828fe7825702c42530bb5838673)
+        ;
+
+        
+    
+    
+            var marker_c5fdccd06b073f4b85df02598a742a2a = L.marker(
+                [36.670592, 127.209267],
+                {}
+            ).addTo(marker_cluster_23b779e6b8879812d2b99c4f12023707);
+        
+    
+            var icon_e83e17a037ebf26f77f12168cf898012 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c5fdccd06b073f4b85df02598a742a2a.setIcon(icon_e83e17a037ebf26f77f12168cf898012);
+        
+    
+        var popup_c81cf7d86166fee21f4563dcd6fc2f4b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_368863c9d31cb9a89db3d04b7cf7a90e = $(`<div id="html_368863c9d31cb9a89db3d04b7cf7a90e" style="width: 100.0%; height: 100.0%;">장소명: 베어트리파크<br>장소 유형: playground<br>촬영 내용: 이 공원은 11회에서 박기숙(독고영재)의 집으로 나타납니다.<br>주소:세종특별자치시 전동면 신송로 217</div>`)[0];
+                popup_c81cf7d86166fee21f4563dcd6fc2f4b.setContent(html_368863c9d31cb9a89db3d04b7cf7a90e);
+            
+        
+
+        marker_c5fdccd06b073f4b85df02598a742a2a.bindPopup(popup_c81cf7d86166fee21f4563dcd6fc2f4b)
+        ;
+
+        
+    
+    
+            var marker_eaf8a9aed2f24a3cbf2b39dce63dc2a4 = L.marker(
+                [36.530588, 127.36972],
+                {}
+            ).addTo(marker_cluster_23b779e6b8879812d2b99c4f12023707);
+        
+    
+            var icon_1db8e03470b6c9c272a25546de64385e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_eaf8a9aed2f24a3cbf2b39dce63dc2a4.setIcon(icon_1db8e03470b6c9c272a25546de64385e);
+        
+    
+        var popup_9c393b10ab8c83298df76a120385445e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8efea562aa88f9aa8dabc5539d93bde8 = $(`<div id="html_8efea562aa88f9aa8dabc5539d93bde8" style="width: 100.0%; height: 100.0%;">장소명: 부강성당<br>장소 유형: playground<br>촬영 내용: 4회에서 황희태(이도현)가 김명희(고민시)와 함께 '사랑고아원'에서 아이들의 건강 검진을 하는 봉사활동을 하고 있다.<br>주소:세종특별자치시 부강면 부강4길 33</div>`)[0];
+                popup_9c393b10ab8c83298df76a120385445e.setContent(html_8efea562aa88f9aa8dabc5539d93bde8);
+            
+        
+
+        marker_eaf8a9aed2f24a3cbf2b39dce63dc2a4.bindPopup(popup_9c393b10ab8c83298df76a120385445e)
+        ;
+
+        
+    
+    
+            var marker_81643de2c81ebc4d08c2f7db61603062 = L.marker(
+                [36.670592, 127.209267],
+                {}
+            ).addTo(marker_cluster_23b779e6b8879812d2b99c4f12023707);
+        
+    
+            var icon_ecea838fe0e1e1534bbe6d459b59e30c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_81643de2c81ebc4d08c2f7db61603062.setIcon(icon_ecea838fe0e1e1534bbe6d459b59e30c);
+        
+    
+        var popup_91942ffd48a17e534df5df1074814bf8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_237ef525b3a3aafff4cdc524c25f0365 = $(`<div id="html_237ef525b3a3aafff4cdc524c25f0365" style="width: 100.0%; height: 100.0%;">장소명: 베어트리파크<br>장소 유형: playground<br>촬영 내용: 1회에서 총리 한판로(전국환)의 집 외관으로 등장한다.<br>주소:세종특별자치시 전동면 신송로 217</div>`)[0];
+                popup_91942ffd48a17e534df5df1074814bf8.setContent(html_237ef525b3a3aafff4cdc524c25f0365);
+            
+        
+
+        marker_81643de2c81ebc4d08c2f7db61603062.bindPopup(popup_91942ffd48a17e534df5df1074814bf8)
+        ;
+
+        
+    
+</script>
+</html>
