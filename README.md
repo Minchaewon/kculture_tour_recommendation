@@ -70,3 +70,12 @@ hotel_df.rename(columns={
 }, inplace=True)
 
 ---
+
+
+🎯 4. 사용자 입력
+python
+복사
+편집
+media_type = input("검색할 분야 (drama, movie, artist): ").strip()
+name = input("배우 또는 아티스트 이름 입력: ").strip()
+region = input("지역 선택 (예: 경기): ").strip()
