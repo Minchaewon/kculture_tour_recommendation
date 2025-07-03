@@ -69,31 +69,4 @@ hotel_df.rename(columns={
     'LDGS_AVRG_SCORE_CO': '평균평점',
 }, inplace=True)
 
-### 🎯 4. 사용자 입력
-media_type = input("검색할 분야 (drama, movie, artist): ").strip()
-name = input("배우 또는 아티스트 이름 입력: ").strip()
-region = input("지역 선택 (예: 경기): ").strip()
-
-### 🔍 5. 필터링 및 예외 처리
-
-if media_type == 'drama':
-    df = media_drama
-elif media_type == 'movie':
-    df = media_movie
-elif media_type == 'artist':
-    df = media_artist
-else:
-    raise ValueError("media_type은 drama, movie, artist 중 하나여야 합니다.")
-
-# 이름, 지역 필터링
-if media_type in ['drama', 'movie']:
-    filtered = df[df['배우이름'].str.contains(name, na=False) & (df['주소_지역명'] == region)]
-else:
-    filtered = df[df['아티스트명'].str.contains(name, na=False) & (df['주소_지역명'] == region)]
-
-# ❗ 빈 경우 처리
-if filtered.empty:
-    print("해당 배우/아티스트와 지역 조합으로 데이터가 없습니다.")
-    m = folium.Map(location=[37.5665, 126.9780], zoom_start=10)  # 서울 중심
-    display(m)
-    exit()
+---
