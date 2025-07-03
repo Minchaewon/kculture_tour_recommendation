@@ -39,3 +39,61 @@
 - 촬영지 기준 **거리 기반 맛집·카페·숙박 추천** (각 3곳)
 - 지도 시각화 및 팝업 기능
 - 결과 지도 HTML로 저장
+
+### 📦 3. 필요 라이브러리 및 전처리
+
+```python
+import pandas as pd
+import folium
+from geopy.distance import geodesic
+from IPython.display import display
+
+media_drama = pd.read_csv(".../media_drama_pre.csv", encoding='utf-8-sig')
+media_movie = pd.read_csv(".../media_movie_pre.csv", encoding='utf-8-sig')
+media_artist = pd.read_csv(".../media_artist_pre.csv", encoding='utf-8-sig')
+kakao_food = pd.read_csv(".../kakao_food_geocode.csv", encoding="utf-8-sig")
+hotel_df = pd.read_csv(".../hotel_pre.csv", encoding='utf-8-sig')
+
+hotel_df.columns = hotel_df.columns.str.strip()
+hotel_df.rename(columns={
+    'Unnamed: 0': '번호',
+    'LDGS_NM': '숙박명',
+    'LDGS_ADDR': '지역명',
+    'LDGS_ROAD_NM_ADDR': '도로명주소',
+    'GSRM_SCALE_CN': '규모',
+    'LDGS_GRAD_VALUE': '성급',
+    'LDGMNT_TY_NM': '숙박유형',
+    'LDGS_AVRG_PRC': '평균가격',
+    'LDGS_MIN_PRC': '최소가격',
+    'LDGS_MXMM_PRC': '최대가격',
+    'LDGS_AVRG_SCORE_CO': '평균평점',
+}, inplace=True)
+
+### 🎯 4. 사용자 입력
+media_type = input("검색할 분야 (drama, movie, artist): ").strip()
+name = input("배우 또는 아티스트 이름 입력: ").strip()
+region = input("지역 선택 (예: 경기): ").strip()
+
+### 🔍 5. 필터링 및 예외 처리
+
+if media_type == 'drama':
+    df = media_drama
+elif media_type == 'movie':
+    df = media_movie
+elif media_type == 'artist':
+    df = media_artist
+else:
+    raise ValueError("media_type은 drama, movie, artist 중 하나여야 합니다.")
+
+# 이름, 지역 필터링
+if media_type in ['drama', 'movie']:
+    filtered = df[df['배우이름'].str.contains(name, na=False) & (df['주소_지역명'] == region)]
+else:
+    filtered = df[df['아티스트명'].str.contains(name, na=False) & (df['주소_지역명'] == region)]
+
+# ❗ 빈 경우 처리
+if filtered.empty:
+    print("해당 배우/아티스트와 지역 조합으로 데이터가 없습니다.")
+    m = folium.Map(location=[37.5665, 126.9780], zoom_start=10)  # 서울 중심
+    display(m)
+    exit()
