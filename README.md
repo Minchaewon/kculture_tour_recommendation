@@ -191,5 +191,6 @@ print("\n📍 각 촬영지별 주변 추천 (3개씩):")
 display(recommend_detail)
 
 ```
+![촬영지 데이터 기반 근처 맛집, 카페, 숙소 추천 리스트]("C:/Users/mcw08/Downloads/image (4).png")
 
-![image.png](attachment:36c482bb-02a5-4780-a649-f6728b638055:image.png)
+
