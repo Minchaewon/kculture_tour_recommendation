@@ -68,11 +68,11 @@ hotel_df.rename(columns={
     'LDGS_MXMM_PRC': '최대가격',
     'LDGS_AVRG_SCORE_CO': '평균평점',
 }, inplace=True)
-
+```
 ---
 
 
-🎯 4. 사용자 입력
+### 🎯 4. 사용자 입력
 python
 복사
 편집
